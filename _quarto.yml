@@ -20,7 +20,7 @@ website:
       - icon: github
         menu: 
           - text: Source code
-          - text: Report a bug
+            href: https://github.com/PGCAnalytics/pgcvideotextbook/
     style: docked
     search: true
     contents:
