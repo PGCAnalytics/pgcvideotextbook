@@ -2,6 +2,10 @@
 title: "SNP Heritability and Genetic Correlation"
 ---
 
+> In this section, we introduce methods for calculating SNP heritability and genetic correlations. SNP heritability is the proportion of trait variance that is explained by SNPs, and genetic correlation is the proportion of variance that two traits share from common genetic variation.
+>
+> In the first video, Josefin Werme gives an introduction to the Local Analysis of \[co\]Variant Association, or LAVA, software, a method for calculating local genetic correlations. In the second video, Dr. Yang gives a tutorial for estimating SNP-based heritability using the GCTA-GREML tool: First constructing a genetic relatedness matrix (GRM), which is an estimation of genetic relationships among all of the individuals in your dataset, and then running a genome-based restricted maximum likelihood (GREML) analysis to calculate SNP heritability. Lastly, Dr. Wray gives an overview of different measures of genetic architecture, specifically calculated SNP heritabilities, of schizophrenia over the last decade, and the caveats of different ways of measuring SNP-based heritability.
+
 # LAVA
 
 **Title**: LAVA Tutorial
