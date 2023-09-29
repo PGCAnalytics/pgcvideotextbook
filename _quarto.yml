@@ -22,7 +22,9 @@ website:
           - text: Source code
             href: https://github.com/PGCAnalytics/pgcvideotextbook/
       - icon: twitter
-        href: https://twitter.com/PGCgenetics
+        menu:
+          - text: PGC Twitter
+            href: https://twitter.com/PGCgenetics
     style: docked
     search: true
     contents:
