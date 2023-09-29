@@ -4,6 +4,8 @@ title: "EWAS"
 
 # Epigenome-Wide Association Studies
 
+> In this tutorial, Drs. Wani and Katrinli demonstrate how to use the "ewastools" R package to perform QC of methylation data, and subsequent epigenome-wide association studies (EWAS). The first part of the video by Dr. Wani discusses QC of methylation data by evaluating idat file quality metrics, genotype checks, normalization, dye bias collection, sex checks, and ComBAT adjustment. In the second part of the video, Dr. Katrinli discusses the EWAS pipeline to estimate cell proportions, perform principal component analysis, smoking scores (for this specific analysis), and then finally to run the association test.
+
 **Title**: How to Perform Epigenome Wide Association Studies
 
 **Presenter(s)**:
