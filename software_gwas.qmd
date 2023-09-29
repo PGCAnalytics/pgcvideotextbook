@@ -2,6 +2,10 @@
 title: "GWAS"
 ---
 
+In the following tutorials, you will get an introduction to conducting genome-wide association studies (GWAS) from start to finish, with considerations for multi-ancestry and admixed populations, as well as insight into running case-case (CC) GWAS.
+
+In the first video, Dr. Huang goes over the steps for conducing a GWAS using PLINK software.
+
 # Genome-Wide Association Studies in PLINK {#sec-section1}
 
 **Title**: Genome-wide Association Studies
