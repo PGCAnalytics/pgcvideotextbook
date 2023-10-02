@@ -85,15 +85,24 @@ Link to video transcript [here](chapter10.3_transcript.qmd).
 
 # 10.4 Language in Genetics Research {#sec-section4}
 
-***Video Content coming soon!***
+**Title**: Bioessentialism
 
 **Presenter(s)**:
 
--   Carina Seah, MS (Department of Genetics and Genomic Sciences, Icahn School of Medicine at Mount Sinai)
+-   Carina Seah, MSc (Department of Genetics and Genomic Sciences, Icahn School of Medicine at Mount Sinai)
 
--   Kayla Townsley, MS (Department of Genetics and Genomic Sciences, Icahn School of Medicine at Mount Sinai)
+-   Kayla Townsley, MSc (Department of Genetics and Genomic Sciences, Icahn School of Medicine at Mount Sinai)
 
 **Level**: Beginner
+
+**Length**: 1:25:51
+
+```{r, echo=FALSE}
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=vE9wdqPZ0Z0")
+```
+
+Link to video transcript [here](chapter10.4_transcript.qmd).
 
 ------------------------------------------------------------------------
 
