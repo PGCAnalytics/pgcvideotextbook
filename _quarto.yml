@@ -49,7 +49,6 @@ website:
           - software_datasets.qmd
           - software_ewas.qmd
           - software_geneset.qmd
-          - software_liftover.qmd
           - software_gwas.qmd
           - software_genomicSEM.qmd
           - software_MR.qmd
