@@ -27,7 +27,7 @@ In alphabetical order:
 
 ![**Howard J. Edenberg PhD**: Distinguished Professor, Departments of Biochemistry and Molecular Biology and Medical and Molecular Genetics, Indiana University School of Medicine, Indianapolis, IN, USA](Edenberg Howard.jpg){fig-align="center" width="286"}
 
-![**Lachlan Gilchrist MSc**: PhD Student, Social, Genetic and Developmental Psychiatry Centre, King's College London, London, UK](LachlanGilchristPhotot.jpg){fig-align="center" width="286"}
+![**Lachlan Gilchrist MSc**: PhD Student, Social Genetic and Developmental Psychiatry Centre, King's College London, London, UK](LachlanGilchristPhotot.jpg){fig-align="center" width="286"}
 
 ![**Laura Huckins PhD**: Associate Professor, Department of Psychiatry, Yale University School of Medicine, New Haven, CT, USA](Laura_Huckins.jpeg){fig-align="center" width="286"}
 
@@ -37,7 +37,7 @@ In alphabetical order:
 
 ![**Ada P. Kępińska PhD**: PostDoctoral Researcher, Departments of Psychiatry and Genetics and Genomic Sciences, The Seaver Autism Center for Research and Treatment, Icahn School of Medicine at Mount Sinai, New York, NY, USA](Ada_Kepinska.jpeg){fig-align="center" width="286"}
 
-![**Cathryn Lewis PhD**: Professor, Social, Genetic and Developmental Psychiatry Centre, King's College London, London, UK](Cathryn%20Lewis.jpg){fig-align="center" width="286"}
+![**Cathryn Lewis PhD**: Professor, Social Genetic and Developmental Psychiatry Centre, King's College London, London, UK](Cathryn%20Lewis.jpg){fig-align="center" width="286"}
 
 ![**Grace D. Lutter**: Social/Clinical Research Specialist, Department of Genetics, University of North Carolina at Chapel Hill, Chapel Hill, NC, USA](Grace%20Lutter.jpg){fig-align="center" width="286"}
 
@@ -49,19 +49,19 @@ In alphabetical order:
 
 ![**Kayla Townsley Bs**: PhD Candidate, Departments of Neuroscience and Genetics and Genomic Sciences, The Graduate School of Biomedical Sciences, Icahn School of Medicine at Mount Sinai, New York, NY, USA](kayla-townsley_headshot.jpg){fig-align="center" width="286"}
 
-![**Tim Van Der Es Msc**: PhD Student, Social, Genetic and Developmental Psychiatry Centre, King's College London, London, UK](TimvanderEs.jpeg){fig-align="center" width="286"}
+![**Tim Van Der Es Msc**: PhD Student, Social Genetic and Developmental Psychiatry Centre, King's College London, London, UK](TimvanderEs.jpeg){fig-align="center" width="286"}
 
 ![**Jiayi Xu PhD**: Associate Research Scientist, Department of Psychiatry, Yale University School of Medicine, New Haven, CT, USA](Jiayi%20Xu.jpg){fig-align="center" width="286"}
 
 **Kelleigh Hogan**: Statistical and Research Data Analyst, Department of Psychiatry, University of California San Diego, La Jolla, CA, USA
 
-**Michelle Kamp**
+**Michelle Kamp**: PhD Student, Division of Human Genetics, Sydney Brenner Institute for Molecular Bioscience, University of the Witwatersrand, Johannesburg, South Africa.
 
 **Chris Lo:** PhD Student, Social, Genetic and Developmental Psychiatry Centre, King's College London, London, UK
 
-**Adam Maihofer**
+**Adam Maihofer PhD**: Assistant Project Scientist, Department of Psychiatry, University of California San Diego, La Jolla, CA, USA
 
-**Oliver Pain**
+**Oliver Pain PhD**: Postdoctoral Research Associate, Social Genetic and Developmental Psychiatry Centre, King's College London, London, UK.
 
 ------------------------------------------------------------------------
 
