@@ -67,6 +67,6 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=J29_Pf8Ti1s")
 ```
 
-Link to video transcript [here](software_datasets_transcript.qmd#sec-section3).
+Link to video transcript [here](software_datasets_transcript.qmd#sec-video3).
 
 Link to [gnomAD website](https://gnomad.broadinstitute.org/).
