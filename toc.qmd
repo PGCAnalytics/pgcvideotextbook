@@ -122,8 +122,6 @@ title: "Table of Contents"
 >
 > [Gene Set Identification](software_geneset.qmd)
 >
-> [Genome Builds](software_liftover.qmd)
->
 > [Genome-Wide Association Studies](software_gwas.qmd)
 >
 > [Genomic SEM](software_genomicSEM.qmd)

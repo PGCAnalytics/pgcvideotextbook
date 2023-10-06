@@ -130,8 +130,6 @@ Each video is embedded into the textbook webpage, and a link to the video transc
 >
 > [Gene Set Identification](software_geneset.qmd)
 >
-> [Genome Builds](software_liftover.qmd)
->
 > [Genome-Wide Association Studies](software_gwas.qmd)
 >
 > [Genomic SEM](software_genomicSEM.qmd)
