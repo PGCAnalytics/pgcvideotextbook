@@ -46,7 +46,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=LxUXinawAv0")
 ```
 
-Link to video transcript [here](chapter1.2_transcript.qmd).
+Link to video transcript [here](chapter1.2_transcript.qmd). Tradução para o português disponível [aqui](chapter1.2_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -388,7 +388,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=XwBoFzdz3ts")
 ```
 
-Link to video transcript [here](chapter1.4_transcript.qmd#sec-sharedgenetic).
+Link to video transcript [here](chapter1.4_transcript.qmd#sec-sharedgenetic). Tradução para o português disponível [aqui](chapter1.4_transcript_portugues.qmd#sec-shared).
 
 ------------------------------------------------------------------------
 
@@ -409,7 +409,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=NdOR9NxMH2Q")
 ```
 
-Link to video transcript [here](chapter1.4_transcript.qmd#sec-sud).
+Link to video transcript [here](chapter1.4_transcript.qmd#sec-sud). Tradução para o português disponível [aqui](chapter1.4_transcript_portugues.qmd#sec-sud).
 
 Paper referenced in the talk:
 

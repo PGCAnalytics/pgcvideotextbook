@@ -1,0 +1,23 @@
+---
+title: "Capítulo 1.2: Epidemiologia"
+---
+
+# ***O que é um GWAS?*** {#sec-section1}
+
+**Título: O que é um GWAS?**
+
+**Apresentador(es): Till Andlauer**
+
+A maior parte do trabalho do consórcio de genômica psiquiátrica trata de estudos de associação genômica em larga escala, ou GWAS, em resumo. Mas, o que é um GWAS?
+
+Então, primeiro você precisa considerar que os transtornos complexos, como a maioria dos transtornos psiquiátricos, são poligênicos. Portanto, não temos mutações causais únicas que conferem risco, como é o caso dos distúrbios monogênicos, mas muitas variantes genéticas com pequenas contribuições individuais para o risco de distúrbios.
+
+GWAS normalmente analisa variantes ou polimorfismos de nucleotídeo único, SNVs ou SNPs, em resumo, tal SNP é uma posição no genoma onde o genótipo pode variar. Neste exemplo, a maioria das pessoas em uma determinada população carrega um “G” e a minoria um “A”, então “A” é o alelo menor. A frequência do alelo menor também pode diferir entre pacientes que sofrem de uma doença e controles saudáveis. Então é disso que se trata o GWAS. Então você pega um grupo de pacientes e um grupo de controles saudáveis ​​e determina o genótipo de centenas de milhares de SNPs usando microarrays.
+
+Em seguida, você compara a frequência dos alelos para cada uma dessas variantes entre casos e controles usando regressão logística. Você também pode realizar o GWAS para uma característica quantitativa, por exemplo, índice de massa corporal ou volume cerebral, e analisar associações usando regressão linear.
+
+Os resultados do GWAS são apresentados como um gráfico de Manhattan. Aqui você vê um sobre Depressão do PGC. Todos os SNPs analisados ​​são mostrados no eixo x, ordenados por cromossomo. E no eixo y você vê o valor-p da associação menos log10. Assim, quanto menor o valor-p, mais alta será a torre no gráfico de Manhattan. Neste GWAS, você pode ver 44 dessas torres ultrapassando a linha vermelha. Esta linha vermelha é o limiar de significância de todo o genoma, um valor p de 5 x 10-8, que corresponde à correção de Bonferroni para testes múltiplos de 1 milhão de variantes.
+
+E por que você consegue essas torres? Por causa do desequilíbrio de ligação. SNPs próximos estão correlacionados. Eles são herdados juntos com mais frequência do que o esperado por acaso. Assim, aglomerados de variantes correlacionadas mostram associações semelhantes que levam às torres nos gráficos de Manhattan.
+
+Agora, os resultados publicados do GWAS normalmente não vêm de uma única análise; em vez disso, GWAS separados são conduzidos em dezenas de coortes, e os resultados de cada um deles são combinados por meio de meta-análise. E é isso que o PGC faz. Dessa forma, nos últimos anos, foram identificados centenas de loci genéticos associados a transtornos psiquiátricos. E a lista não para de aumentar. No entanto, muito do trabalho só começa após a realização do GWAS, e isso tenta anotar a função dos SNPs identificados. Existem muitos livros e artigos que fornecem mais informações sobre GWAS e este livro sobre genética psiquiátrica é um bom exemplo.
