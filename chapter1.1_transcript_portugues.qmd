@@ -1,0 +1,15 @@
+---
+title: "Capítulo 1.1: O que são transtornos psiquiátricos?"
+---
+
+# ***O que são transtornos psiquiátricos?*** {#sec-section1}
+
+**Título**: Transtornos psiquiátricos
+
+**Apresentador(es):** Broad Institute
+
+Os transtornos psiquiátricos podem ser considerados transtornos crônicos graves e incapacitantes dos jovens. Somados, eles causam um sofrimento desproporcional para os indivíduos, para as famílias. Infelizmente, não fizemos tanto progresso como havíamos imaginado nos últimos 60 anos. Precisamos de uma revolução na eficácia, mas também na amplitude e no número de sintomas que podemos tratar clinicamente. É fácil estudar o câncer. É fácil estudar a doença inflamatória intestinal porque você simplesmente entra, tira um pouco e olha no microscópio. Você simplesmente não pode fazer isso com o cérebro. A pista mais importante que temos sobre as características humanas em particular e sobre os transtornos psiquiátricos humanos, vem da genética.
+
+Por exemplo, sabemos que o cérebro do adolescente é um período de vulnerabilidade em muitos transtornos neuropsiquiátricos, incluindo a esquizofrenia, mas não sabemos por quê. Portanto, havia todos os tipos de teorias sobre a esquizofrenia que podem ou não ser verdadeiras. O maior fator único de risco genético, pelo menos nas populações europeias, acaba sendo um gene que codifica o fator quatro do complemento ou C4. No cérebro, o papel das proteínas do complemento é marcar sinapses individuais que são fracas ou ineficientes. Um pensamento possível sobre o que causa a esquizofrenia: algo que tem a ver com essas proteínas do complemento sinaliza de forma inadequada para essas células imunológicas do cérebro removerem as sinapses que na verdade você precisava para sua cognição, para pensar, para o processamento de informações do mundo. O próprio gene de risco raramente é um bom alvo, mas fornece informações sobre a via ou o mecanismo pelo qual a doença se manifesta. Portanto, se você marchar para cima ou para baixo na via, ou lateralmente para outras vias que interfiram com essa via específica, geralmente poderá identificar alvos mais tratáveis ​​para a droga.
+
+Ainda é cedo, mas o objetivo de fazer a genética e o difícil acompanhamento da biologia é, em última análise, a terapêutica, fazer um diagnóstico idealmente muito cedo, idealmente intervir para prevenir o avanço da doença. Certamente essa é a minha esperança e, na verdade, essa é a minha missão: melhorar a vida das pessoas com doenças psiquiátricas graves. Afinal, minha própria família foi afetada por isso e vi em primeira mão o sofrimento causado por isso. Então, estou totalmente comprometido com isso e, na verdade, muito otimista.
