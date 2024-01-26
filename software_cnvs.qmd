@@ -21,6 +21,6 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=Lg2k2BEQIy4")
 ```
 
-Link to video transcript [here](chapter9.1_transcript.qmd).
+Link to video transcript [here](chapter9.1_transcript.qmd). Tradução para o português disponível [aqui](chapter9.1_transcript_portugues.qmd#sec-section1).
 
 Link to [PLINK1.9](https://www.cog-genomics.org/plink/) and [PLINK2.0](https://www.cog-genomics.org/plink/2.0/) website.
