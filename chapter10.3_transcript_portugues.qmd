@@ -1,0 +1,29 @@
+---
+title: "Capítulo 10.3: Tamanhos de efeito pequenos"
+---
+
+# ***Tamanhos de efeito pequenos*** {#sec-section1}
+
+**Título:** Tamanhos de efeito pequenos
+
+**Apresentador(es):** Howard Edenberg , PhD (Department of Biochemistry and Molecular Biology, Indiana University School of Medicine)
+
+Uma breve nota sobre tamanhos de efeito pequenos.
+
+Olá. Sou Howard Edenberg, da Universidade de Indiana.
+
+Os transtornos psiquiátricos e por uso de substâncias são transtornos genéticos complexos. O risco é afetado tanto pelos genes quanto pelo meio ambiente. Nenhum deles funciona sozinho e interagem, às vezes de maneiras muito complexas. Nenhuma variante genética causa uma característica complexa, como um transtorno psiquiátrico ou por uso de substâncias. Variações que afetam muitos genes contribuem para variações na fisiologia e estas, por sua vez, contribuem para variações no risco do transtorno, no curso do transtorno e na resposta aos tratamentos.
+
+Os estudos de associação genômica em larga escala (GWAS) são atualmente a melhor abordagem para identificar variações genéticas individuais que contribuem para o risco destas e de muitas outras doenças. GWAS são análises imparciais que testam variações comuns em todo o genoma para determinar se elas afetam uma característica. Mas como apenas cerca de metade do risco total é contribuído pela variação genética e essa parte está distribuída entre centenas a milhares de genes, os efeitos de qualquer variante comum são normalmente muito pequenos. Portanto, são necessários estudos muito grandes para encontrar essas variantes.
+
+Já que o efeito de qualquer variante é muito pequeno, por que se preocupar em encontrá-las? Alguns argumentaram que descobrir variantes de efeitos tão pequenos não ajuda. Argumentarei aqui que eles estão errados. O que queremos fazer é identificar de forma confiável as centenas de variantes que contribuem para o risco, mesmo que cada variante individual contribua apenas com uma pequena quantidade. Podemos aprender muito com isso. Existem alguns usos imediatos das descobertas do GWAS. Os padrões globais de associação podem ajudar a prever parte do risco para a doença através de escores poligênicos de risco. Eles podem mostrar se as características estão geneticamente relacionadas. Eles podem examinar a causalidade potencial por meio da randomização mendeliana. E podem ajudar a explicar a heterogeneidade em muitos casos, se existirem diferentes padrões de variantes entre diferentes pessoas com o mesmo transtorno geral.
+
+O que mais podemos fazer depois de descobrirmos muitas variantes de pequeno efeito? As variantes genéticas e o padrão delas podem nos levar à biologia. Eles podem nos mostrar quais genes estão envolvidos e quais vias estão envolvidas. Estas conduzem-nos à fisiologia dos transtornos e isso, por sua vez, pode levar-nos a um melhor diagnóstico, à descoberta racional de medicamentos e à medicina personalizada, tudo isto, penso, será muito valioso.
+
+O efeito de um medicamento numa via não é limitado pelo tamanho do efeito da variante que nos levou a descobrir a via que é importante na doença. Mesmo que a variante seja rara ou o tamanho do efeito da variante seja muito pequeno, se nos levar a uma via biológica, essa via pode ser alvo de medicamentos que tenham um efeito muito grande. O impacto de um medicamento sobre uma via não é de forma alguma limitado pelo tamanho do efeito das variantes que nos levaram a compreender o papel da via.
+
+Por isso, eu, por exemplo, continuo a pensar que a utilização de grandes GWAS para identificar variantes e genes que contribuem para o risco destas e de outros transtornos será de grande valor. Talvez não imediatamente, mas a longo prazo. Sem esse conhecimento estaremos realmente voando às cegas quando procuramos novos tratamentos.
+
+Algumas reflexões sobre a tradução das descobertas de associações genômicas em novas terapêuticas para a psiquiatria foram discutidas em um artigo de revisão publicado há alguns anos que vale a pena examinar. \[PMID: 27786187. PMCID:[PMC5676453](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5676453/)\]
+
+Obrigado por prestar atenção. Adeus.

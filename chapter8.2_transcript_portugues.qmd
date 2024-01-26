@@ -1,0 +1,59 @@
+---
+title: "Capítulo 8.2: Correlações genéticas e LDSC particionado"
+---
+
+# ***Correlação Genética e Particionamento*** {#sec-section1}
+
+**Título**: Correlação Genética e Particionamento
+
+**Apresentador(es)**: Patrick Turley (Analytic and Translational Genetics Unit, The Broad Institute of Harvard and MIT)
+
+Então agora vamos falar sobre correlação genética e particionamento. Então, vamos começar com a correlação genética.
+
+Vou falar mais amplamente sobre um termo que chamamos de sobreposição genética. Portanto, muitas características têm arquitetura genética realmente semelhante. Ou seja, se encontrarmos um SNP que seja causal para alguma característica, como o nível de escolaridade, é mais provável que, uma vez encontrado para o nível de escolaridade, possamos pensar que é mais provável que também esteja associado a coisas como desempenho cognitivo ou um monte de outras características, você sabe, esquizofrenia. Então, talvez queiramos obter uma estimativa de quão forte é esse relacionamento. Você sabe, se encontrarmos um SNP para uma característica, qual a probabilidade de que também seja causal para a outra? Assim como um vocabulário que acho que não surgiu, não definimos especificamente. Então, existe o estado em que um SNP está associado a uma variedade de fenótipos, isso é chamado de pleiotropia. Então, alguém diz: “Ah, existe pleiotropia”, isso significa que os genes fazem mais de uma coisa. E, porque existe pleiotropia, é por isso que haverá sobreposição genética. Então, por que nos preocupamos com a sobreposição? Bem, você sabe, isso pode nos ajudar a desvendar relações causais complicadas. Então, se percebermos que todos os SNPs que são importantes para a educação também são importantes para a esquizofrenia, então, você sabe, poderíamos dizer: “Ah, então essas duas coisas têm uma relação genética”. Você sabe, se percebermos que a depressão está altamente correlacionada geneticamente com o neuroticismo, quero dizer, tipo, “Ok, sim, a contribuição genética, você sabe, aditiva para essas duas características é semelhante”, e isso pode nos ajudar enquanto nós ' Estou pensando no que pode estar causando os dois. Também pode nos ajudar a priorizar vias causais. E então, vamos, isso está relacionado talvez ao método do fenótipo proxy. E digamos que sabemos que a educação e o desempenho cognitivo estão altamente correlacionados geneticamente, mas não temos amostras muito grandes para o desempenho cognitivo. Bem, se soubermos que eles estão altamente relacionados, então poderíamos, você sabe, limitar o espaço sobre o qual estamos olhando para o genoma apenas pegando, você sabe, SNPs que estão associados ao nível de escolaridade acima de um certo nível e procurar aí a associação com o desempenho cognitivo e, como resultado, não precisamos fazer uma correção tão grande de vários testes porque estamos fazendo menos testes. Você sabe, também se soubermos que as coisas estão relacionadas e estivermos tentando descobrir como, você sabe, isso nos indicará a direção certa.
+
+Pergunta do público: Como isso difere do gene candidato?
+
+Então eu acho que quando pelo menos historicamente as pessoas disseram gene candidato, isso foi baseado em uma espécie de relação biológica teórica. E então dissemos: Ah, sim, esse gene que achamos que tem a ver com isso, e então vamos testar isso”. Ao passo que quando digo fenótipo proxy, é menos uma relação teórica que estamos usando para selecionar uma relação empírica, ótimo.
+
+Então, quando dizemos sobreposição, há duas maneiras de pensar sobre isso. Então, o enriquecimento e a correlação genética de alguém. E então o enriquecimento é essa ideia de um método de fenótipo proxy, você sabe, nossos SNPs que são importantes para um fenótipo A, também importantes para um fenótipo B. E para que pudéssemos fazer esse teste, vamos apenas pegar o SNPs com um valor p menor que p- e vamos testá-los em um GWAS para o fenótipo B. E isso poderia ser muito bem-sucedido em ver se, você sabe: os SNPs no fenótipo B nesse subconjunto são eles , você sabe, é mais provável que seja mais significativo? Essa é uma questão de grande importância. Mas existem algumas questões técnicas. Primeiro, como você escolheria o limite? Vamos apenas olhar para os SNPs que são significativos em todo o genoma ou deveríamos olhar talvez para baixo na distribuição? Como você lida com o LD? Então, digamos que você tenha dois SNPs e eles estejam altamente correlacionados entre si, mas esse SNP é muito importante para o fenótipo A, mas não é nada importante para o fenótipo B, e esse SNP é muito importante para o fenótipo B, mas não para o fenótipo A. Se apenas compararmos as estatísticas resumidas do GWAS, diríamos: “Ah, sim, ambos são importantes” e, portanto, essas características podem estar relacionadas. Mas quando se trata do efeito real desses SNPs específicos, eles não estão de forma alguma relacionados. E assim, devemos ter em mente que temos essa sensação quando temos estatísticas resumidas do GWAS, você não deveria pensar no SNP, você deveria pensar como uma região ao redor do SNP.
+
+Pergunta do público: Então esta é outra generalidade. Geralmente acontece que os genes implicados no mesmo fenótipo estão no mesmo cromossomo? 
+
+Ah, sim, essa é uma pergunta para a qual não sei a resposta, na verdade. Alguém tem alguém com formação biológica que saiba disso? Eu estava me perguntando isso outro dia. Então a questão é: se você tem um gene que você sabe que é importante para algum fenótipo, outros genes que serão importantes para esse fenótipo talvez estejam próximos, como no mesmo cromossomo ou próximos? Sim, próximos um do outro no cromossomo ou apenas no cromossomo. 
+
+Resposta do público: Falamos sobre os elementos de regulação da transcrição cis, controle local da expressão gênica. 
+
+Sim, sim. Então, acho que, para fins de expressão, sabemos que existe alguma localidade. 
+
+Resposta do público: A maioria dos genes que controlam a expressão estão próximos, mas pode haver alguns que estão distantes. 
+
+Resposta do público: Meu entendimento de que depende do fenótipo. Existem algumas coisas como a função imunológica, onde há uma enorme densidade de genes relacionados ao sistema imunológico em uma área chamada complexo principal de histocompatibilidade no cromossomo 6. E então, como você e eu estávamos conversando outro dia, Patrick, genes do receptor nicotínico de acetilcolina que tendem a estar próximos uns dos outros.
+
+Portanto, esses estão associados ao comportamento de fumar.
+
+Resposta do público: Mas para outras coisas, como o nível de escolaridade, tende a haver impactos em todo o genoma. Eu me pergunto se há correlação local. 
+
+Quero dizer, se for altamente poligênico. 
+
+Pergunta do público: Acho que minha pergunta está relacionada mais diretamente a uma via biológica. 
+
+Sim, sim, eu gostaria de saber a resposta também, e talvez alguém saiba, mas não sei. E é relevante para muitas das coisas que fazemos. Lembre-se de como eu disse a você que uma das suposições na regressão de pontuação LD é que esses betas são independentes, e se genes que são importantes para coisas específicas tendem a estar próximos uns dos outros, isso também significa que eles estão em LD alto um com outro, e então pode quebrar, você sabe, pode violar as suposições sobre essas regressões de pontuação. Então, não sei a resposta, mas gostaria de saber.
+
+Então, aqui está outra pergunta, digamos que nós, você sabe, temos nossa educação, nossos 74 SNPs associados à educação, e então os pesquisamos em um GWAS de altura, e descobrimos que todos eles estão associados com altura. Você sabe, achamos que isso é um sinal de que as duas características estão fortemente relacionadas? Vou dizer não, quem pode me dar uma razão pela qual não esperamos isso? Você, sim, então, então você não gostaria de interpretar o fato de que cada SNP educacional também está associado à altura. 
+
+Resposta do público: Efeito de direção? 
+
+Sim, acho que a direção poderia ser uma coisa, o que mais poderíamos pensar porque a direção, se estiver associada, poderia seguir. Mas estamos apenas procurando um enriquecimento geral, não estamos pensando em direção. 
+
+Resposta do público: Não sei se isso, talvez não esteja entendendo, mas talvez se a altura e o nível de escolaridade estão correlacionados? 
+
+Sim, quero dizer, se for esse o caso, então realmente achamos que eles estão relacionados. 
+
+Resposta do público: É apenas através do canal que as pessoas mais altas obtêm uma educação melhor. 
+
+Eu acho que sim, acho que talvez eu devesse ter escolhido algo que não está relacionado, digamos que há características que não estão. Acho que talvez não devesse fazer você continuar adivinhando, mas talvez fosse bom que você estivesse pensando. Mas a altura é realmente poligênica, certo? Então, por que isso é relevante? Sim, a altura é realmente poligênica. Se tivéssemos uma característica que não fosse poligênica, digamos que houvesse apenas um gene, e era o único gene, e descobrimos que esse gene também é importante para a altura, por causa do SNP aleatório sorteado do genoma provavelmente está associado à altura. E então devemos ter isso em mente também quando estivermos fazendo esses testes. Então temos que pensar: qual é o nosso significado esperado? E então, porque estamos falando de “as coisas são mais significativas do que esperamos”? Você tem que fazer a pergunta: o que esperamos? E dizer que esperamos nulo pode não estar certo.
+
+Há também a questão dos testes unilaterais ou bilaterais, que chega a essa ideia: queremos pensar no sinal ou não? Se observarmos um efeito positivo na educação, se quisermos apenas ver se isso leva a efeitos positivos na altura, então este é um teste unilateral. Mas se quisermos apenas dizer “esperamos um grande efeito na altura?”, não nos importamos se é negativo ou positivo, então isso seria um teste bilateral. E essa é apenas uma decisão que precisamos tomar.
+
+Aqui estão alguns exemplos do que eu disse a vocês, então pegamos os 74 SNPs educacionais. Estamos quase sem tempo, mas vou parar no final da questão da sobreposição. E então quero ver se isso está associado ao GWAS no tamanho do seu tálamo no seu cérebro. A linha de 45 graus é o que esperaríamos ver se todos fossem nulos, e então vemos que, você sabe, ela se afasta do nulo, então pode haver um pouco de sinal extra em relação ao nulo. Mas podemos testar quanto enriquecimento existe com base em quão poligênica pensamos que a característica é. E temos um valor p de 0,08, não podemos rejeitar que a quantidade de inflação que estamos vendo se deve apenas ao acaso. No entanto, se olharmos para os SNPs educacionais e um GWAS de desempenho cognitivo, você sabe, começamos a vê-lo desaparecer muito rapidamente, e nosso valor p é 0,002, apenas com base em, você sabe, quão significativos são estes em relação ao que esperaríamos. Se você olhar para a esquizofrenia, ela desaparece ainda mais. Esquizofrenia, acho que é um caso engraçado. Então, se olharmos para o desempenho cognitivo, a concordância do sinal é de 90%, o que significa um SNP que aumenta a educação, você sabe, 90% das vezes também o estimaremos para aumentar o desempenho cognitivo. Portanto, é altamente enriquecido. A esquizofrenia, vemos, você sabe, é altamente, altamente enriquecida – podemos ver apenas olhando para esses pontos que há muito enriquecimento. No entanto, a concordância do sinal é de 51%, o que significa que um SNP associado à educação provavelmente será importante para a esquizofrenia, mas não podemos realmente adivinhar se será protetor da esquizofrenia ou, o que é o oposto, mais causal, é será mais provável que leve à esquizofrenia. E esse é um caso engraçado. Então acho que deveríamos fazer uma pausa para o almoço e podemos conversar brevemente sobre correlação genética depois do almoço.

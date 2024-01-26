@@ -1,0 +1,65 @@
+---
+title: "Capítulo 6.1: Escores Poligênicos de Risco"
+---
+
+# ***Escores poligênico de risco (PRS)*** {#sec-section1}
+
+**Título**: Escores poligênico de risco (PRS)
+
+**Apresentador(es)**: CPM Oxford
+
+Nossos genes fornecem informações valiosas sobre nossa história familiar, nossa ancestralidade e também sobre nossa saúde. À medida que aprendemos mais sobre o nosso DNA, identificamos novas oportunidades para a saúde. Uma dessas oportunidades surge do uso de escore poligênico de risco. Neste vídeo, você aprenderá o que é um escore poligênico de risco, verá como eles podem ser usados ​​na área da saúde e descobrirá como você pode participar de pesquisas que os utilizam.
+
+Escore poligênico de risco: por que você se importa com o que quer que seja? Conhecer o nosso risco de desenvolver doenças específicas pode ser uma forma realmente poderosa de nos ajudar a viver uma vida mais saudável. Imagine que você soubesse que corre um alto risco de ter um ataque cardíaco. Essa é uma motivação bastante clara para fazer algo a respeito, como mudar sua dieta ou tomar medicamentos para reduzir riscos. Mas como você pode saber que corre um alto risco?
+
+Um importante fator de risco para doenças comuns, como doenças cardíacas, câncer e diabetes, é a nossa própria composição genética. Novos estudos mostram que agora podemos analisar os genes de um indivíduo e realmente medir esse risco usando algo chamado escores poligênicos de risco.
+
+Nossos genes variam de pessoa para pessoa; é por isso que não somos todos iguais. Mas algumas destas diferenças genéticas podem contribuir para o risco de doenças complexas. Existem algumas doenças raras que são causadas por alterações num único gene, mas agora sabemos que para as doenças mais comuns, como doenças cardíacas e diabetes, muitas vezes não é apenas uma ou duas destas alterações genéticas que são importantes; são muitos deles, cada um tendo um pequeno efeito nos escores poligênicos de risco (portanto, poli ("muitos") gênico ("relacionado aos genes") - pontuando um risco.
+
+Os cientistas compararam o DNA entre grupos gigantescos de pessoas com e sem doenças e identificaram milhares de variações genéticas que influenciam o risco de centenas de doenças. Este importante DNA de referência dos estudos pode então ser comparado com o DNA de pacientes individuais para calcular o seu risco.
+
+Então, como os escores poligênico de risco poderiam realmente ajudá-lo? A avaliação habitual de um paciente por um médico pode indicar um curso de ação, mas quando munido de um escore poligênico de risco, uma abordagem diferente pode se tornar o melhor caminho a seguir. Estes escores podem ajudar os médicos a identificarem melhor medicamentos ou terapias específicas às quais um paciente provavelmente responderá bem, ou se é provável que se beneficiem de um rastreio precoce de câncer específicos. E como os nossos genes não mudam, à medida que mais destas variações são identificadas, os seus escores poligênicos de risco podem ser atualizadas sem necessidade de mais testes. Além disso, lembre-se de que essa mesma informação genética pode ser usada para fornecer um escore poligênico de risco para muitas doenças diferentes.
+
+Então, ficamos presos aos genes que temos durante toda a vida. Mas mesmo quando significam que o nosso escore poligênico de risco de uma doença específica é elevada, isso não significa que o nosso destino esteja selado. Há muito que todos nós podemos e devemos fazer para reduzir o risco geral de doenças, especialmente se o nosso risco poligênico for alto. Por exemplo, pacientes com alto risco poligênico de diabetes tipo 2 podem reduzir significativamente o risco geral através de exercícios e alimentação saudável.
+
+Então o que vem depois? Bem, você pode ver o quanto os escores poligênicos de risco são promissoras, mas ainda há trabalho a ser feito. Mais estudos são necessários para avaliar o impacto clínico do PRS na melhoria do diagnóstico, tratamento ou prevenção de doenças específicas. Além disso, os estudos devem ser aumentados para cobrir uma população global mais ampla. Mas os escores poligênicos de risco já são uma nova ferramenta promissora. Ao levá-los em consideração juntamente com outros fatores de risco, têm o potencial de nos ajudar a viver vidas mais longas, mais saudáveis ​​e mais felizes.
+
+Para saber mais sobre escores poligênico de risco e como você pode participar de estudos de pesquisa envolvendo PRS, visite-nos em cpm.well.ox.ac.uk/prs.
+
+------------------------------------------------------------------------
+
+# ***O que é um escore poligênico de risco?*** {#sec-section2}
+
+**Título**: O que é um escore poligênico de risco?
+
+**Apresentador(es)**: Till Andlauer (Department of Computational Biology and Digital Sciences, Boehringer Ingelheim)
+
+Neste vídeo, vou apresentar a você os escores poligênicos de risco (PRS), também chamados agora apenas de escores poligênicos (PGS), porque você também pode calculá-los com base em características quantitativas como, por exemplo, volumes cerebrais.
+
+*Transtornos poligênicos*
+
+Todos os transtornos comuns complexos são poligênicos. Se quiser quantificar o risco genético para uma doença complexa, terá de avaliar os efeitos de muitas variantes genéticas ao mesmo tempo. A base para um PRS é um GWAS, e há um vídeo separado explicando o que isso é.
+
+*Calculando PRS*
+
+Para o cálculo do PRS, este GWAS é considerado o conjunto de dados de descoberta ou treinamento. Os tamanhos de efeito do GWAS são usados ​​como pesos no cálculo de um PRS. Para obter estimativas estáveis ​​do tamanho do efeito, você precisa de GWAS gerados em amostras grandes, como, por exemplo, conduzido pelo PGC. Mas há um problema: as variantes vizinhas estão correlacionadas, porque são herdadas juntas e, portanto, mostram associações semelhantes. A densidade do SNP poderia, portanto, influenciar o PRS. Em qualquer locus, o PRS clássico usa apenas a variante com o valor p mais baixo. SNPs correlacionados são removidos usando um método chamado aglomeração de LD.
+
+*Aglomeração LD (LD clumping)*
+
+Quantos SNPs usar? Essa é uma pergunta difícil. Você pode querer usar apenas os SNPs que mostram significância em todo o genoma – 44 neste estudo sobre depressão. Mas e esses aqui? Eles não são relevantes? Provavelmente, eles se tornariam significativos se um tamanho de amostra maior fosse usado para o GWAS. Portanto, normalmente valores de p de 0.05 ou 0.01 são usados ​​como limites para o cálculo do PRS clássico.
+
+*Outros métodos*
+
+Nos últimos anos, foram publicados muitos outros métodos que utilizam estruturas de regressão bayesiana para modelar o desequilíbrio de ligação e, assim, calcular os pesos corrigidos por LD. Esses métodos, como LDpred, PRS-CS e SBayesR, foram avaliados em um manuscrito recente e apresentam desempenho muito melhor que o PRS clássico.
+
+Não importa como você escolha seus pesos, o próximo passo é sempre o mesmo. Para cada SNP, multiplique o peso pelo número de alelos de efeito. Se "A" for o alelo do efeito, então o fator de multiplicação seria "0" neste caso, aqui "1" e aqui "2". Você faz essa multiplicação para cada SNP e soma todas as variantes para obter uma única pontuação. Um PRS por si só, para uma única pessoa, é apenas um número arbitrário que não pode ser bem interpretado.
+
+Para poder interpretar o PRS, é necessário um grande grupo de pessoas que partilhem a mesma ancestralidade e possivelmente até a mesma origem sociodemográfica entre si e com as pessoas utilizadas para o GWAS de treinamento. Somente com este grupo você consegue interpretar o PRS de um indivíduo em relação a esse grupo. E se você calcular o PRS para muitas pessoas, verá que os escores seguem uma distribuição normal. O PRS de um único indivíduo pode então mapear para um percentil inferior, médio ou superior dentro dessa distribuição.
+
+Os pacientes que sofrem de um transtorno terão, em média, PRS mais elevado para esse transtorno do que os controles saudáveis, mas apenas em média. As predições de risco a nível individual do PRS têm, portanto, uma sensibilidade e especificidade muito fracas. Basicamente, você só pode dizer alguma coisa sobre as pessoas mapeadas para os percentis mais baixos ou mais altos; eles têm risco significativamente menor ou maior para o transtorno. E para todos os intermediários, você não pode dizer muito.
+
+É possível, no entanto, obter previsões bastante boas se compararmos os extremos da distribuição, mas as razões de chances alcançadas são, evidentemente, ainda muito mais baixos do que os das doenças monogênicas. No entanto, o PRS pode ser utilizado para estratificação de risco para identificar pessoas de alto risco que possam necessitar de mais atenção médica.
+
+*Aplicações*
+
+Na pesquisa, o PRS tem muitas aplicações altamente úteis. Desde a avaliação da carga de risco poligênico para variantes comuns em famílias, especialmente afetadas por transtornos psiquiátricos, até à caracterização genética dos subtipos de transtorno bipolar e, claro, muitos, muitos mais. Além disso, muitos artigos de revisão e métodos sobre PRS foram publicados recentemente, e você encontrará facilmente muito material para continuar lendo.

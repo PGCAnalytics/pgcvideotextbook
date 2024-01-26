@@ -1,0 +1,25 @@
+---
+title: "Capítulo 2.1: Organização do Genoma"
+---
+
+# ***Uma introdução ao genoma humano*** {#sec-section1}
+
+**Título**: Uma introdução ao genoma humano
+
+**Apresentadores:** Genética HMX
+
+\[Música\]
+
+Os humanos em todo o mundo têm muito em comum, mas também uma enorme diversidade. Algumas das diferenças entre cada um de nós vêm do nosso ambiente e das experiências de vida, mas o nosso DNA desempenha um papel importante na determinação da nossa aparência, das nossas características e da nossa saúde. Existem milhares de genes na sequência do genoma humano. Mudanças em genes individuais podem determinar se temos sardas, se podemos digerir lactose, se temos cera de ouvido úmida ou seca, se somos daltônicos para o vermelho-verde ou se temos probabilidade de ter olhos azuis ou se achamos que brócolis tem um sabor melhor. Os genes individuais também podem determinar se desenvolveremos anemia falciforme, fibrose cística ou doença de Huntington. Vários genes agem em conjunto com o nosso ambiente para determinar a cor do nosso cabelo e da pele, a nossa altura, o nosso peso, a nossa pressão arterial e o nosso risco de desenvolver diabetes tipo 2, depressão, câncer, algumas doenças autoimunes e muitas outras condições.
+
+Apesar de todas estas diferenças potenciais, os humanos são 99,9% geneticamente idênticos. Como é possível que sejamos todos tão semelhantes e ao mesmo tempo tão diferentes? Vamos ampliar a menor unidade genética: um único nucleotídeo de ácido desoxirribonucleico ou DNA.
+
+Um nucleotídeo de DNA é composto de grupos açúcar e fosfato e uma das quatro bases nitrogenadas: adenina, timina, guanina e citosina, abreviadas como A, T, G e C. Os grupos açúcar e fosfato formam a espinha dorsal estrutural do DNA. permitindo que os nucleotídeos se concatenem em uma longa fita única de DNA, enquanto as bases determinam a sequência do DNA. As propriedades químicas do DNA permitem a formação de ligações entre as bases, a fim de criar uma fita dupla com duas ligações de hidrogênio emparelhando A e T e três pares C e G. Embora diferentes tipos de células humanas possam ser muito diferentes em aparência e função, elas contêm o mesmo genoma, que consiste em cerca de três Giga bases ou três bilhões de pares de bases de DNA. Todo o DNA na célula teria cerca de dois metros de comprimento se fosse esticado e precisasse ser condensado para caber em células tão pequenas quanto 10 micrômetros de diâmetro.
+
+O DNA é primeiro enrolado em sua estrutura de hélice canônica e, em seguida, enrolado em proteínas histonas para formar uma estrutura de proteína de DNA chamada nucleossomo. Esses nucleossomos podem ser ainda enrolados e enrolados para criar uma estrutura compacta que se encaixa no núcleo. Durante a divisão celular, o DNA é organizado em cromossomos bem enrolados, 46 no total, sendo 23 provenientes de cada pai. Esses cromossomos podem ser separados com facilidade e precisão durante a divisão celular, garantindo que cada nova célula contenha uma cópia exata do DNA. Fora da divisão celular, o DNA fica descondensado no núcleo, permitindo maior acessibilidade.
+
+A maquinaria transcricional regula a expressão de cerca de 20.000 genes, que, embora correspondam a menos de 2% de todo o DNA genômico, codificam todas as proteínas necessárias para construir e operar uma célula humana. Então, voltando à questão original, “como é possível que toda a diversidade humana exista quando somos 99,9% geneticamente semelhantes?”, é importante lembrar que o 0,1% de DNA que varia, em média, entre cada de nós, na verdade corresponde a cerca de 3 milhões de diferenças em todo o genoma, com 20.000 delas, em média, caindo em genes codificadores de proteínas. Embora isso seja igual a aproximadamente uma diferença por gene, na realidade, estas diferenças não estão distribuídas uniformemente entre as regiões codificantes.
+
+As diferenças na sequência de DNA são chamadas de variantes, e aquelas que afetam uma única posição são chamadas de variantes de nucleotídeo único ou SNVs. SNVs comuns que ocorrem em mais de 1% de uma população são chamados de polimorfismos de nucleotídeo único ou SNPs. Os SNPs, juntamente com alterações de sequência em maior escala, como deleções, duplicações e rearranjos, criam toda a riqueza da diversidade genética humana em nível populacional.
+
+Isto também levanta muitas questões a nível individual: como é que o DNA determina as nossas características? Como podemos compreender o que um gene faz e como as variantes desse gene podem afetar as nossas vidas? O que nosso DNA pode nos dizer sobre o risco de doenças e o risco de nossos entes queridos? Como as informações de nossos genomas podem melhorar nossos cuidados médicos? Compreender a genética nos permite aplicar os conceitos de herdabilidade e variação genética a questões de saúde e doenças humanas no nosso mundo de hoje.

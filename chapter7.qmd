@@ -29,7 +29,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=p3m6MM5b-UU&t=148s")
 ```
 
-Link to video transcript [here](chapter7_transcript.qmd#sec-video1).
+Link to video transcript [here](chapter7_transcript.qmd#sec-video1). Tradução para o português disponível [aqui](chapter7_transcript_portugues.qmd#sec-section1).
 
 \[Note: This paper is now available as [*Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations: https://doi.org/10.1016/j.cell.2019.08.051*\]](https://doi.org/10.1016/j.cell.2019.08.051)
 
@@ -52,7 +52,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=p3m6MM5b-UU&t=2321s")
 ```
 
-Link to video transcript [here](chapter7_transcript.qmd#sec-video2).
+Link to video transcript [here](chapter7_transcript.qmd#sec-video2). Tradução para o português disponível [aqui](chapter7_transcript_portugues.qmd#sec-section2).
 
 ------------------------------------------------------------------------
 
@@ -73,6 +73,6 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=p3m6MM5b-UU&t=890s")
 ```
 
-Link to video transcript [here](chapter7_transcript.qmd#sec-video3).
+Link to video transcript [here](chapter7_transcript.qmd#sec-video3). Tradução para o português disponível [aqui](chapter7_transcript_portugues.qmd#sec-section3).
 
 Link to Tractor [GitHub](https://github.com/Atkinson-Lab/Tractor) and [Tutorial](https://github.com/Atkinson-Lab/Tractor-tutorial).

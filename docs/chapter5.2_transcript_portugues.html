@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PGC Video Textbook - Capítulo 5.2: Imputação</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PGC Video Textbook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html" rel="" target="">
+ <span class="menu-text">Contact us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://pgc.unc.edu/" rel="" target="">
+ <span class="menu-text">PGC Website</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Capítulo 5.2: Imputação</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pgc_logo_website_v3.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/PGCAnalytics/pgcvideotextbook/">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-twitter"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/PGCgenetics">
+            PGC Twitter
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to the PGC Video Textbook!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: The Genome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: Technologies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Study Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: GWAS Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6: Polygenic Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7: Ancestry-Specific Analyses and Considerations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8: Post-GWAS Bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9: Advanced Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10: Other Considerations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Software Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_cnvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CNVs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_ewas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_geneset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gene Set Identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_gwas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_genomicSEM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genomic SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_MR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mendelian Randomization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_mtag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MTAG</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_prs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SNP Heritability and Genetic Correlation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools/Software Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://pgc.unc.edu/for-researchers/download-results/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGC Summary Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-section2" id="toc-sec-section2" class="nav-link active" data-scroll-target="#sec-section2"><strong><em>Haplótipos e Imputação</em></strong></a></li>
+  <li><a href="#sec-section3" id="toc-sec-section3" class="nav-link" data-scroll-target="#sec-section3"><strong><em>Imputação</em></strong></a></li>
+  <li><a href="#sec-section1" id="toc-sec-section1" class="nav-link" data-scroll-target="#sec-section1"><strong><em>Uma introdução à imputação de genótipos</em></strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capítulo 5.2: Imputação</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-section2" class="level1">
+<h1><strong><em>Haplótipos e Imputação</em></strong></h1>
+<p><strong>Título</strong>: Haplótipos e Imputação</p>
+<p><strong>Apresentador(es)</strong>: Dr.&nbsp;Gábor Mészáros (Institute of Livestock Sciences (NUWI), University of Natural Resources and Life Sciences)</p>
+<p>Olá a todos, bem-vindos de volta à série de palestras Introdução à Genômica. Desta vez falaremos sobre haplótipos e imputação. Antes de passarmos para o novo material, aqui está um rápido resumo das palestras anteriores. Então falamos sobre marcadores SNP que são amplamente utilizados. Existem várias maneiras de expressar esses genótipos, mas estamos sempre falando de SNPs bialélicos. E esses SNPs estão sendo genotipados com chips SNP específicos da espécie. Conversamos sobre como determinar as posições no genoma, falamos sobre mapas físicos e também falamos sobre eventos de recombinação que são de grande importância biológica e introduzem variabilidade nas populações.</p>
+<p>Este gráfico também é da última vez [sessão]. Portanto, temos um indivíduo aqui e há um evento de recombinação. E os haplótipos originais, denotados como A, B e C está mudando para A, b e c por causa desse evento de recombinação. Durante esta palestra, examinaremos um pouco mais de perto esses haplótipos e também mostraremos como usá-los ou qual a sua utilidade no contexto da imputação de genótipos.</p>
+<p>Então, quando olhamos para os genótipos, o que vemos na realidade são cromossomos paternos e maternos juntos que se unem durante a fertilização para formar o conjunto de alelos. Então o que vemos são certos genótipos em determinados loci. A título de exemplo, digamos que temos estes quatro indivíduos e em três loci temos estes genótipos. O que vemos aqui são apenas resumos. Agora, é claro, podemos fazer a pergunta: quais são os conjuntos reais de alelos em cada cromossomo? Para o primeiro indivíduo, é fácil porque o genótipo consiste inteiramente em homozigotos. Então basicamente AA, bb e CC. Portanto, sabemos que em ambos os cromossomos existem, na verdade, os mesmos haplótipos de AbC.</p>
+<p>No segundo indivíduo já temos um heterozigoto. Então, aqui também está apenas uma opção de como dividir os haplótipos, os haplótipos reais em ambos os cromossomos são diferentes um do outro porque em um cromossomo há ABc e no outro cromossomo há aBc. Então, basicamente, um de cada um desses alelos vai para um cromossomo e o outro [alelo] para o outro cromossomo.</p>
+<p>É claro que isso se torna mais interessante quanto mais heterozigotos tivermos em nosso genoma, porque isso na verdade cria opções sobre como os haplótipos poderiam ser distribuídos. Então temos esses três loci aqui e dois deles são heterozigotos, então o locus Bb e Cc. Quando olhamos para as combinações de pares destes alelos, então poderemos chegar a duas soluções – esta ou esta. Se você observar os alelos nesses pares de haplótipos, então os genótipos sempre terminarão com esse genótipo resumido, mas também, se você observar com cuidado, os pares de haplótipos, portanto, os dois primeiros pares de haplótipos são diferentes dos dois segundos pares de haplótipos. É claro que quanto mais heterozigotos tivermos, mais complicado fica. Assim, por exemplo, para os três heterozigotos temos ainda mais combinações. Então coloquei pontos de interrogação aqui. Então, se quiser, você pode resolver isso sozinho. Então basta pausar o vídeo aqui e tentar descobrir quais são as reais possibilidades de haplótipos caso tenhamos três loci heterozigotos. Então, quais são as combinações de haplótipos possíveis que resultam nesses genótipos resumidos. Depois de fazer isso, você pode retomar o vídeo e ver se acertou. Ou apenas continue assistindo e obtenha a resposta em 3, 2, 1… pronto!</p>
+<p>Então essas são as possibilidades reais. Então você vê que na verdade existem quatro pares de haplótipos possíveis com base nesses três genótipos heterozigotos. E cada um desses pares de haplótipos é diferente um do outro. Então, basicamente, como você resolve isso: então, o primeiro, você pega o primeiro de cada par, então A, B, C. E então, o que resta é abc. Então seria isso, a primeira combinação. Então você vai com as combinações de pares. Então você inverte um locus de cada vez até chegar a todas as combinações.</p>
+<p>É claro que temos muito mais do que apenas três heterozigotos no genoma. Portanto, surge uma questão: como resolvemos estas questões na prática, onde temos dezenas de milhares de loci e também milhares de genótipos heterozigotos? Agora, a resposta é, claro, com computadores. Felizmente, existe um software sofisticado que resolve essas questões para nós e fornece os haplótipos que poderíamos analisar mais detalhadamente. Este processo de cálculo é chamado de faseamento. Portanto, o faseamento é uma tarefa ou processo no computador para atribuir alelos aos cromossomos paternos e maternos. Ele procura haplótipos, ou as chamadas fases, em dados genotípicos em grande escala e resolve esses problemas complexos de atribuição de haplótipos corretos. Claro, isso é mais fácil se os chamados trios forem genotipados, ou seja, basicamente, os pais e a prole ou, no caso dos humanos, o pai, a mãe e seu filho. Ou ainda, se tivermos trios multigeracionais que entram nas famílias, incluindo avós e bisavós são genotipados. Então, se todos forem genotipados, esse processo fica um pouco mais fácil. Na realidade, porém, não temos esta situação ideal. Muitas vezes, apenas partes das populações são genotipadas, por isso é mais difícil descobrir os haplótipos reais. Felizmente, isto também é possível e os haplótipos também podem ser determinados para amostras de indivíduos “não relacionados” para uma população. “Não relacionado” aqui está entre aspas porque geralmente existe algum tipo de relacionamento entre os indivíduos de uma população. Como mencionei antes, existem soluções de software específicas para tudo isso, que na verdade dividem os genótipos em segmentos menores e tentam derivar esses haplótipos desses segmentos menores e mesclá-los novamente de maneira adequada.</p>
+<p>Agora, quando determinamos estes haplótipos ou estas fases numa população, estes são realmente úteis para uma série de propósitos. E uma dessas finalidades é a chamada imputação de genótipos. Mencionei várias vezes que a genotipagem do SNP é bastante confiável, mas ocasionalmente vemos o genótipo ausente. Então, na verdade, com esse processo de imputação de genótipos, podemos fazer uma suposição fundamentada sobre como preencher esses genótipos ausentes para obtermos a informação completa. Portanto, o processo de imputação nada mais é do que preencher informações faltantes. Existem duas maneiras principais de usar esse método. O primeiro é a imputação de SNPs ausentes esporadicamente, e o outro é a imputação entre chips SNP. Por exemplo, podemos estender um chip SNP de densidade mais baixa, por exemplo, um chip SNP de 50k, para uma densidade mais alta. Para ambas as abordagens, darei exemplos nos slides a seguir.</p>
+<p>Dos dois métodos, a imputação de SNPs ausentes esporadicamente é mais direta. Assim, como estabelecemos, alguns dos SNPs podem estar faltando devido a erros de genotipagem. E devido a estes erros de genotipagem, poderemos ser forçados a remover indivíduos da nossa análise. Ou, por exemplo, se precisarmos de dados completos no sentido de que todos os SNPs devam ser conhecidos, então isso também será um problema para nós. Mas esta situação poderia ser corrigida imputando estes SNPs esporadicamente ausentes.</p>
+<p>Digamos que temos um haplótipo estabelecido em uma população assim. E quando temos outro animal ou indivíduo que está genotipado, e há um erro de genotipagem, mas o haplótipo fica assim. Então, é basicamente o mesmo de antes, então todos os outros loci para este haplótipo são exatamente iguais, mas esses genótipos estão faltando. Com base nesta comparação, se todos os outros SNP se enquadrarem, temos uma boa ideia do que deve ser preenchido no lugar dos pontos de interrogação para que tenhamos dados completos também para este indivíduo.</p>
+<p>A imputação entre chips SNP funciona segundo uma lógica semelhante, mas é um pouco mais complexa. Então, digamos que temos chips SNP de duas densidades. E este é um exemplo menor. Então você vê que há 16 colunas aqui, então este será nosso chip SNP maior, e o segundo chip SNP seria um menor que consiste em oito SNPs. Portanto, cada linha aqui seria um indivíduo, cada coluna seria um locus, e esses loci são homozigotos, então isso é 0; heterozigoto, isto é 1; e o outro homozigoto que é 2. Agora, o arranjo usual com esses chips SNP menores e maiores, de modo que eles contenham mais ou menos SNPs, é que um chip SNP, ou o chip SNP menor, seja um subconjunto do maior. Então, basicamente, todos os SNPs do chip SNP menor também aparecem nos maiores, mas há outros SNPs que estão no chip SNP maior, mas desconhecidos para o menor. Então isso mostra a situação inicial aqui, quando genotipamos nove indivíduos com o chip SNP menor.</p>
+<p>Agora, digamos que esses indivíduos pertençam a uma população pouco aparentada, mas também sabemos que, mesmo em indivíduos não aparentados, existem pequenos trechos de sequências que são idênticas por descendência. Esses padrões locais de IBD, ou idênticos por descendência, poderiam ser descritos e também determinado o comprimento desses segmentos, que obviamente varia com base nas recombinações. Se identificarmos esses segmentos ou esses haplótipos, podemos usá-los a nosso favor. Então, por exemplo, esses seriam os haplótipos que ocorrem na nossa população. E também para fins deste exemplo, eles também são codificados por cores. Então, se voltarmos ao nosso exemplo original para os nove indivíduos que são genotipados com o chip SNP de densidade mais baixa. Assim, pudemos ver que cada um desses indivíduos poderia ser descrito como uma combinação de certos haplótipos. E como estes haplótipos já são conhecidos, sabemos realmente o que devemos colocar no lugar dos pontos de interrogação. E isso também é feito. E as informações estão sendo preenchidas nessas lacunas que antes eram desconhecidas. Então, o que basicamente fazemos é pegar as informações dos chips SNP de maior densidade, criar os haplótipos para a população e usar as informações desses haplótipos para preencher as informações, também, para os outros indivíduos que foram genotipados com o chip SNP de densidade mais baixa, caso este chip SNP de densidade mais baixa seja um subconjunto do chip SNP de densidade mais alta. Gostaria também de sublinhar aqui que estes tipos de haplótippos não surgem do nada. Mas, na verdade, precisamos de um número suficiente de indivíduos que sejam realmente genotipados com este chip SNP de maior densidade nesta população para que possamos determinar os haplótipos reais que ocorrem nesta população, que podem ser usados ​​posteriormente para esta imputação genômica, conforme descrito aqui.</p>
+<p>Agora, por que isso é útil? Bem, os chips SNP de densidade mais baixa tendem a custar menos. Portanto, se o custo da genotipagem for um problema ou quisermos genotipar um número realmente grande de indivíduos, podemos usar apenas esse chip SNP de densidade mais baixa e partir para o processo de imputação. Claro, para isso precisamos de haplótipos que foram determinados com base no genótipo dos indivíduos pelo chip SNP de alta densidade. Esta imputação é chamada in silico. Então, basicamente, é feito com computadores, o que também significa que não há custos adicionais além do custo computacional de todo o processo.</p>
+<p>Existem diferentes opções e possibilidades de software para esse processo. E, que eu saiba, todos ou a maioria deles também são de acesso gratuito ou aberto. Com base neste software podemos fazer a imputação que será feita com certa precisão. Então, na verdade, todo o processo não é cem por cento preciso, mas funciona surpreendentemente bem. A precisão da imputação em geral depende do tamanho do conjunto de referência e da qualidade dos dados. O que quero dizer com isto é que precisamos determinar realmente os haplótipos que ocorrem nesta população, ou na população de interesse. Então, é claro, precisamos ter um genótipo de amostra representativo com chips SNP de maior densidade para determinar os haplótipos que ocorrem na população, para que possamos usar esses haplótipos mais adiante no processo de imputação.</p>
+<p>Em geral, a imputação funciona muito bem para os SNPs comuns que ocorrem com razoável frequência dentro de uma população. Isto também significa que, infelizmente, a imputação funciona menos bem para estes chamados SNPs raros que ocorrem com muito pouca frequência, porque simplesmente não há forma de o processo de imputação os retirar dos haplótipos que estão disponíveis para esta população. Portanto, o conselho geral é que, se alguém estiver interessado em alelos raros muito específicos, o processo de imputação talvez não seja a melhor solução. Nesse caso, é aconselhável genotipar os indivíduos com o chip SNP de maior densidade. Mas no geral, a imputação funciona muito bem. Então coloquei aí que a precisão da imputação poderia ser maior, ou é superior a 95%. Então eu só coloquei os números, para vocês terem uma ideia que estamos falando de valores muito altos. Na verdade, principalmente nos estudos de simulação, na minha experiência, a precisão da imputação é inferior a 99% e as pessoas começam a ficar insatisfeitas. Então, na verdade, nos artigos, especialmente nas simulações, a precisão da imputação é muito superior a 95%. Em dados reais, bem, pode ser variável. Como mencionei, isso depende muito da referência e da qualidade dos dados. Além disso, há uma série de possibilidades sobre como avaliar a precisão real da imputação, mas isso é feito principalmente com o chamado procedimento de mascaramento. Portanto, é um processo muito semelhante ao que descrevi também nesta apresentação. Então tem os genótipos obtidos a partir de um chip SNP de maior densidade e basicamente, dentro desse processo. Alguns desses genótipos são excluídos e então o software de imputação é usado para preencher esses marcadores ausentes. Mas, é claro, sabemos qual é o genótipo real para esses chips SNP de maior densidade. Então, basicamente, são comparados os valores que foram preenchidos pelo software e aqueles que foram obtidos na própria genotipagem. E esta é a base de como o software de imputação também está sendo avaliado, quão bom é o seu trabalho. Mas, como mencionei, esses softwares fazem um trabalho surpreendentemente bom.</p>
+<p>E já chegamos ao final deste segmento e terminamos, como sempre, com um pequeno resumo. Falamos sobre os chamados haplótipos que são uma série de SNPs. E esses haplótipos esclarecem qual combinação de alelos vem de qual pai. É claro que, se quisermos fazer esses cálculos em larga escala ou em genótipos reais, precisaremos usar computadores para isso. E há uma variedade de programas de software especializados que fazem esse trabalho para nós. E a abordagem em si é chamada de faseamento. E essas fases ou haplótipos poderiam ser utilizadas de diversas maneiras, mas uma das utilizações é o chamado processo de imputação que nada mais é do que preencher os SNPs faltantes aos nossos dados. Aqui, também temos opções se quisermos preencher SNPs ausentes esporadicamente que não foram genotipados por algum motivo, para que algum tipo de erro de genotipagem ou SNPs ausentes possa ser preenchido ou imputado. Ou temos uma opção diferente, quando podemos realmente estender um chip SNP menor para um maior, com base nos haplótipos e nas informações desses chips SNP maiores e mais densos. Talvez até economizando algum dinheiro no processo, porque esses chips SNP de densidade mais baixa tendem a custar menos. E se não estivermos interessados ​​em alguns alelos raros muito específicos e estivermos bem com a versão imputada destes genótipos, podemos usá-los para a nossa investigação. Então terminamos aqui hoje. Deixe-me saber se você tiver alguma dúvida ou comentário na seção de comentários abaixo. Além disso, obrigado pelo tempo gasto neste vídeo e desejo-lhe um ótimo dia.</p>
+<hr>
+</section>
+<section id="sec-section3" class="level1">
+<h1><strong><em>Imputação</em></strong></h1>
+<p><strong>Título</strong>: Imputação</p>
+<p><strong>Apresentador(es)</strong>: Dra. Sarah Medland (The Psychiatric Genetics Group, Queensland Institute of Medical Research)</p>
+<p><strong>Sarah Medland</strong>:</p>
+<p>Olá, meu nome é Sarah Medland e falarei com vocês hoje sobre imputação. Portanto, há três razões principais pelas quais podemos imputar dados. A primeira delas é a meta-análise ou a combinação de nossos dados com os de outra coorte. Em segundo lugar, mapeamento preciso. E darei um exemplo disso daqui a pouco. O terceiro é combinar dados de diferentes chips.</p>
+<p>Então imagine uma situação em que você tem uma grande coorte que está sendo genotipada metade no chip A e metade no chip B. Se juntarmos os dados desses dois chips e analisá-los, acabaremos com uma mistura de distribuições de poder. Portanto, teríamos alguns SNPs que estão em ambos os chips e seriam os SNPs mais poderosos na análise em comparação com aqueles que estão em um chip ou outro. Se levássemos isto adiante para análise e olhássemos para os nossos gráficos QQ e Manhattan, teríamos muita dificuldade em interpretar esses resultados devido a essa mistura de poderes. Portanto, se encontrarmos uma associação e olharmos para a região, poderíamos esperar que a distribuição dos valores-p não seguiria o que esperaríamos com base no LD ou na estrutura de correlação dentro dessa região. Então, como temos esse diferencial de potência, os SNPs que estariam em ambos os chips teriam a potência mais alta e valores p potencialmente mais altos do que aqueles que estão em um chip ou outro. Então, para contornar isso, o que poderíamos fazer é reunir esses dois conjuntos de dados, levá-los adiante para imputação e terminar com um conjunto de dados que tenha um N razoavelmente constante e uma única distribuição de potência que não dependa se um o SNP estava presente no chip ou não. Também podemos usar a imputação para corrigir faltas esporádicas e erros de genotipagem, e também imputar tipos de variação que não genotipamos diretamente, como variantes estruturais.</p>
+<p>Aqui está um exemplo de mapeamento preciso. Nesta situação, executamos um GWAS, mas usamos apenas SNPs genotipados e temos essa variante que encontramos no cromossomo 19. Quando entramos e damos uma olhada, parece estar flutuando, então não é realmente suportado. Na verdade, não temos nada nesta região que o sustente particularmente bem. Então, olhando para isso, é muito difícil descobrir se isso pode ser uma descoberta verdadeira ou não, e uma das coisas que podemos fazer é um mapeamento preciso, que é entrar e imputar outro conteúdo naquela região e ver se há suporte adicional que não estamos observando em nossos SNPs genotipados. Então, quando avançamos e fazemos isso neste caso, podemos ver que este é realmente o verdadeiro efeito. É bem apoiado pelos SNPs da região, só que essas variantes não foram genotipadas neste chip.</p>
+<p>Então, quando falamos sobre imputação, do que estamos realmente falando aqui? Geralmente começamos com um conjunto de dados de genótipo que possui genótipos ausentes ou não digitados. Temos um conjunto de referência de haplótipos, portanto, um conjunto de referências público, e essas referências são comparadas aos nossos genótipos. Tentamos identificar qual haplótipo melhor representa cada segmento de dados e então inferimos o conteúdo faltante. Então, dito de outra forma, começamos com a amostra do genótipo, que tem alguns genótipos, mas faltam outros. Temos nosso conjunto de haplótipos de referência. O que vamos fazer é comparar nossas amostras de genótipos com nossos haplótipos de referência. Tentar descobrir quais haplótipos representam melhor quais segmentos de dados e, em seguida, inferir os genótipos ausentes. Isto é feito de forma probabilística e podemos avaliar a precisão desta imputação à medida que avançamos.</p>
+<p><em>Passos para Imputação</em></p>
+<p>OK, há algumas etapas e coisas em que precisamos pensar quando estivermos configurando a imputação. Então, primeiro, precisamos ter dados de controle de qualidade muito bons e isso seria semelhante ao controle de qualidade que foi mostrado na sessão de controle de qualidade no GWAS de ontem. Em segundo lugar, precisamos decidir quais das nossas referências queremos usar, e estamos na situação em que agora temos muitas referências, por isso vale a pena pensar cuidadosamente sobre porque você está usando uma referência específica e o que está tentando a ver com sua análise.</p>
+<p>As referências mais comuns a utilizar neste momento são o 1000 Genomes e as referências HRC. A referência do 1000 Genomes é uma referência multiétnica, enquanto o HRC é uma referência predominantemente europeia. As referências HapMap e 1000 Genomes podem ser baixadas e usadas localmente. As outras referências estão disponíveis principalmente apenas em servidores de imputação customizados. Embora haja uma grande diferença no tamanho das referências, por exemplo, a referência 1000 Genomes rende cerca de 20000 marcadores, enquanto, desculpe, 20 milhões de marcadores, enquanto o HRC rende cerca de 40 milhões e o TOPMed rende cerca de 300 milhões. No final das contas, se você tiver um grupo de indivíduos predominantemente europeus, provavelmente acabará com entre 8 e 10 milhões de marcadores utilizáveis ​​para sua análise.</p>
+<p><em>Faseamento</em></p>
+<p>Assim, uma vez que tenhamos feito o controle de qualidade e decidido nossas referências, o próximo passo é fasear nossos dados. O faseamento, neste caso, significa que estimamos os haplótipos em nossos dados. Então pegamos nossos dados genotípicos. Tentamos reconstruir os haplótipos usando dados de referência e, por exemplo, nesta situação aqui temos três genótipos e há quatro haplótipos potenciais que podemos surgir a partir desses dados. Não fazemos isso manualmente. Usamos software especialmente projetado para isso, e os pacotes de software mais comuns no momento são Eagle e Shapeit. Eles usam o modelo oculto de Markov e os métodos de Monte Carlo da cadeia de Markov para reconstruir os haplótipos. E então eles são usados ​​para fornecer estruturas para inferir ou imputar os dados.</p>
+<p><em>Programas de Imputação</em></p>
+<p>Também para a nossa imputação utilizamos programas customizados e os mais utilizados no momento são minimac ou impute. Existem outros que estão disponíveis. Um ponto importante é nunca usar o Plink para imputação, embora o Plink tenha uma opção de imputação, ele não é muito bem projetado e eu não recomendaria usá-lo. Portanto, os dois programas de imputação mais comumente usados ​​são minimac e impute. Portanto, o minimac vem do trabalho de Gonçalo Abecasis, Christian Fuchsberger e colegas. E tem uma série de opções de análise downstream, incluindo SAIGE, que usará no final da semana, BoltLMM e Plink2. O impute agora está disponível para imputar a versão 5. Ela vem de Jonathan Marchini e colegas e incorpora a Transformada Posicional de Burrows Wheeler (PBWT), portanto, é uma maneira rápida e eficiente de realizar a imputação. Mais uma vez, ele possui vários programas de análise downstream que foram escritos especificamente para a saída deste programa.</p>
+<p><em>Livro de receitas de imputação</em></p>
+<p>Então, como você realmente faria sua imputação? Se você estiver nesta situação em que precisa fazer a imputação localmente, eu recomendaria seriamente usar o que chamamos de livro de receitas e há vários deles disponíveis online. Então aqui está um link para o livro de receitas de imputação minimac3 para 1000 Genomes. Se você estiver em uma situação em que pode usar um servidor de imputação, recomendo fortemente que você faça isso e há alguns deles disponíveis. Portanto, há um na Universidade de Michigan, que é provavelmente o mais usado, há um no Sanger no Reino Unido e um novo, o servidor de imputação TOPMed para aqueles que desejam imputar dados TOPMed. Aqui está uma pequena foto de cada uma dessas primeiras páginas. Na prática, não vamos explicar como você imputa dados, porque há um conjunto muito bom de sessões práticas de imputação disponíveis no site do servidor de imputação de Michigan, estas são da reunião da Associação Americana de Genética Humana em 2020, e você pode percorrer cada um deles se estiver interessado em aprender como executar a imputação no servidor.</p>
+<p><em>Controle de qualidade de dados</em></p>
+<p>Os pontos principais são que, como eu disse, precisamos fazer um bom controle de qualidade dos dados para excluir SNPs com falta excessiva, baixa frequência de alelos menores, problemas de Hardy-Weinberg e erros mendelianos. Devemos também abandonar os SNPs de cadeia ambígua ou palindrômica. E você precisa ter cuidado para que seus dados estejam na construção e alinhamento corretos. Portanto, dependendo da referência que você escolheu, se você escolheu as referências TOPMed, você precisa ter seus dados na construção 38. Se você escolher as outras, a build deve estar na construção 37. Então você precisa gerar seus dados em o formato esperado para o programa de faseamento, e é muito importante que você verifique a convenção de nomenclatura das referências e do programa que deseja usar. Os SNPs também usam números RS ou estão em uma referência de posição?</p>
+<p>Se você estiver usando um servidor de imputação, depois de ter seus dados controlados e prontos para uso, é realmente tão simples quanto fazer upload de seus dados, escolher as opções que deseja usar e, em seguida, enviar o trabalho. Após a imputação, você tem cerca de uma semana para retirar os dados imputados do servidor e então tudo será apagado.</p>
+<p>OK, depois de fazermos nossa imputação, se usarmos o servidor de imputação de Michigan, nossos dados estarão em um formato chamado formato VCF. Portanto, neste formato, cada linha do arquivo representa uma variante e cada bloco de dados representa um indivíduo. O arquivo contém nossos dados imputados em três formatos diferentes. O primeiro deles antes do ponto e vírgula é o genótipo ou de melhor estimativa e se refere ao número de cópias do alelo alternativo que alguém possui. O segundo deles é o formato da dosagem, que varia entre zero e dois, e mais uma vez é uma contagem de um número de doses do alelo alternativo que alguém possui. O terceiro formato, que não é usado com muita frequência, é o que chamamos de formato de probabilidade de genótipo e, portanto, é a probabilidade de um indivíduo ter um genótipo AA, AB ou BB para cada um dos SNPs em nosso arquivo.</p>
+<p>Para acompanhar isso, temos uma série de arquivos de informações que contêm informações sobre a precisão da imputação e a frequência das variantes na amostra. Portanto, temos nossos identificadores SNP e você pode ver que alguns deles ficam bastante longos. Temos nossos dois alelos, nossas frequências, nossos r-quadrados ou precisões de imputação, uma coluna que nos diz se é genotipado ou não. E para os SNPs que são genotipados, temos uma precisão de imputação de exclusão. Portanto, isso nos dá uma ideia de quão precisamente esses SNPs genotipados foram imputados ou teriam sido imputados se já não estivessem genotipados.</p>
+<p><em>Rquadrado</em></p>
+<p>Portanto, uma coisa a ter em mente é que existem diferenças sutis entre a maneira como os diferentes programas criam suas métricas de R-quadrado. Em ambos os casos, efetivamente o R-quadrado é a razão entre a variância observada e a variância esperada. Mas existem pequenas diferenças na forma como são calculados. Há também uma diferença no fato de que a medida de informação IMPUTE é limitada a um. Considerando que a medida r-quadrada MACH ou Minimac pode ultrapassar um como estimativa empírica.</p>
+<p>Os dois programas obtiveram um acordo bastante bom e deveriam se alinhar bastante bem se você imputasse o mesmo conjunto de dados nos dois sentidos. Portanto, o R quadrado ou a informação nos informa sobre o nível de certeza que temos nos dados. Então, se tivéssemos um R quadrado de um, isso indicaria que não há incerteza. R quadrado zero significa incerteza completa e, por exemplo, um R quadrado em 0,8 em 1000 indivíduos nos dará a mesma quantidade de poder como se esse SNP tivesse sido genotipado em 800 indivíduos. Então você pode pensar dessa maneira.</p>
+<p>Depois de fazermos nossa imputação, é uma boa ideia fazer um controle de qualidade e verificar se funcionou. Então, algumas coisas que você pode fazer é observar a frequência do alelo menor em comparação com a referência e ver como fica. Você também pode observar o R ​​ quadrado no cromossomo e ver como fica. Então, aqui estão alguns exemplos de uma imputação relativamente boa, mas você pode ver que o r-quadrado varia bastante ao longo do genoma, mas geralmente segue uma distribuição bastante bem definida. Considerando que esta é uma imputação particularmente e deliberadamente ruim, você pode ver que temos uma distribuição muito diferente aqui.</p>
+<p><em>GWAS</em></p>
+<p>Depois de fazer a imputação básica, é uma boa ideia executar um GWAS para uma característica que seja bastante poderosa. Idealmente, algo contínuo. Dê uma olhada no Lambda e nos gráficos do Manhattan e QQ. E então execute a mesma característica usando GWAS usando apenas os genótipos observados e represente graficamente os resultados da variante imputada versus a observada e veja o que você obtém.</p>
+<p><em>Consórcios</em></p>
+<p>Por último, muitas vezes, quando executamos a imputação, na verdade a executamos para um consórcio ou uma meta-análise, e eles lhe darão instruções sobre quais painéis de referência usar e o que fazer. Eles provavelmente pedirão que você analise todas as variantes, independentemente de elas passarem no controle de qualidade ou não. É importante pensar sobre isso, especialmente se você estiver usando referências TOPMed que têm algo em torno de 300 milhões de variantes, já que apenas cerca de 8 a 10 milhões delas serão normalmente úteis para GWAS e, portanto, você executará análises e enviará resultados para muitos, muitos SNPs que não serão muito úteis para ninguém. Portanto, se você tiver alguma dúvida, fique à vontade para perguntar no início da sessão prática ou postá-la no slack. Muito obrigado, tchau.</p>
+<hr>
+</section>
+<section id="sec-section1" class="level1">
+<h1><strong><em>Uma introdução à imputação de genótipos</em></strong></h1>
+<p><strong>Título</strong>: Uma introdução à imputação de genótipos</p>
+<p><strong>Apresentador(es):</strong> Dr.&nbsp;Brian Browning, Universidade de Washington.</p>
+<p><em>Introdução:</em></p>
+<p>Esta palestra abordará a imputação de genótipos, que é uma técnica padrão. Faremos apenas uma visão geral e veremos alguns dos modelos utilizados, que depois na palestra de pesquisa que terei na quinta-feira, faremos uso de algumas informações do tutorial. Vou terminar talvez com um pouco de discussão sobre programação porque isso é algo muito relevante para esse público.</p>
+<p><em>O que é imputação?</em></p>
+<p>Portanto, a imputação é apenas uma estimativa de dados ausentes. Você pode usar os outros dados do conjunto de dados, você tem um conjunto de dados externo. E se você jogou algum jogo de palavras, você fez imputação. Exemplos clássicos, forca. Comece, dê três caracteres, os dois últimos caracteres são AT e cerca de um terço das letras do alfabeto podem caber lá. E Forca dá uma boa ilustração de um princípio geral de imputação - quanto mais contexto você tiver, melhor poderá preencher ou estimar os dados ausentes. Se eu lhe der alguns caracteres adicionais para a frase “o cachorro perseguiu o”, você poderá fazer um trabalho muito melhor preenchendo-a. Em vez de um terço dos caracteres do alfabeto, há um - C provavelmente vem à mente primeiro. Também poderia ser um R, mas sua distribuição de probabilidade se torna muito mais pontual.</p>
+<p><em>Imputação de genótipo:</em></p>
+<p>A imputação é o preenchimento de genótipos. Então, originalmente começou onde você realmente estava imputando genótipos. Agora, por razões computacionais, trabalhamos no nível de haplótipos e imputação de alelos. Portanto, seus dados de referência consistem em haplótipos de referência, haplótipos de referência de duas fases por amostra de referência. E a amostra que você está imputando também tem dois haplótipos, mas faltam muitos dados. Normalmente é genotipado em uma matriz SNP. E você tem apenas alguns marcadores. Você pode ter um marcador aqui, ou em um haplótipo, há um G, e um marcador aqui no outro haplótipo, há um C. E no segundo haplótipo da amostra, um A e um C. E com base nessas amostras de referência e um modelo probabilístico, você deseja fazer inferências sobre o que são todos esses pontos.</p>
+<p><em>Inscrições para GWAS:</em></p>
+<p>A imputação já existe há muito tempo. A imputação de genótipos ausentes esporádicos já existe há muito tempo. Mas a imputação ganhou destaque em 2007, quando um grupo de Oxford com o Consórcio Wellcome Trust de controle e caso, de certa forma, simultaneamente, um grupo em Michigan, o grupo de Gonzalo Abecasis, desenvolveram métodos para marcadores de genótipos imputados usando dados de referência. E a aplicação inicial foi para encontrar novos loci associados a características, e no estudo inicial, na verdade não produziu muito, embora vá produzir algum poder, a ideia é que você tenha uma matriz SNP na qual você genotipa 300.000, 500.000, um milhão de marcadores, mas há muitos outros marcadores no genoma. Se você puder imputá-los, poderá testar marcadores adicionais. Portanto, isso deve aumentar um pouco a potência, e isso acontecerá.</p>
+<p>A segunda aplicação foi para mapeamento fino. Portanto, seus marcadores genotípicos mostraram que você tem uma associação em uma região, mas pode haver outros marcadores que não foram genotipados e que fornecem um sinal mais forte. Isso pode ser valioso para estudos de replicação. Então você imputa os marcadores adicionais na região. Você pode encontrar um marcador que esteja mais altamente correlacionado com a característica na qual está interessado, e então esse é o marcador que você gostaria de levar adiante, incluindo definitivamente seu estudo de replicação, porque deveria ter uma chance maior de replicar a associação se for real.</p>
+<p>Esses dois primeiros aplicativos são legais - não acho que sejam necessários para mudar o jogo ou sejam úteis, muito úteis. Mas a verdadeira aplicação matadora é a meta-análise. Portanto, existem muitos arrays SNP diferentes com diferentes números de marcadores de diferentes fornecedores. Matrizes SNP de diferentes fornecedores tendem a não ter muita sobreposição. E quando você quer fazer meta-análise, é muito difícil fazer meta-análise quando seus conjuntos de dados são genotipados em marcadores diferentes. É como este nó górdio. Bem, a imputação apenas corta esse nó. Você pega um painel de referência, imputa todos os seus conjuntos de dados individuais para que todos tenham os mesmos marcadores que estão no painel de referência, e agora eles estão no mesmo conjunto de marcadores, e você prossegue. Então isso tem sido muito valioso quando você vê esses estudos na Nature, Nature Genetics, onde eles têm centenas de milhares de amostras e dezenas e dezenas de associações. Foi a imputação que fez com que isso funcionasse de maneira direta, porque há muitos conjuntos de dados diferentes, e eles tiveram que usar a imputação para colocá-los todos nos mesmos conjuntos de marcadores para fazer a meta-análise. Portanto, creio que a meta-análise foi muito, muito bem-sucedida.</p>
+<p><em>Saída de imputação:</em></p>
+<p>O que você obtém com a Imputação não é necessariamente como a Forca, onde você adivinha qual é a letra mais provável. É uma saída probabilística. Então pensamos com base nos dados de referência e na data observada na amostra que neste alelo deste haplótipo, há uma certa probabilidade de que o alelo seja o alelo A ou com uma certa probabilidade de que seja o alelo B. Portanto, ao longo desta palestra, todos esses métodos se estendem a marcadores multi-alélicos, mas primeiro, apenas para remover essa complexidade, vamos assumi-los como marcadores bialélicos e normalmente me referirei aos alelos como A e B. Meu histórico é com dados humanos, então sempre que me refiro a algumas características físicas dos dados, normalmente estarei pensando, sempre estarei pensando em dados humanos. Então, minhas desculpas às pessoas de origem animal. Só que essa não é minha formação. Portanto, meus exemplos são do domínio humano.</p>
+<p>Então aqui está um haplótipo em um marcador que você pode ter, para o alelo A, probabilidade 98%, probabilidade alelo B 2%. E no outro haplótipo, você também tem uma distribuição de probabilidade que essencialmente fornece todas as informações necessárias para o que você deseja usar. A vantagem da saída probabilística é que você captura a incerteza na imputação, em vez de chamadas rígidas de genótipo, onde você apagou essa incerteza. Você pode fazer a chamada de genótipos, se quiser, apenas pegando o genótipo que tem a maior probabilidade. E para obter probabilidades posteriores, o nível do genótipo em vez do nível do alelo, basta assumir o equilíbrio de Hardy-Weinberg e ele aparece. Além disso, com genótipos probabilísticos, você pode usá-los nas estruturas padrão para testes. Portanto, se você fizer uma análise de regressão linear, normalmente o preditor em um marcador é o número de cópias do alelo menor, 0, 1 ou 2. Essa mesma estrutura funciona com dados imputados, mas em vez de um número inteiro de cópias, você têm o número esperado de cópias, que às vezes é chamado de dose esperada do alelo. Assim como neste exemplo, a dose do alelo B é 0,88. Isso é o que você inseriria em sua análise de regressão.</p>
+<p><em>Medindo a precisão da imputação:</em></p>
+<p>Há mais incerteza na imputação; você precisa de uma maneira de medi-lo. E há dois tipos de maneiras. Uma delas, creio eu, é realmente óbvia; outra é um pouco menos.</p>
+<ol type="1">
+<li><p>Portanto, a maneira mais óbvia é apenas a discordância genotípica.</p></li>
+<li><p>A maneira um pouco menos óbvia é a correlação na dosagem do alelo</p></li>
+</ol>
+<p>Eu penso que este foi, mais uma vez, os primeiros grupos que estavam a desenvolver a imputação a conceber estes métodos. O grupo de Michigan e o grupo de Oxford conceberam algo semelhante. Michigan desenvolveu as métricas de correlação sobre as quais falarei aqui.</p>
+<p>Acontece que R-quadrado, embora seja um pouco mais complicado, tem algumas vantagens, grandes vantagens. É normalizado para frequência alélica. Então, por exemplo, se eu disser que tenho um marcador ao qual posso imputar os alelos nesse marcador com 99,9% de precisão, bem, é muito difícil interpretar isso sem mais informações. Se a frequência do alelo do marcador for 30%, 40%, 50%, 99,9%, a precisão é muito, muito boa. Se a frequência do alelo do marcador for 0,1%, a precisão de 99,9% é muito, muito, muito ruim, certo? Porque você poderia pegar e simplesmente fazer isso com a estratégia idiota de imputação de sempre imputar os alelos como sendo o alelo principal; você destruiu todas as informações no marcador e alcançou 99,9% de precisão. Então você tem que saber a frequência do alelo, enquanto a correlação a incorpora automaticamente. Se você, você sabe, em sua aula introdutória de estatística, se você calculou uma correlação, há variações no denominador. Essas variações capturam as frequências alélicas. Portanto, pode ser interpretado de uma maneira muito melhor, sem a necessidade de conhecer a frequência do alelo.</p>
+<p>A métrica de correlação quadrada onde você observa a correlação esperada entre a dose de alelo imputada, o número imputado de cópias de alelos em amostras e o número real de cópias de alelos em amostras. Ele também tem alguns outros fatores que não me parecem muito óbvios, mas são úteis. Portanto, o R-quadrado pode ser estimado se os verdadeiros genótipos forem desconhecidos. Você pode obter uma estimativa de sua precisão, mesmo sem saber qual é a verdade. Agora, ele assume que suas probabilidades de genótipo posterior estão bem calibradas, então essa suposição está embutida. Mas se forem, você pode estimar o R-quadrado a partir dos próprios dados imputados sem saber a verdade, você pode estimar qual é essa correlação. Essa ideia foi desenvolvida por Michigan, e uma derivação de algo semelhante que ilustra uma maneira de derivar isso é fornecida na referência que citei no American Journal of Human Genetics.</p>
+<p>A segunda característica surpreendente é que o R ao quadrado fornece informações sobre o poder relativo. Portanto, há uma interpretação em termos de potência que é útil para R-quadrado. Acontece que os testes alélicos têm poder semelhante se você usar genótipos imputados para amostras internas ou os genótipos verdadeiros para R-quadrado x amostras internas, algo semelhante a isso é conhecido há muito, muito tempo. A melhor explicação que vi sobre isso está em uma caixa no artigo do American Journal que citei aqui, se você quiser pesquisar. É apenas uma pequena caixa que passa pela derivação. Então, se você está olhando para um marcador que você imputou onde o R-quadrado estimado, que está sendo considerado o verdadeiro R-quadrado e é 0,8, e você tem mil amostras no total, você pode ter metade casos e metade controles. Se você testar esse marcador imputado, o poder deverá ser aproximadamente o mesmo que usar os genótipos verdadeiros, que estão corretos para 80% de suas amostras, para 800 amostras. Portanto, é uma maneira de, se você estiver tentando determinar quais limites de R-quadrado usar para aceitar seus genótipos imputados para transportar esse marcador imputado para a análise posterior. Isso lhe dá uma maneira de interpretar o que esse R-quadrado pode significar.</p>
+<p><em>O que determina as frequências que você pode imputar?</em></p>
+<p>A regra geral com imputação é que você pode imputar marcadores de alta frequência muito bem e marcadores de baixa frequência não muito bem. Onde está o corte? O que determina o limite do que você calcula? Existem dois fatores principais. Um que podemos mudar e outro que não podemos. O que não podemos mudar é o tamanho efetivo da população. Estamos presos a isso. Quanto mais diversificada for a população, maior será o tamanho efetivo da população e mais curtos serão os segmentos de haplótipos compartilhados na população. Quanto mais curtos forem os segmentos de haplótipos compartilhados, mais difícil será imputar. Não posso mudar isso. Mas o que podemos mudar se recebermos dinheiro é o tamanho do painel de referência. Quanto maior o tamanho do painel de referência, mais baixas frequências podemos calcular. E muitas vezes pensamos em termos de frequência alélica menor para muitas aplicações. Isso é mais natural. Mas, para imputação, acho útil pensar na contagem de alelos menores.</p>
+<p><em>Precisão de imputação (MAF VS MAC):</em></p>
+<p>Esses são os mesmos dados e, também, esses gráficos são bons para se ter uma noção do potencial de precisão de imputação para diferentes frequências. Trata-se de dados simulados de um painel de referência populacional do Noroeste Europeu. Os tamanhos variam de 50 a 200 mil amostras, e os dados do alvo estavam em um chip SNP de um milhão. No gráfico à esquerda, estamos traçando a correlação quadrática; isso está usando a verdadeira “verdade” simulada versus os dados imputados para diferentes frequências alélicas menores. No gráfico à direita, são os mesmos dados, mas divididos por uma contagem menor de alelos. No lado esquerdo, você pode ver que realmente precisa saber a frequência do que está imputando para entender a precisão. No lado direito, quando expresso em termos de contagem de alelos menores, é muito mais estável. Então, com esses dados simulados, cerca de 10 marcadores, 10 cópias do alelo menor no painel de referência, você obtém uma precisão de correlação quadrada em torno de 0,74. Cerca de 20 marcadores no painel de referência, 20 variantes em um painel de referência para esse nível, você obtém cerca de 80% de precisão de imputação. Então, estes são dados simulados; será um pouco melhor do que os painéis de referência atuais porque os painéis de referência atuais são predominantemente, se não totalmente, mas pelo menos predominantemente de dados de sequência de baixa cobertura, e dados de sequência de baixa cobertura, seu calcanhar de Aquiles está estimando genótipos de baixa frequência. Portanto, tem uma taxa de erro muito elevada para genótipos de baixa frequência, mas à medida que avançamos para painéis de referência obtidos a partir de sequenciação de alta cobertura, este tipo de desempenho deverá ser prático em populações não consanguíneas, como as populações europeias. Uma das inferências disso é que, ao dobrar o tamanho do painel de referência, se você fosse capaz de imputar marcadores com pelo menos 20 cópias do alelo menor com um determinado tamanho do painel de referência, ao duplicá-lo, isso ainda deveria ser verdade; vai até ficar um pouquinho melhor. Portanto, toda vez que você dobra o tamanho do painel de referência, a frequência das variantes que você pode calcular, mantendo-se iguais, cai pela metade. É uma espécie de relacionamento linear.</p>
+<p><em>Por que imputar quando você pode sequenciar?</em>&nbsp;</p>
+<p>Agora, se você tem experiência em sequenciamento, uma pergunta natural a ser feita é por que imputar quando você pode sequenciar? A imputação contém erros; o sequenciamento é um sequenciamento mais preciso e de alta cobertura. Por que se dar ao trabalho de imputar? Este slide apenas detalha as coisas com as quais a imputação é competitiva com o sequenciamento de alta cobertura e as coisas com as quais ela não é competitiva.</p>
+<p>Então, a coisa mais fácil a fazer é estimar as frequências dos alelos, e é isso que fazemos, e fazemos testes de associação, que é onde a imputação tem sido usada mais amplamente; esse é o seu ponto forte. Então, com 50.000 amostras de referência do noroeste europeu, se você imputar até 20 cópias, isso significa imputar uma frequência alélica menor de 10 ou 2 vezes 10 elevado a menos 4, então você pode ir relativamente baixo e se sair muito bem com a imputação se seu o objetivo é estimar frequências alélicas menores. Se o seu objetivo for um pouco mais difícil, é muito mais difícil estimar um genótipo do que estimar uma frequência alélica menor, então fica mais problemático.</p>
+<p>Em meus dados simulados, para frequência alélica menor de 5% e acima, ele se sai muito bem; na verdade, ele pode estimar o genótipo com cerca de 99,9% de precisão nesse intervalo. Mas isso não é verdade para menos de 5%; a precisão cai, e a imputação no nível do genótipo, não no nível de frequência alélica menor, mas no nível do genótipo, simplesmente não é tão precisa. Agora poderíamos melhorar isso recorrendo a painéis de referência cada vez maiores, mas há uma quebra, e é muito maior do que a quebra para estimar a frequência alélica. Há um intervalo muito maior para estimar o limite dos genótipos e, claro, para mutações de novo, não me importa quão grande seja o seu painel de referência; você não será capaz de imputá-los.</p>
+<p>Então, é verdade que há coisas que o sequenciamento de genótipos faz muito melhor do que a imputação. Então, por que você faria isso (imputação)? Dinheiro.</p>
+<p><em>Custos</em></p>
+<p>Tudo bem, sequenciamento de alta cobertura = mil dólares, ou pelo menos foi a última vez que verifiquei. Acho que ainda está nessa faixa e isso pode até exigir um pedido em massa. Sim, estou curioso para saber se alguém tem dados sobre isso; gostaria de saber quais são os custos atuais da genotipagem como serviço. Digitação de chip, se você for um bom negociador, poderá conseguir um bom negócio na digitação de chip. Você precisa de grandes conjuntos de dados; você precisa jogar Affymetrix contra Illumina e fazer com que eles se enfrentem, mas você pode reduzir para US $ 50 por amostra. Imputação com os métodos atuais, você sabe, meio centavo por genoma para 10.000 amostras de referência, e estes são números de ordem de magnitude, cinco centavos por genoma para cem mil amostras de referência. E se você tiver um milhão de amostras de referência, o que provavelmente não teremos por alguns anos, 50 centavos por amostra. Portanto, essencialmente cem vezes menos que o custo de digitação de chip, e há muitos dados disponíveis com custos de digitação de chip ou com dados de chip GWAS disponíveis. Então, comparado ao sequenciamento, a diferença de custo é um fator de dois mil. Você pode não ter mil dólares para sequenciar uma amostra, mas provavelmente terá cinco centavos. Tudo bem, sim, há uma compensação dependendo de qual é a sua aplicação, especialmente se você estiver interessado em testes de associação, a imputação oferece um ótimo custo-benefício.</p>
+<p><em>Modelo oculto de Markov (HMM):</em></p>
+<p>Então, na próxima parte da palestra, gostaria de abordar os modelos, o modelo padrão, o modelo mais utilizado para imputação. Tem havido um trabalho muito bom e inteligente desenvolvendo outras abordagens, abordagens de preenchimento de matrizes, abordagens estatísticas resumidas. Ah, só para resumir, vou falar daquele que conheço mais e também aquele que, pelo que vi, tem maior precisão.</p>
+<p>Modelos ocultos de Markov: Portanto, os métodos básicos são baseados em modelos ocultos de Markov onde você tem um processo de Markov e não pode observar os estados subjacentes; o processo está oculto. Bem, o que você tem são dados observados, e eu examinarei as partes do modelo, e então usaremos esse modelo na palestra de pesquisa na quinta-feira. Então descreverei o modelo de Li e Stephens. Uma vez que o campo de imputação passou para o que foi chamado de pré-faseamento, assim como a imputação aos haplótipos, o modelo de Li e Stephens se torna o modelo, na minha opinião, torna-se o modelo de escolha porque é computacionalmente tratável no nível do haplótipo sem ter que fazer muitos atalhos. Você pode fazer o modelo completo de Li e Stephens e ele fornece resultados muito precisos. A referência para esse modelo seminal é fornecida neste slide.</p>
+<p>Portanto, o modelo oculto de Markov possui vários componentes. Analisarei esses componentes, e todos eles normalmente serão baseados em um slide como este. Então, examinarei isso com alguns detalhes. Então a primeira coisa que ele tem são estados modelo, e haverá um estado modelo para cada emparelhamento de haplótipo e marcador. Portanto, os marcadores, que estão nos haplótipos de referência, são dados como colunas da matriz; os haplótipos, estes são haplótipos de referência, não os haplótipos que você está imputando, mas aqueles das amostras de referência, são fornecidos aqui. Iremos rotulá-los como h1, h2, h3, h4 e assim por diante. Os estados do modelo tornam-se então apenas os elementos da matriz, esses círculos. E por razões que ficarão aparentes no slide ou dois, queremos rotular esses estados com o alelo que o haplótipo de referência carrega. Então, usaremos dois; o alelo azul representará o alelo de referência, a coloração amarela representará o alelo alternativo. Portanto, o número de estados no seu modelo será apenas o número de linhas vezes colunas. Então, é o número de haplótipos vezes o número de marcadores.</p>
+<p><em>O próximo componente do modelo.</em></p>
+<ol type="1">
+<li><p><strong>Probabilidades de Estado Inicial</strong>: depois de definir os estados para o modelo oculto de Markov de Li e Stephens, estão as probabilidades de estado iniciais. Então, essas são as probabilidades antes de você ver quaisquer dados observados. E a forma como o modelo, o processo, o processo de Markov funciona é que você começa no primeiro marcador e segue até o último marcador. Então, as probabilidades de estado inicial – há apenas probabilidades diferentes de zero na primeira coluna para o primeiro marcador. Assim, para cada haplótipo, todos os estados no primeiro marcador terão probabilidade igual, de modo que provavelmente somam um; não há razão para preferir um estado ao outro. E em todos os outros marcadores e em todas as outras colunas, esses estados têm probabilidade 0 de estar no início.</p></li>
+<li><p><strong>Transições de Estado</strong>: Depois há as transições de estado, e só para evitar que o slide fique muito confuso, só mostrei uma até agora. As transições de estado que mostrei são exatamente o que você pode considerar a transição de estado primária. Então, a transição de estado primário simplesmente acontece, quando você passa de um marcador para o outro, você permanece no mesmo haplótipo com probabilidade próxima de um, é isso que acontece. Mas, na verdade, é um pouco mais flexível e complexo. Com uma pequena probabilidade, você pode pular para um haplótipo aleatório, e foi isso que tentei mostrar para apenas um único marcador aqui. Então, com uma probabilidade próxima de um, você permanece no mesmo estado, e não há, o que chamamos, de recombinação. Com uma probabilidade, uma probabilidade pequena, a probabilidade restante, você salta para um estado aleatório, e esse estado aleatório também pode incluir o estado em que você está.</p></li>
+</ol>
+<p>Então, isso é modelagem é recombinação histórica, onde no passado, por um tempo, você herdou o mesmo haplótipo; você está imputando correspondências ou herdou a mesma sequência de alelos genotipados de um determinado haplótipo de referência. E então, devido a uma recombinação histórica, muda para outro haplótipo de referência. Portanto, a probabilidade daquela pequena probabilidade de transição para um haplótipo aleatório é proporcional, em distâncias curtas, é aproximadamente proporcional à distância genética. Portanto, quanto maior a distância genética, maior a taxa de recombinação, e assim você terá uma maior probabilidade de transição para um haplótipo aleatório. Então, não vou mais mostrar isso, mas esteja ciente de que as transições de estado reais podem ir de qualquer estado no próximo marcador, mas vou mostrar apenas as primárias onde você permanece no mesmo haplótipo.</p>
+<ol start="3" type="1">
+<li><strong>Probabilidades de emissão</strong>: O próximo componente do modelo oculto de Markov é que você precisa de alguma maneira de relacionar seus dados observados ao processo de Markov. E isso vem das chamadas probabilidades de emissão. E é aqui que começa a rotulagem onde rotulamos cada haplótipo de referência em cada estado com o alelo que o haplótipo de referência carrega. E então, se você estiver em um estado específico, vamos pegar o primeiro marcador de estado no primeiro haplótipo, ele irá, com probabilidade próxima de um, emitir o alelo azul, e isso é mostrado nestas equações aqui. Então, se você estiver no estado azul, o quadrado (eu uso um quadrado para representar o alelo nos dados observados), será épsilon; aqui está um valor pequeno, será próximo de um. Com uma pequena probabilidade, emitirá o outro estado; você terá uma incompatibilidade entre os dados observados e o estado em que se encontra. E o mesmo princípio vale para o amarelo. Se você estiver no amarelo, emitirá um alelo amarelo com alta probabilidade e, com pequena probabilidade, emitirá o outro alelo.</li>
+</ol>
+<p>Isso funciona em qualquer estado onde você observou dados. Esses quadrados abertos significam que você tem dados faltantes, como teria se estivesse realizando a imputação de genótipos. Então aqui está outro marcador que está genotipado em sua amostra, você está imputando, e então, por exemplo, sem saber mais nada, você apenas espera intuitivamente que seja mais provável que você esteja em um estado no haplótipo 4,1 ou 2 porque o as probabilidades de emissão são maiores porque o alelo corresponde aos estados H3 e H5. Nos estados onde há dados faltantes, os termos de emissão são constantes; não importa qual seja o estado subjacente; você não tem dados observados e pode tratá-los como um só, e eles desaparecem.</p>
+<p>Agora, deixe-me confirmar: depois de ter as probabilidades de estado, você poderá obter as probabilidades legais imputadas. Portanto, a principal coisa que você está tentando entender é que, dados esses dados imputados em um marcador específico, em qualquer marcador imputado (desculpe, dado o haplótipo observado, os alelos observados naquele haplótipo), você quer entender o que em cada desses estados ocultos, qual é a sua probabilidade. Depois de fazer isso, você basicamente terá resolvido o problema de imputação. Se você quiser saber qual é a probabilidade do alelo azul no terceiro marcador, depois de ter essas probabilidades de estado, basta somar todas as probabilidades de estado para o haplótipo azul para os estados azuis, e isso lhe dá a probabilidade, probabilidade posterior de o alelo azul, probabilidade posterior do alelo amarelo no terceiro marcador, probabilidade de que seja amarelo, basta somar as probabilidades de estado para todos os estados para os haplótipos de referência onde o haplótipo de referência carrega os alelos amarelos. Então, a chave são essas probabilidades de estado, e esse é o próximo slide.</p>
+<p><em>Calculando probabilidades de estado HMM</em></p>
+<p>Essa forma padrão de dividir isso é uma matemática muito bonita. Adoro a matemática que você usa para obter essas probabilidades de estado. Você divide isso no que é chamado de probabilidade direta e probabilidade inversa. Então, primeiro, esta é a probabilidade de estado porque o pequeno m é um marcador. H é o seu haplótipo, então é a probabilidade de estar no estado no marcador M, haplótipo H. O ‘O’ são os alelos observados. ‘M’ maiúsculo é o número total de marcadores. Portanto, dados todos os alelos observados nos marcadores genotípicos, você deseja ser capaz de calcular, condicionalmente, qual é a probabilidade do estado. Pelo que falamos no último slide, assim que você conhece as probabilidades de estado, basta somá-las para obter as probabilidades dos alelos imputadas. Então você divide isso usando as suposições de fim de independência condicional em duas partes que são chamadas de probabilidade direta e probabilidade regressiva.</p>
+<p>Portanto, há algumas coisas a serem observadas sobre esta equação.</p>
+<p>Uma delas é que há uma probabilidade futura para cada estado do seu modelo. Lembre-se, o número de estados é o número de linhas vezes colunas, o número de haplótipos vezes o número de marcadores. Portanto, há uma probabilidade direta para cada um desses estados, e há uma probabilidade reversa para cada um desses estados, para cada marcador e para cada haplótipo. A probabilidade futura inclui apenas os dados observados até o marcador ‘M’. Portanto, se estivermos imputando uma probabilidade futura para um estado no marcador ‘M’, a probabilidade futura incluirá apenas os dados observados até o marcador ‘M’. A probabilidade retroativa inclui os dados observados desde o próximo marcador até o fim. Então há esse tipo de divisão acontecendo. E então vamos ver, então o nome da probabilidade, acho que vem da forma como são calculadas. Acontece que você calcularia as quatro probabilidades fazendo uma passagem direta pelos seus dados.</p>
+<ol type="1">
+<li><p><strong>Calculando probabilidades futuras</strong>: Então a forma como funciona é: você começa com as probabilidades de estado para o marcador 1, que você obtém apenas das probabilidades de estado iniciais. Eles são todos iguais. Dadas as probabilidades de estado para o marcador 1, há uma equação de atualização, que exibirei na tela em alguns minutos. Há uma equação de atualização que fornece todas as probabilidades de estado no marcador 2. Depois de ter todas as probabilidades de estado no marcador 2, há uma equação de atualização que usa essas probabilidades para determinar todas as probabilidades de estado no marcador 3. E você simplesmente avança pelos seus dados, um marcador de cada vez. E em cada etapa, você usa as probabilidades de estado no marcador anterior para fornecer as probabilidades futuras no próximo marcador. Eu disse probabilidades de estado, mas quero dizer as probabilidades futuras no marcador anterior, e você continua marchando.</p></li>
+<li><p><strong>Calculando probabilidades retroativas:</strong> Como você pode imaginar, as probabilidades retroativas funcionam da mesma maneira. É apenas o contrário, você começa com ‘M’ maiúsculo, o último marcador em seu conjunto de dados. Você começa com as probabilidades inversas, que inicialmente são todas iguais. E então, a partir disso, você obtém as probabilidades de estado inverso no marcador ‘M’ menos um, no marcador anterior. E você continua marchando para trás, então acaba no marcador 6. E dadas as probabilidades de retrocesso no marcador 6, você pode obtê-las no marcador 5. Dadas todas as probabilidades de retrocesso no marcador 5, a equação de atualização retroativa fornece o marcador 4 e assim por diante. E você marcha de volta. Então você faz uma passagem para frente e para trás pelos dados. E é imaginativamente chamado de algoritmo, algoritmo para frente e para trás.</p></li>
+<li><p><strong>Atualização futura</strong>: Usaremos esta equação na palestra de pesquisa, e eu só queria dar uma visão geral da equação. Este é um exemplo da equação de atualização direta. Não é necessário memorizá-lo, mas apenas compreender seus diferentes componentes. Então lembre-se, a equação de atualização futura fornece as probabilidades futuras no marcador ‘M’ mais 1, dadas as probabilidades futuras no marcador ‘M’. Então, opa, probabilidades futuras no marcador N mais 1, essas são as probabilidades futuras no marcador M mais 1. Você notará que há um M mais 1 ali. Então você soma todos os haplótipos de referência, todos os estados no marcador M. Então, aqui está a probabilidade direta no marcador M. E então você acaba multiplicando isso por uma probabilidade de transição. Esta é a probabilidade do estado de ser uma referência H, o estado para o haplótipo de referência H principal e a transição para o estado no próximo marcador com referência ao haplótipo H. E então você multiplica por uma probabilidade de emissão. Então, dado o estado em que você se encontra, qual é a probabilidade do alelo observado nesse estado? A atualização de estado retroativo, não vou falar sobre isso, tem o mesmo formato. É um pouco diferente, mas é o mesmo formato. Você está somando um produto triplo, um produto da probabilidade de estado retrógrado no estado de onde você vem, uma probabilidade de transição e uma probabilidade de emissão. Uma coisa que usaremos na palestra de pesquisa na quinta-feira é que usaremos com muita ênfase o fato de que quando você está em um marcador imputado, esse termo efetivamente desaparece. E é isso. E usaremos isso para encontrar maneiras mais rápidas de calcular a imputação.</p></li>
+</ol>
+<p><em>A prática da programação</em></p>
+<p>Na última parte da palestra, queria falar sobre programação. Isto é para pessoas com experiência em CS. Talvez você já tenha visto isso, um pouco disso, muito disso, tudo isso, mas provavelmente há pessoas aqui que são como eu há alguns anos atrás, entrando na genética computacional com pouca ou nenhuma experiência em programação. E há certas coisas que pensei que poderiam ser úteis apenas repassar e que podem economizar algum tempo, tornar sua vida um pouco mais simples, porque muito do nosso trabalho envolve escrever código. Portanto, ao escrever software, descubro que o principal desafio para mim é a complexidade. Se ficar mais complexo, minha mente terá dificuldade em compreendê-lo, mais propensa a erros. E por mais que você seja como eu, você fica entusiasmado ao escrever código muito rápido, é muito emocionante escrever código que é muito rápido, esse não é realmente o primeiro objeto.</p>
+<ol type="1">
+<li><strong>Simplicidade</strong>: O primeiro objetivo é escrever código limpo e simples. Não se preocupe com a otimização. Você está apenas tentando escrever o código simples para que, ao observá-lo, seja fácil entender o que ele faz. Ele opera de maneira lógica. A estrutura faz sentido, é fácil para a mente absorver e compreender sem ter que realmente estudá-la. Existe um lugar para otimização, mas não é a primeira coisa que você deseja fazer. Há uma citação famosa de que Donald Knuth tirou essa afirmação das escrituras e depois a mudou para ciência da computação. Ele escreveu: “a otimização prematura é a raiz de todos os males”. E acho que a ideia é que se você otimizar muito cedo, você pode acabar otimizando a coisa errada ou fazendo otimizações desnecessárias que na verdade não melhoram o código. Ou se o seu código não for simples para começar, você terá dificuldade em encontrar as otimizações certas. Veja, a otimização não é gratuita. Sim, pode acelerar as coisas, mas tem um custo. Se o seu código simples fosse rápido o suficiente, você não precisaria otimizar.</li>
+</ol>
+<p>Então, quando você otimiza, por definição, você está introduzindo complexidade. E essa complexidade tem custos. Você terá mais bugs porque é mais complexo. Será mais difícil encontrar os bugs porque é mais complexo. Será mais difícil estender seu código, adicionar novos recursos a ele porque é mais complexo. Será mais difícil manter o código porque é mais complexo. É mais difícil para outras pessoas olharem para o seu código e se perguntarem o que você está fazendo porque é mais complexo. Então há esse custo. E você tem que pesar esse custo em relação ao benefício esperado. Um grande aumento na complexidade vale a pena obter uma redução de 5% no tempo de execução? Na maioria dos casos, não. Se o seu código for rápido o suficiente para fins práticos, obter uma redução de dez ou cem vezes no tempo de execução pode não valer a pena devido ao aumento da complexidade se já for rápido o suficiente para seus propósitos - se for executado em um segundo. Portanto, avalie e entenda quanta complexidade você está adicionando e qual é a compensação antes mesmo de adicioná-la, porque a otimização não é, simplesmente não é gratuita.</p>
+<ol start="2" type="1">
+<li><strong>Modularidade</strong>: O segundo princípio geral que considero útil é a modularidade, que apenas carrega a ideia de que você quer unidades de código onde a entrada é muito simples, o que faz é simples de entender, pelo menos em alto nível, e a saída é muito simples. Um módulo de código que você pode tratar conceitualmente como uma unidade sem precisar pensar muito sobre isso. Agora, ao escrever o código, talvez você não precise pensar profundamente sobre ele, mas quando ele estiver funcionando e fazendo o que você deseja, você poderá tratá-lo apenas como um bloco de construção.</li>
+</ol>
+<p>E, idealmente, você deseja que seu programa tenha módulos de interação muito livre, de modo que, quando estiver trabalhando em um módulo específico, porque ele opera de forma muito independente, você possa dedicar toda a sua concentração. Você não precisa ter o programa inteiro, todo o programa complexo ao seu alcance e na sua memória. Você pode se concentrar apenas na parte individual em que está trabalhando, porque ela está fracamente acoplada. O exemplo clássico disso seriam os utilitários UNIX na linha de comando. Se você usou um sistema UNIX, então utilitários UNIX, existem utilitários para classificar, contar linhas, contar palavras, extrair colunas, extrair linhas que atendam a determinados critérios, alterar caracteres, substituir palavras. Existem todos esses utilitários UNIX, e você pode fazer grande parte da sua programação sem realmente escrever código. Basta pegar os utilitários UNIX e juntá-los em uma série de filtros ou em um pipeline. Os utilitários UNIX são um exemplo clássico de como fazer algumas unidades de código que fazem uma coisa, fazem isso razoavelmente bem e com as quais você pode trabalhar como uma unidade sem entender como elas são implementadas. E esse tipo de abordagem é muito útil para escrever projetos complexos.</p>
+<ol start="3" type="1">
+<li><p><strong>Funções</strong>: Outra coisa geral quando você está escrevendo é se você pode estar ciente de quando suas classes ou seus métodos, que são chamados de funções dependendo da linguagem em que você está trabalhando, quando eles fazem muita coisa. Um dos conselhos que li quando estava aprendendo programação é: “Esteja ciente das funções que se estendem além do comprimento da tela do seu computador”. E na minha experiência, esse é um bom conselho. Quando não cabe na tela, é mais provável que cometa erros porque não consigo ver a função inteira sem rolar. E o comprimento extra que indica geralmente é um pouco mais complexo. E então, você sabe, todas as regras têm exceções, mas geralmente, se a função se estende mais do que a tela, quero ver se existe uma maneira de tornar o código mais limpo, simples e fácil de entender, dividindo-o em partes. Aulas, se você trabalha em um ambiente orientado a objetos, que para problemas complexos podem ser programas complexos muito úteis. Para mim o seu limite pode ser diferente, mas o meu limite é, uma vez que meu arquivo, eu trabalho predominantemente em Java, uma vez que tem mais de duzentas ou trezentas linhas, percebo que tenho mais dificuldade em realmente entender o que está acontecendo na classe. E então, quando fica longo, eu, se posso, tento encontrar maneiras, ver se tem uma maneira de quebrar as coisas que tornaria mais simples de entender. Nem sempre tem, mas eu tento.</p></li>
+<li><p><strong>Reestruturação</strong>: Então, para obter esse código simples, envolve o que chamamos de reestruturação, que é apenas limpar seu código sem alterar seu comportamento. Então, quando você reestrutura? Como você sabe quais partes do código você deseja gastar algum esforço para limpar? Por experiência própria, tudo o que acabei de escrever, eles precisam ser limpos. Nunca consigo um design realmente certo na primeira vez, a menos que seja apenas um trecho de código trivial. Posso não perceber quando escrevo que ele tem problemas, mas há um teste decisivo para descobrir que você tem um código difícil de entender. É quando você volta depois de alguns meses. Por alguma razão, você tem que voltar ao seu código, e você está olhando para ele, e é muito humilhante porque você não consegue entender o que escreveu. Você se pergunta o que estava pensando. Por que eu fiz isso? Isso é um inseto? Isso não é mais complicado do que fazer de outra maneira? Todos aqueles pensamentos de que quando você olha para o código com novos olhos, geralmente é então que eu gasto tempo reestruturando. Quando escrevi o código pela primeira vez, estou um pouco perto demais para isso. Estou um pouco…É difícil para mim ver as manchas, mas você chega com olhos novos, elas são realmente óbvias. E muitas vezes é nessa parte desse tempo doloroso que você gasta tentando entender o que seu código está fazendo novamente, que também pode, ao mesmo tempo, ser muito fácil ver maneiras pelas quais eu poderia ter feito isso de forma diferente. Eu poderia ter combinado as coisas. Eu poderia ter mudado a organização para facilitar a estruturação. Eu poderia dividir métodos longos nesses dois métodos mais curtos. Posso combinar código que é essencialmente código duplicado para que, em vez de ter que manter dois componentes de código, seja apenas um. Portanto, todas essas coisas se tornam óbvias quando você olha o código novamente com novos olhos. Então, reestruturar, se você teve a experiência como eu tive muitas, muitas vezes, de apenas ter um dia não muito divertido tentando entender o que você escreveu no passado, reestruturar significa apenas que na próxima vez que você olhar o código, ele não será tão ruim. E ajudará qualquer pobre alma que não seja você. Se você tiver dificuldade em entender seu código, imagine o que outra pessoa que entrar em seu código fará… quais dificuldades ela terá.</p></li>
+<li><p><strong>Teste e depuração</strong>: Então, para teste e depuração, uma ferramenta que considero realmente útil é o teste de regressão. Portanto, esta não é uma regressão linear das estatísticas. É apenas um teste para garantir que seu código ainda esteja funcionando corretamente. E isso pode ser configurado de forma muito automatizada. Você tem alguns conjuntos de dados de teste, os conjuntos de dados de teste que você usou originalmente para se convencer de que seu código estava se comportando bem e fazendo o que deveria fazer. Salve esses conjuntos de dados de teste, escreva alguns scripts e salve a saída obtida de uma versão anterior. E quando você continua trabalhando em seu código, talvez reestruturando, e então atinge uma espécie de ponto estável, o código, você pode verificar se seu código ainda está produzindo a mesma saída. Você pode verificá-lo em um nível qualitativo para ver se ainda está produzindo a mesma precisão. Você também pode usar a ferramenta diff no UNIX para verificar se os arquivos de saída foram alterados. E esta é uma maneira fantástica de detectar bugs que você introduziu. Você tinha um código funcionando, fez algumas alterações e não percebeu, mas quebrou alguma coisa. Isso torna muito sistemático e fácil encontrar esses tipos de bugs.</p></li>
+</ol>
+<p>Outra ferramenta útil é um sistema de controle de versão. Eu uso uma ferramenta chamada Git. Ele permite que você volte e veja o estado anterior do seu programa. Você pode ter iniciado um desenvolvimento e depois descoberto que cometeu um erro. Você precisa voltar atrás. Ou talvez haja um bug que você nunca detectou antes e que foi introduzido no passado. Ele permite que você faça essencialmente uma pesquisa binária para encontrar exatamente o ponto onde você cometeu o bug e determinar exatamente quais alterações você fez naquele ponto. Então você pode, com um microscópio, identificar o local onde o bug foi introduzido. Se você usa Git, há muitas ferramentas online para isso. Há um curso Udacity sobre Git, um curso curto. Há também alguns manuais online. Se você pesquisar algo chamado “livro do Git”, deverá encontrar o livro on-line que explica o Git, se quiser aprender isso. Não acho que seja fácil aprender Git inicialmente, esses sistemas de controle de versão exigem um pouco de uso, mas são uma ferramenta poderosa quando você os aprende. É como o ambiente UNIX. É difícil de aprender, mas muito poderoso.</p>
+<p>A última é que vale a pena lembrar dos bugs anteriores. Os bugs não são distribuídos uniformemente no seu código. Normalmente, eles tendem a se agrupar. A razão para isso é, você sabe, bastante natural. Pode ser uma seção complexa de código, código complexo com maior probabilidade de abrigar bugs. Eles estão espacialmente correlacionados em seu código. Pode ser algo em sua vida em que você não estava no seu melhor no dia em que escreveu esse código. Você não dormiu o suficiente. Você recebeu uma carta do IRS, tanto faz. Apenas algo que te deixou um pouco confuso, onde você não está com todas as suas capacidades. Então, vale a pena lembrar onde estão seus bugs anteriores quando você encontrar um bug. Se você consegue se lembrar dos tipos de bugs que teve e onde eles costumavam ocorrer no código no passado, isso pode ajudá-lo. Ele pode dar um pouco mais de preferência a essas partes do código quando você está tentando rastrear esse bug. E isso pode economizar muito tempo.</p>
+<p>Então, obrigado. Obrigado pela sua atenção. Esse é o fim das minhas observações.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

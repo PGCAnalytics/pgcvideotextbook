@@ -37,7 +37,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=8jtoLRmC5F4")
 ```
 
-Link to video transcript [here](chapter10.1_transcript.qmd).
+Link to video transcript [here](chapter10.1_transcript.qmd). Tradução para o português disponível [aqui](chapter10.1_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=P8Odk5HuY50")
 ```
 
-Link to video transcript [here](chapter10.2_transcript.qmd).
+Link to video transcript [here](chapter10.2_transcript.qmd). Tradução para o português disponível [aqui](chapter10.2_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -79,7 +79,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=l5tsUyhXjt4")
 ```
 
-Link to video transcript [here](chapter10.3_transcript.qmd).
+Link to video transcript [here](chapter10.3_transcript.qmd). Tradução para o português disponível [aqui](chapter10.3_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -137,6 +137,6 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=bxCV2Z5i_yI&t=8s")
 ```
 
-Link to video transcript [here](chapter10.6_transcript.qmd).
+Link to video transcript [here](chapter10.6_transcript.qmd). Tradução para o português disponível [aqui](chapter10.6_transcript_portugues.qmd#sec-section1).
 
 Link to the [GDPR text](https://gdpr-info.eu/).

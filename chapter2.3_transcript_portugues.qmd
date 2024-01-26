@@ -1,0 +1,25 @@
+---
+title: "Capítulo 2.3: Variação Genética"
+---
+
+# ***Origens da Variação Genética*** {#sec-section1}
+
+**Título**: Origens da Variação Genética
+
+**Apresentador(es)**: Jéssica Pamment
+
+\[Música\]
+
+Da próxima vez que você estiver na sala de aula, olhe ao seu redor e verá que, embora todos os seus colegas sejam humanos, da mesma espécie que você, não há dois indivíduos na classe exatamente iguais, a menos que você tenha gêmeos idênticos na sala. Esta variação nas características é verdadeira não apenas para a população humana, mas para qualquer espécie. Algumas das diferenças observadas dentro de uma população são causadas pelo ambiente e pelas experiências de cada indivíduo. Por exemplo, as alterações hormonais provocadas por temperaturas mais frias fazem com que o pelo de uma raposa ártica passe de marrom para branco. Embora o ambiente desempenhe definitivamente um papel na introdução da variação numa população, a maioria das variações observadas nas populações são causadas por diferenças nos genes. Por exemplo, um gene é responsável por determinar se os ratos terão pelo marrom ou preto. Com exceção dos clones, como os gêmeos idênticos, cada indivíduo dentro de uma população carrega um conjunto único de genes, metade dos quais foram recebidos de um dos pais e a outra metade do outro. O conjunto total de genes de todos os indivíduos de uma determinada população é chamado de pool gênico.
+
+Um gene é uma unidade discreta de informação hereditária que consiste em uma sequência específica de nucleotídeos no DNA. Portanto, os nucleotídeos são os blocos de construção do DNA e, portanto, dos genes. As diferenças entre os indivíduos podem ser medidas até o nível dos nucleotídeos individuais. No entanto, medir diferenças dentro de um pool gênico a este nível não é particularmente útil porque grande parte da variação reside em regiões não codificantes do DNA, o que significa que estas variações não resultam numa diferença observável. Muitas vezes é melhor medir a variação no nível do gene porque é nesse nível que as características quantitativas e discretas são codificadas.
+
+Então, como surge a variação genética em uma população? Bem, uma das formas é por meio de mutações, que resultam em uma alteração na sequência original do DNA. Mutações podem ocorrer como erros durante a replicação do DNA. No entanto, se a mutação não ocorrer numa célula que é transmitida aos descendentes, como um óvulo ou espermatozoide, a mudança não pode levar a um novo alelo, que é uma versão alternativa de um gene. A variação também pode surgir no nível cromossômico durante o processo de meiose. Este é um tipo modificado de divisão celular encontrado apenas em organismos de reprodução sexuada, que resulta na produção de gametas.
+
+As duas maneiras pelas quais a variação é introduzida na meiose: crossing over e segregação independente. O crossing over acontece no início da meiose na prófase um e resulta na troca de DNA entre cromossomos homólogos, ou seja, entre os cromossomos paternos e maternos de cada par de cromossomos. Isso resulta em cromossomos recombinantes. A segunda maneira pela qual a variação é introduzida é como resultado do arranjo aleatório de pares de cromossomos na placa celular durante a metáfase um. Nos seres humanos, a distribuição aleatória de cromossomos dá origem a mais de 8,4 milhões de combinações possíveis de cromossomos, e isso sem levar em conta o crossing over, que introduz ainda mais variação.
+
+Outro mecanismo que contribui para a variação genética em organismos que se reproduzem sexualmente é a fertilização aleatória. Como acabei de mencionar em humanos, cada gameta masculino e feminino representa uma das cerca de 8,4 milhões de combinações cromossômicas possíveis devido à segregação independente. A fusão de um gameta masculino com um gameta feminino durante a fertilização é completamente aleatória e produzirá uma célula com qualquer uma das cerca de 70 trilhões de combinações de cromossomos. Se levarmos em conta a variação trazida pelo crossing over, o número de combinações é ainda maior.
+
+Esperançosamente, você pode ver o quão único você realmente é. Agora que aprendemos como a variação genética é introduzida numa população de organismos que se reproduzem sexualmente, é importante lembrar o significado evolutivo disto. A seleção natural é uma força motriz por trás da evolução, e a seleção natural resulta no acúmulo de variações genéticas favorecidas pelo meio ambiente. Outra forma de pensar sobre isso é que a variação genética é a matéria-prima necessária para que a evolução ocorra.
+
+\[Música\]

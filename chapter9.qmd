@@ -33,7 +33,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=Lg2k2BEQIy4")
 ```
 
-Link to video transcript [here](chapter9.1_transcript.qmd).
+Link to video transcript [here](chapter9.1_transcript.qmd). Tradução para o português disponível [aqui](chapter9.1_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=LoTgfGotaQ4")
 ```
 
-Link to video transcript [here](chapter9.2_transcript.qmd).
+Link to video transcript [here](chapter9.2_transcript.qmd). Tradução para o português disponível [aqui](chapter9.2_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -185,7 +185,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=ScKL40dp8M4&ab_channel=BenLambert")
 ```
 
-Link to video transcript [here](chapter9.4_transcript.qmd#sec-video1).
+Link to video transcript [here](chapter9.4_transcript.qmd#sec-video1). Tradução para o português disponível [aqui](chapter9.4_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -202,7 +202,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=HyA_Vgbc0t4&ab_channel=BenLambert")
 ```
 
-Link to video transcript [here](chapter9.4_transcript.qmd#sec-video2).
+Link to video transcript [here](chapter9.4_transcript.qmd#sec-video2). Tradução para o português disponível [aqui](chapter9.4_transcript_portugues.qmd#sec-section2).
 
 ------------------------------------------------------------------------
 

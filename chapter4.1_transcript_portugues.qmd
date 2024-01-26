@@ -1,0 +1,51 @@
+---
+title: "Capítulo 4.1: Desenho do Estudo Epidemiológico"
+---
+
+# ***Estudos Epidemiológicos: Um guia para iniciantes*** {#sec-section1}
+
+**Título**: Estudos Epidemiológicos: Um guia para iniciantes
+
+**Apresentador(es)**: Ranil Appuhamy, MD (World Health Organization)
+
+**Ranil Appuhamy:**
+
+Olá, seja bem-vindo a este vídeo sobre estudos epidemiológicos. Veremos rapidamente os estudos epidemiológicos, o que são, alguns tipos diferentes de estudos, suas vantagens e desvantagens.
+
+*O que é um estudo?*
+
+Em primeiro lugar, o que é um estudo? Bem, simplificando, um estudo é um processo científico de responder a uma pergunta usando dados de uma população. Pode ser qualquer pergunta. Por exemplo, fumar causa câncer? Há mais doenças em uma área do que em outra? Ou qual alimento é responsável por causar um surto? Portanto, a primeira coisa a fazer em qualquer estudo é ter uma pergunta de estudo. O que estamos tentando descobrir? Então, precisamos descobrir qual é o melhor tipo de estudo que nos ajudaria a responder à pergunta. Uma vez decidido o tipo de estudo, precisamos realizá-lo, coletar e analisar os dados utilizando um método estatístico adequado. Depois, precisamos de interpretar os resultados para dar sentido a tudo e, finalmente, precisamos reportar os resultados do nosso estudo. É importante ressaltar que todos os estudos precisam ser feitos de forma ética. Agora, vamos dar uma olhada em alguns tipos de estudo diferentes.
+
+*ESTUDO ECOLÓGICO*
+
+Um estudo ecológico é o tipo de estudo em que são feitas medições como taxas de doenças e informações sobre exposições em um grupo de pessoas. Os grupos podem ser tão pequenos como pessoas numa casa ou tão grandes como pessoas num país inteiro. É importante lembrar que os resultados e conclusões dos estudos ecológicos se aplicam a um grupo e não a indivíduos. Os estudos ecológicos são úteis para comparar a saúde das populações em diferentes locais, como as taxas de sarampo na Austrália e na Nova Zelândia, ou em momentos diferentes. Eles também são úteis para gerar perguntas e destacar questões que podem servir para futuras investigações ou estudos.
+
+*SÉRIE DE CASOS*
+
+Uma série de casos descreve as características de um grupo de pessoas que têm a mesma doença ou a mesma exposição. O objetivo é compreender os dados demográficos, a apresentação clínica, o prognóstico ou outras características das pessoas que têm uma doença específica ou descrevem algo incomum. Por exemplo, no início da década de 1980, a ocorrência de uma pneumonia incomum em homens levou ao reconhecimento e identificação do HIV.
+
+*ESTUDO TRANSVERSAL*
+
+Um estudo transversal utiliza uma população selecionada e mede as informações de saúde num determinado momento, fornecendo um retrato da sua saúde. Geralmente envolve fazer aos participantes uma série de perguntas por meio de um questionário. Os inquéritos de saúde que recolhem informações de saúde sobre pessoas numa população são um exemplo de estudo transversal. Como esses estudos geralmente medem quantas pessoas têm uma doença em um determinado momento, eles também são chamados de estudos de prevalência. É importante garantir que a população selecionada seja representativa da população total.
+
+Estudos transversais são relativamente baratos e fáceis de conduzir em comparação com outros estudos. Podem fornecer informações sobre múltiplas exposições e resultados e são uma boa forma de avaliar as necessidades de saúde de uma população. No entanto, como a informação é recolhida num único momento, não pode ser utilizada para determinar se uma determinada exposição causou ou não a doença.
+
+*ESTUDO DE CONTROLE DE CASO*
+
+Um estudo de caso-controle começa com casos, que são pessoas com uma doença. Ele usa um grupo de comparação chamado controle, que é semelhante aos casos, mas não tem a doença. Em seguida, ambos os grupos são questionados sobre suas exposições anteriores a diferentes fatores de risco. Agora, para cada um dos fatores de risco, as probabilidades de exposição se fossem um caso são comparadas com as probabilidades de exposição se fossem um controle. Isso é chamado de razão de chances. Uma razão de chances superior a 1 significa que as pessoas com a doença têm maior probabilidade de terem sido expostas a esse fator de risco do que as pessoas sem a doença. Isso sugere que poderia ser uma possível causa da doença. Uma razão de chances inferior a 1 sugere que é um fator de proteção e 1 sugere que não há associação. Estudos de caso-controle são comumente usados ​​em investigações de surtos de origem alimentar. Por exemplo, podemos comparar as probabilidades de comer diferentes tipos de alimentos entre pessoas que adoeceram após consumir uma refeição e aquelas que não o fizeram. Se a razão de chances for maior que 1 para um determinado tipo de alimento, então é possivelmente a causa da doença. Uma grande vantagem de um estudo de caso-controle é que geralmente é rápido e barato de fazer. Além disso, como começam com casos, podem ser usados ​​para estudar doenças incomuns. No entanto, como estes estudos envolvem números pequenos, não são bons para estudar exposições raras. Um dos desafios em um estudo de caso-controle é encontrar controles adequadamente pareados. Além disso, como os estudos perguntam sobre exposições no passado, as pessoas podem não conseguir recordar com precisão as suas exposições.
+
+*ESTUDO DE COORTE*
+
+Vamos dar uma olhada nos estudos de coorte agora. Num estudo de coorte, um grupo de pessoas é acompanhado durante um período de tempo para ver o que lhes acontece e são recolhidas informações sobre fatores de risco. Podemos então comparar a ocorrência de um resultado como uma doença naqueles que estão expostos a um determinado fator de risco com aqueles que não estão expostos a esse fator de risco. A principal medida utilizada em estudos de coorte é chamada de risco relativo. Um risco relativo é a razão entre o risco de doença no grupo exposto e o risco de doença no grupo não exposto. Um risco relativo superior a 1 significa que a exposição está associada a um risco aumentado da doença. Se for 1, indica que o risco é o mesmo, e se for menor que 1, indica que o risco é menor. Um estudo de coorte bem conhecido é o estudo médico britânico realizado na década de 1950, onde um grupo de médicos foi acompanhado durante muitos anos. Este estudo forneceu provas científicas valiosas sobre os efeitos nocivos do tabagismo, especialmente a ligação entre o tabagismo e o câncer de pulmão. Uma das principais vantagens dos estudos de coorte é que a sequência temporal dos eventos pode ser determinada. Isto é útil ao tentar determinar o que causou uma doença. Outra vantagem é que informações sobre vários desfechos e fatores de risco diferentes podem ser coletadas ao mesmo tempo. Isso permite que análises secundárias seja realizada nos dados. Uma desvantagem dos estudos de coorte é o alto custo e podem envolver um grande número de pessoas acompanhadas durante um longo período de tempo. Geralmente não são adequados para estudar doenças raras. Um desafio nos estudos de coorte, especialmente aqueles que são realizados durante um longo período de tempo, é garantir que as pessoas que iniciaram o estudo permaneçam até o final do estudo. Se muitas pessoas desistirem, isso afetará os resultados do estudo.
+
+*ESTUDO INTERVENCIONAL*
+
+Agora, vejamos outro tipo de estudo, um estudo intervencionista. Num estudo intervencionista, é feita uma intervenção num grupo de pessoas e o resultado é estudado. Exemplos de intervenções podem ser a administração de um medicamento, uma vacina ou aconselhamento de saúde. O resultado pode ser coisas como uma mudança no estado da doença ou uma mudança no comportamento. Um estudo randomizado controlado é o melhor desenho de estudo para um estudo intervencionista. Digamos que queremos estudar os efeitos de um novo medicamento. Começamos com uma população de estudo e as pessoas são então alocadas aleatoriamente para fazer parte do grupo de intervenção onde recebem o medicamento ou do grupo de controle onde não recebem o medicamento. Depois, após um período de tempo adequado, os resultados nos dois grupos são avaliados e comparados para ver o efeito que o medicamento teve. Os resultados podem ser coisas como uma mudança nos sintomas da doença ou nas taxas de mortalidade. Idealmente, nem os participantes nem os investigadores deveriam saber qual grupo recebeu a intervenção. Isso é chamado de duplo-cego e garante que nenhum deles possa influenciar o resultado do estudo. A principal vantagem de um estudo randomizado controlado é que ele pode fornecer boas evidências de que a intervenção levou a um resultado. A randomização garante que ambos os grupos tenham chances iguais de receber a intervenção e que tenham características semelhantes. Desta forma, o efeito da intervenção pode ser determinado sem que outros fatores influenciem o resultado. As desvantagens são que esses estudos são geralmente muito caros de se fazer e pode precisar também de um alto número de participantes. Pode não ser adequado em casos que não aplicar uma intervenção seja inapropriado ou não ético.
+
+*RESUMO*
+
+Finalmente, às vezes é um desafio acompanhar todos os estudos realizados sobre um determinado tema. Felizmente, existem estudos que resumem outros estudos. Existem duas maneiras principais de fazer isso: uma revisão sistemática e uma meta-análise.
+
+Uma revisão sistemática identifica sistematicamente todos os estudos relevantes sobre um determinado tema, avalia a qualidade de cada estudo, sintetiza e interpreta os resultados e apresenta um resumo imparcial e equilibrado das evidências. Uma meta-análise, por outro lado, utiliza dados de todos os estudos que abordaram a mesma questão e têm um desenho de estudo semelhante. Em seguida, combina os dados desses estudos para realizar uma análise estatística e produzir um único resultado resumido.
+
+E esta é uma visão geral de alguns dos tipos de estudos epidemiológicos comumente usados. Vimos o que é um estudo, diferentes tipos de estudo, suas vantagens e desvantagens.

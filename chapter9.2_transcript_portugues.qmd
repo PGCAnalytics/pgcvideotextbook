@@ -1,0 +1,19 @@
+---
+title: "Capítulo 9.2: Randomização Mendeliana"
+---
+
+# ***Uma introdução de dois minutos sobre Randomização Mendeliana*** {#sec-section1}
+
+**Título:** Uma introdução de dois minutos sobre Randomização Mendeliana
+
+**Apresentador(es):** George Davey Smith, TARG Bristol
+
+Os epidemiologistas estão interessados ​​em compreender os fatores relacionados à saúde e à doença. Os fumantes tendem a morrer mais jovens que os não fumantes; certamente parece que sim, mas desvendar causa e efeito pode ser difícil. Os fumadores são, em média, diferentes dos não fumadores; eles são mais propensos a beber muito e a ter dietas menos saudáveis. Mas mesmo que medimos estes fatores de confusão, podemos não os medir perfeitamente, ou pode haver outros que não medimos. Além disso, à medida que as pessoas adoecem, podem reduzir ou deixar de fumar, o que poderia sugerir erradamente que a redução do consumo de tabaco conduz a uma pior saúde.
+
+Poderíamos designar aleatoriamente 50 mil pessoas para fumar e 50 mil pessoas para não fumar, e acompanhá-las para monitorar sua saúde. Isto elimina a possibilidade de que qualquer outro factor possa ser responsável por quaisquer diferenças que vemos na sua saúde a longo prazo, mas isto não é ético nem prático.
+
+Felizmente, todos nós fomos recrutados para um experimento sem saber disso no momento em que fomos concebidos. Nossos genes, que foram transmitidos aleatoriamente de geração em geração, influenciam o quanto comemos, bebemos, fumamos e muito mais. Essas influências genéticas não são afetadas por nada que você possa ou não escolher fazer em sua vida; eles não estão relacionados a fatores de confusão.
+
+Podemos usar esse conhecimento para aprender sobre causa e efeito, agrupando as pessoas de acordo com seu código genético. Este método é denominado Randomização Mendeliana. Por exemplo, os fumantes que carregam uma versão de um gene chamado CHRNA5 tendem a fumar menos do que aqueles que carregam uma versão diferente. Quando agrupamos as pessoas de acordo com a versão deste gene que possuem, descobrimos que as pessoas com a versão do gene associada ao tabagismo intenso morrem realmente mais jovens. Mas será que o gene está influenciando o tempo de vida de alguma outra forma? Nós não pensamos assim. Quando observamos o mesmo gene em não fumantes, não há efeito na expectativa de vida. Então, isso deve ser motivado pelo fumo.
+
+Usando este método, você pode mostrar que fumar causa câncer de pulmão, doenças cardíacas e respiratórias e muitas outras doenças, mas não parece influenciar a depressão ou a ansiedade. A randomização mendeliana já começou a nos informar sobre os fatores que influenciam o risco de doença. Agora, estamos usando a mesma abordagem de outras maneiras para analisar vários fatores de risco em conjunto e ver o que influencia a progressão da doença, o que pode nos ajudar a desenvolver novos tratamentos.

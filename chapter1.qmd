@@ -438,7 +438,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=uQAO_XwN9Fk&t=80s")
 ```
 
-Link to video transcript [here](chapter1.4_transcript.qmd#sec-suicide).
+Link to video transcript [here](chapter1.4_transcript.qmd#sec-suicide). Tradução para o português disponível [aqui](chapter1.4_transcript_portugues.qmd#sec-suicide).
 
 ------------------------------------------------------------------------
 
@@ -455,4 +455,4 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=SpRczJwXkpc")
 ```
 
-Link to video transcript [here](chapter1.4_transcript.qmd#sec-tourette).
+Link to video transcript [here](chapter1.4_transcript.qmd#sec-tourette). Tradução para o português disponível [aqui](chapter1.4_transcript_portugues.qmd#sec-tourette).

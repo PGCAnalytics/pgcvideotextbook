@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PGC Video Textbook - Capítulo 8.3: Análise de associação genética</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PGC Video Textbook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html" rel="" target="">
+ <span class="menu-text">Contact us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://pgc.unc.edu/" rel="" target="">
+ <span class="menu-text">PGC Website</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Capítulo 8.3: Análise de associação genética</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pgc_logo_website_v3.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/PGCAnalytics/pgcvideotextbook/">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-twitter"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/PGCgenetics">
+            PGC Twitter
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to the PGC Video Textbook!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: The Genome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: Technologies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Study Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: GWAS Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6: Polygenic Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7: Ancestry-Specific Analyses and Considerations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8: Post-GWAS Bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9: Advanced Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10: Other Considerations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Software Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_cnvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CNVs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_ewas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_geneset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gene Set Identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_gwas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_genomicSEM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genomic SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_MR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mendelian Randomization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_mtag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MTAG</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_prs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SNP Heritability and Genetic Correlation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools/Software Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://pgc.unc.edu/for-researchers/download-results/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGC Summary Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-section1" id="toc-sec-section1" class="nav-link active" data-scroll-target="#sec-section1"><strong><em>MAGMA</em></strong></a></li>
+  <li><a href="#sec-section2" id="toc-sec-section2" class="nav-link" data-scroll-target="#sec-section2"><strong><em>FUMA</em></strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capítulo 8.3: Análise de associação genética</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-section1" class="level1">
+<h1><strong><em>MAGMA</em></strong></h1>
+<p><strong>Título</strong>: Como passamos das descobertas genéticas do GWAS/WGS/WES para a visão mecanicista da doença?</p>
+<p><strong>Apresentador(es)</strong>: Danielle Posthuma (Department of Complex Trait Genetics, Vrije Universiteit Amsterdam)</p>
+<p>Bem, bem-vindo de volta, esta é a terceira parte da sessão sobre como passamos das descobertas genéticas ao conhecimento mecanicista da doença, e nesta última parte vou me concentrar um pouco na ferramenta de software MAGMA para conduzir análises baseadas em genes e vias. Então na prática você aprenderá como trabalhar com o MAGMA, que é uma ferramenta que foi criada por Christiaan de Leeuw há alguns anos e pode ser baixada neste site aqui [https://ctg.cncr.nl/software/magma].</p>
+<p>É uma ferramenta para análise de conjunto de genes e requer que você trabalhe com a interface de linha de comando, que agora deve ser bastante familiar para você e como entrada você pode fornecer dados genotípicos e fenotípicos brutos ou também pode fornecer estatísticas resumidas de resultados de estudos de associação já publicados, mas você também precisaria de alguns dados de referência. Porque precisamos de informações sobre a estrutura LD entre os SNPs que fazem parte da sua análise e a outra entrada são as definições dos genes. Então é com isso que vemos quais SNPs pertencem a quais genes e voltarei a isso nos próximos slides e também nas definições de conjuntos de genes. Mas se você baixar o MAGMA, existem alguns arquivos que possuem alguns arquivos padrão que você pode usar, que fazem isso para você, mas você também está livre para usar seus próprios arquivos se quiser. Então, apenas como um aparte, se você quiser ter acesso a estatísticas resumidas públicas, criamos um banco de dados e neste slide acabei de adicionar um exemplo quando você estiver interessado em olhar para um GWAS específico, então ele lhe dá o gráfico de Manhattan, gráficos baseados em genes, o gráfico QQ. Também já fornece resultados de conjuntos de genes. E dá algumas informações sobre este GWAS com o link para o PubMed ID e onde baixar os dados. Então, você pode usar este banco de dados se quiser brincar com qualquer ferramenta de software que exija a inserção de estatísticas resumidas, então sim, você pode simplesmente baixar estatísticas resumidas deste banco de dados, mas também existem alguns outros bancos de dados que têm o mesmo propósito. Na análise do conjunto de genes MAGMA, há três etapas principais, então a primeira etapa é a anotação onde combinamos os SNPs com os genes e, portanto, o MAGMA precisa saber quais SNPs devo analisar como parte de qual gene. Então esse é o primeiro passo.</p>
+<p>O passo dois é a análise do gene, e é aí que calculamos a associação do gene com o fenótipo. Então aqui a unidade de análise é o gene e o terceiro passo é a análise do conjunto de genes, onde a associação de conjuntos de genes é testada em relação ao seu fenótipo. E então, por ser uma estrutura de regressão linear muito geral que pode ser facilmente estendida, é muito fácil usar conjuntos contínuos. Então, em vez de ter um conjunto dicotômico onde os genes são membros do conjunto de genes ou não são membros do conjunto de genes, você também pode ter um conjunto de genes quantitativamente definido, onde cada gene tem um valor que indica quão provável é de fazer parte de um conjunto de genes, ou que indica o nível de expressão de um gene em um tipo de célula e então o tipo de célula é o conjunto de genes. E também permite fazer análises condicionais e conjuntas e análises de interação como foi explicado na segunda parte das palestras de hoje.</p>
+<p><em>Anotação</em></p>
+<p>Agora voltando às três etapas principais, anotação. Se você baixar o MAGMA, ele vem com um arquivo de anotação geral e os SNPs são mapeados para genes com base na localização física, mas você também pode alterar esse arquivo de anotação para que possa, se quiser que os eQTLs sejam incluídos nele, você pode mapear SNPs que estão fisicamente localizados fora de um gene, mas que possuem uma ligação eQTL conhecida com o gene, ou interação com a cromatina, que também é possível de usar. Você também pode adicionar uma janela ao redor do gene para poder dizer, bem, eu gostaria de ter talvez 1 megabase antes e depois do gene e esses SNPs também devem ser analisados ​​como parte deste gene. Na verdade, um SNP pode ser ligado e mapeado em vários genes.</p>
+<p><em>Análise Genética</em></p>
+<p>Então, se você executar a análise, existem quatro modelos disponíveis no MAGMA. Se você tiver os dados genotípicos brutos, ele conduzirá uma análise de regressão linear de componentes principais e isso só poderá ser feito quando você tiver acesso aos dados brutos. Então, se você inserir estatísticas resumidas, o que a maioria de vocês provavelmente fará, então existem três modelos diferentes que você pode usar para avaliar a significância estatística de seus genes e de seus conjuntos de genes.</p>
+<p>Portanto, o primeiro modelo é a média do SNP (Mean Model) e realiza o teste na associação média do SNP, de modo que avalia a evidência de associação de todos os SNPs que estão localizados no gene e então usa a associação média para avaliar se o gene está realmente associado. Ou você pode fazer o Top Model baseado em SNP, onde o foco da análise está na associação do SNP mais forte, e você também pode combinar esses dois modelos e obter isso, o Multi Model SNPwise, onde a evidência de ambos os modelos anteriores é combinado em um valor p para o seu gene. E sim, decidir qual modelo é melhor para você depende de qual é sua hipótese real. Então, que tipo de sensibilidade você deseja? Portanto, não existe, não achamos que exista o melhor, o melhor modelo. Realmente depende da situação ou da sua questão de pesquisa. É por isso que fornecemos vários modelos na ferramenta MAGMA. Então, o que está sendo feito na ferramenta MAGMA, quando você faz uma análise de conjunto de genes, é basicamente uma análise de genes. Portanto, em vez de os indivíduos serem a sua unidade de análise ou os seus pontos de dados, os genes são os pontos de dados na análise. Portanto, nesta tabela listamos 10 IDs de genes diferentes e cada um desses genes foi testado para associação na etapa baseada em genes no MAGMA. Portanto, todos eles têm algum tipo de medida da força da associação com o seu fenótipo com base nas estatísticas resumidas do GWAS. E também há uma indicação se eles fazem ou não parte do conjunto de genes que você gostaria de testar.</p>
+<p>Portanto, neste caso, os genes são os pontos de dados e o conjunto de genes é a variável de agrupamento e a associação genética com o fenótipo, esse é o resultado que você gostaria de obter, então este é basicamente um teste T simples para testar se a associação média dos genes que estão dentro do seu conjunto de genes é diferente da associação média dos genes que estão fora do seu conjunto de genes. Sim, isso é basicamente um teste unilateral dos genes, porque você tem uma hipótese muito forte de qual associação deveria ser mais forte. Agora, existem dois tipos de testes. Portanto, você poderia fazer uma análise independente onde perguntar se a média ou a associação genética média de genes em um conjunto de genes é maior que zero. Sim, então essa é a sua hipótese nula e a sua hipótese alternativa, enquanto na análise competitiva você pergunta se a associação genética média dos genes no conjunto de genes é maior que a dos genes fora do conjunto de genes.</p>
+<p>Sim, essa é a sua análise competitiva. E compare isso com um ensaio clínico randomizado ou qualquer configuração experimental. Então, em uma análise independente, perguntaríamos se a melhora média dos pacientes no grupo de tratamento é maior que zero, enquanto em uma análise competitiva você teria um grupo de controle, então você perguntaria se a melhora média dos pacientes no grupo de tratamento é realmente maior do que a dos pacientes no grupo de controle. Agora todos concordariam que gostaríamos de fazer uma análise competitiva. Precisaríamos de um grupo de controle, caso contrário não podemos realmente dizer que o tratamento está fazendo com que os pacientes melhorem. Então essa é também a razão pela qual pensamos que a análise competitiva é o caminho a seguir na análise de conjuntos de genes e que as análises independentes não são informativas para perguntar se o seu conjunto de genes que você testou está realmente associado causalmente à sua característica de interesse. É por isso que aconselhamos nunca fazer uma análise independente, mas sempre usar uma análise competitiva do conjunto de genes.</p>
+<p>OK. Isso apenas está enfatizando o mesmo ponto e também na parte dois dessas palestras de hoje eu indiquei isso ou se isso não estiver claro então talvez você deva voltar para a Parte 2 da palestra, então espero que esta mensagem apareça e estou ansiosa pela prática do MAGMA que está planejada para hoje mais tarde. Obrigada pela audiência e até logo!</p>
+<hr>
+</section>
+<section id="sec-section2" class="level1">
+<h1><strong><em>FUMA</em></strong></h1>
+<p><strong>Título:</strong> FUMA: Mapeamento funcional e anotação de associações genéticas</p>
+<p><strong>Apresentadora(s):</strong> Kyoko Watanabe (Regeneron)</p>
+<p><strong>Kyoko Watanabe</strong></p>
+<p>Olá a todos. Sou estudante de doutorado na Vrije Universiteit em Amsterdã. O meu trabalho centra-se principalmente na compreensão de associações genéticas num contexto biológico. Hoje, vou apresentar a vocês uma aplicação web que desenvolvi recentemente, que é Mapeamento funcional e anotação de associações genéticas [FUMA].</p>
+<p>Então, vou começar com uma explicação bem rápida recapitulação do que foi GWAS [estudo de associação genômica em larga escala] novamente. Basicamente, começamos genotipando um grande número de indivíduos usando arrays de SNP [Polimorfismo de nucleotídeo único], que hoje em dia podemos marcar cerca de um milhão de SNPs e, ao realizar a imputação com painéis de referência, você acaba com um máximo de 20 milhões de SNPs. Então eu um caso muito simples, quando você tem grupos caso e controle em seus indivíduos genotipados, você realiza testes estatísticos para ver se a ocorrência de alelos menores nos grupos caso e controle são diferentes de zero. Então, no final, você obtém o valor p para cada SNP que possui. Mas, como você pode imaginar, o número de testes estatísticos realizados é igual ao número de SNPs que você possui. Claro, você tem que corrigir para múltiplos testes, e o padrão ouro para um valor p genomicamente significativo é 5×10-8. Então, sempre que você encontrar SNPs com valores de p menores que isso, essas regiões genômicas são chamadas de “acertos” ou “significativos”.</p>
+<p>Assim, o primeiro estudo GWAS foi publicado em 2005 e, desde então, o custo da genotipagem diminuiu drasticamente, o que nos permitiu recolher um número muito maior de indivíduos. Hoje em dia, grandes consórcios para meta-análise costumam utilizar mais de 100 mil indivíduos. E ao aumentar o tamanho da amostra, também aumentamos o poder estatístico para detectar tamanhos de efeito relativamente fracos. Por exemplo, o estudo em altura, utilizando cerca de 200.000 indivíduos, acabou identificando mais de 100 loci em todo o genoma. Portanto, temos conduzido GWAS na última década e hoje em dia, no GWAS Catalog, temos mais de 3.000 estudos, incluindo mais de 38.000 associações únicas de características SNP para mais de 600 fenótipos. Então, basicamente, temos muitos loci de risco espalhados por todo o genoma.</p>
+<p>Contudo, especialmente para características complexas que são altamente poligênicas, sabemos que a associação de SNPs únicos é muito fraca. Para detectar esses efeitos, precisamos de um número muito maior de amostras. E, felizmente, o UK Biobank acaba de ser lançado este mês, e o banco de dados QC2 [conjunto de dados do UK Biobank] contém informações sobre 500.000 indivíduos e mais de mil 1.000 fenótipos. Portanto, o UK Biobank tem potencial para identificar novos loci para muitas características complexas humanas, e esperamos que mais e mais GWAS sejam publicados nos próximos meses.</p>
+<p>Então, a questão é: quais benefícios obtemos com os resultados do GWAS? Idealmente, gostaríamos de identificar as variantes causais a partir de associações genéticas que podem ser usadas para melhorar diagnósticos, prognósticos ou até mesmo identificar novos alvos de medicamentos ou biomarcadores. No entanto, uma associação não é causal. A associação não diz nada sobre causalidade. E também, com base puramente nos valores p do GWAS, você realmente não sabe muito sobre a biologia subjacente. A identificação de variantes causais a partir dos resultados do GWAS não é simples. Então, para superar esse problema, costumamos passar por diversas etapas.</p>
+<p>O primeiro passo é corrigir o LD [desequilíbrio de ligação], que é uma ocorrência não aleatória de SNPs. Portanto, por causa do LD, os SNPs mais significativos encontrados em um locus genômico específico não precisam necessariamente ser os que realmente causam o fenótipo. Em vez disso, poderia haver outros SNPs que são verdadeiramente responsáveis ​​pelo fenótipo, e estes SNPs podem ter uma correlação mais elevada com os SNPs mais significativos. Portanto, não queremos perder esses SNPs apenas com base no valor p.&nbsp;Portanto, o primeiro passo é incluir todos os SNPs que possuem uma correlação mais alta com os SNPs significativos. Depois de ter a lista de SNPs de seu interesse, a segunda etapa é verificar as consequências funcionais nos genes. Por exemplo, se você tiver SNPs em regiões exônicas ou em regiões não codificantes, existem diversas ferramentas de software que podem realizar esta tarefa. No entanto, sabe-se que mais de 90% das descobertas do GWAS se enquadram em regiões não codificantes. Portanto, apenas saber que você tem uma ocorrência em uma região não codificada não ajuda realmente a entender o que realmente está acontecendo em um contexto biológico. Então você ainda precisa anotar as funções biológicas.</p>
+<p>Existem vários recursos de dados que você pode usar. Por exemplo, a pontuação CADD é uma métrica que avalia os efeitos deletérios dos SNPs, e o RegulomeDB é uma pontuação categórica que indica a probabilidade de o SNP afetar os elementos regulatórios. Além disso, existem vários bancos de dados eQTL, por exemplo GTEx possui detalhes em 44 tipos de tecidos diferentes. E, especialmente para regiões não codificantes, você também vai querer verificar o status epigenético. Os dados estão disponíveis em Roadmap e ENCODE. Não mencionei nenhum nome de banco de dados aqui, mas o genoma 3D, no campo do genoma 3D, cada vez mais dados estão se tornando disponíveis. Assim, incluir dados Hi-C também pode ser outra opção para mapear SNPs para os genes distais. Então, usando essas informações funcionais no nível do SNP, você pode acabar com uma lista de genes nos quais está interessado. Finalmente, você precisa considerar padrões de expressão em diferentes tipos de tecidos e também em células que compartilham funções biológicas, como vias.</p>
+<p>Então, estamos executando essas várias etapas manualmente. Como você pode imaginar, isso requer a instalação de softwares diferentes e o download de vários bancos de dados e, às vezes, a reformatação dos dados a cada vez. Portanto, isso é muito demorado e elaborado. Então, esperávamos criar uma plataforma única que pudesse realizar todos eles.</p>
+<p>Então, desenvolvemos uma aplicação web chamada FUMA que basicamente otimiza as quatro etapas que mostrei nos slides anteriores em uma única plataforma. Então, no FUMA, existem dois processos principais. O primeiro é o SNP2GENE (SNP-gene), a partir das estatísticas resumidas do GWAS. Fornecemos listas de SNPs candidatos com anotações e também listas de genes priorizados. E esses genes podem ser passados ​​para o segundo processo, que é a análise GENE2FUNC (gene-função), onde fornece a anotação de variante adicional no nível do gene. E outra vantagem do FUMA é que também fornecemos visualização interativa na aplicação web, para que você não precise usar software externo apenas para visualização.</p>
+<p>Então, vou explicar o que o FUMA realmente faz em cada processo. Assim, no SNP2GENE, a partir das estatísticas resumidas do GWAS, primeiro caracterizamos os loci genômicos corrigindo o LD. E aqui, fornecemos a lista de SNPs principais e os loci de risco genômico. Todos os SNPs que estão em LD dos SNPs líderes são então passados ​​para a segunda etapa, que é a anotação dos SNPs. Aqui, realizamos o ANNOVAR e anotamos diversas pontuações de variantes e eQTL, e também o Hi-C. Usando essas informações, finalmente realizamos o mapeamento genético. Atualmente, temos três critérios diferentes para mapeamento genético. O primeiro é o mapeamento posicional usando anotações do mapeamento ANNOVAR e eQTL, e também, o mapeamento de interação da cromatina. Portanto, antes de realizar esse mapeamento genético, você também pode filtrar SNPs com base nas anotações obtidas na etapa dois. E você também pode combinar diferentes mapeamentos. Você pode especificar vários parâmetros diferentes ao enviar o trabalho. E fornecemos uma lista de genes mapeados por… com base nos parâmetros definidos pelo usuário.</p>
+<p>Portanto, este é apenas um exemplo da aparência da página de resultados. Fornecemos um gráfico de Manhattan no topo.</p>
+<p>E a segunda é… realizamos testes baseados em genes usando o software MAGMA. Portanto, este é o gráfico de Manhattan baseado nos valores p do gene. E os resultados resumidos por loci de risco genômico. E todos os resultados estão disponíveis em forma de tabela. E você também pode criar um gráfico regional com todas as anotações e resultados juntos. E todos os resultados e abordagens podem ser baixados.</p>
+<p>Portanto, este é apenas um exemplo de como você pode utilizar o mapeamento eQTL. Portanto, este é um dos locais de risco no cromossomo 14, do GWAS da esquizofrenia. Do topo, você verá um gráfico de Manhattan ampliado e os genes, pontuação CADD, RegulomeDB, estados abertos da cromatina e eQTLs. Como você pode ver, o próprio locus de risco abrange vários genes. Então se você não sabe, se não tem mais informações, você acaba listando todos os genes, ou pode verificar manualmente a função dos genes e escolher aquele que tem a função mais interessante no fenótipo. No entanto, ao realizar o mapeamento de eQTL, priorizamos os genes únicos que possuem eQTLs no cérebro. Assim, realizando diferentes tipos de mapeamento de eQTL, você também pode priorizar genes.</p>
+<p>E outro exemplo é o mapeamento de interação da cromatina. O FUMA atualmente usa dados Hi-C de Schmitt et al.&nbsp;que inclui 14 tipos de tecidos e linhas celulares diferentes. Como já disse, o campo está crescendo muito rápido. Também oferecemos a opção de aplicar a matriz de interação da cromatina personalizada, que não se limita ao Hi-C, mas pode incluir Capture Hi-C e C5. Portanto, o gráfico mostra os loci de risco no cromossomo 16 do IMC GWAS. A camada mais externa é o gráfico de Manhattan, e a segunda, o círculo azul, são as coordenadas do genoma. E os loci de risco estão destacados em azul. E dentro do círculo, os links laranja são links Hi-C e os links verdes são eQTLs. Então, como você pode ver claramente, o Hi-C pode mapear SNPs para genes distais em comparação com eQTLs. Portanto, isso pode ajudá-lo a identificar novos genes candidatos que você pode ter perdido.</p>
+<p>Então, finalmente, uma vez que você tenha a lista de genes, você pode usar o processo GENE2FUNC, onde fornecemos um heatmap de expressão genética e especificidade de tecido, realizando testes de super-representação para genes expressos diferencialmente em diferentes tipos de tecidos, testes de enriquecimento para genes conjuntos, e também, links externos para OMIM [Online Mendelian Inheritance in Man] e DrugBank para investigar mais detalhadamente os genes individuais.</p>
+<p>Então, resumindo, otimizamos a anotação pós-GWAS em uma única plataforma, como uma aplicação web. Portanto, este pode ser o primeiro lugar para uma visão geral ampla do que está acontecendo nos loci de risco do GWAS assim que você obtiver os novos resultados do GWAS. Mas também, se você tiver um fenótipo de interesse, já existem muitas estatísticas resumidas do GWAS disponíveis. Então você pode começar, você pode realizar o FUMA para os GWAS disponíveis e começar a integrar com a pesquisa. E para atualizações futuras, estamos pensando em estender o FUMA para poder aceitar todos os estudos de sequenciamento de exoma e também EWAS.</p>
+<p>E por fim, gostaria de agradecer ao meu orientador, ao meu coorientador, e o FUMA está disponível online, então fique à vontade para visitar o site. E também tenho um pôster esta noite no local B-325, então se você quiser saber mais detalhes, fique à vontade para me visitar. Obrigada. [Nota: observe que esta é uma gravação de arquivo; o site da FUMA está disponível em [<a href="https://fuma.ctglab.nl/" class="uri">https://fuma.ctglab.nl/</a>]</p>
+<p><strong>Facilitador:</strong> Alguém tem alguma pergunta?</p>
+<p>Pergunta do público: Então, eu tenho uma pergunta. Já vi alguns casos em que, embora o locus de risco esteja associado ao mesmo fenótipo, há evidências claras de haplótipos distintos. Parece que o FUMA provavelmente seria capaz de mostrar casos como esse em que potencialmente você está obtendo o mesmo fenótipo de variantes distintas que afetam, digamos, o promotor do gene ou um intensificador próximo.</p>
+<p><strong>Kyoko Watanabe:</strong> Você quer dizer pleiotropia?</p>
+<p>Membro do público: Tipo, mesmo fenótipo, mas duas variantes causais diferentes.</p>
+<p><strong>Kyoko Watanabe:</strong> Na mesma região?</p>
+<p>Membro do público: Na mesma região.</p>
+<p><strong>Kyoko Watanabe:</strong> Hum. Sim. Portanto, é mais como se o FUMA servisse apenas para anotar quais são as informações funcionais disponíveis, apenas fornecendo as opções de quais SNPs você examinará mais adiante. Então não é… Não é remover a informação. Então, você pode obter vários SNPs que possuem funções de um locus, mas sim, não podemos distinguir qual é realmente causal. Mas não acho que você realmente vai perder essa informação.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

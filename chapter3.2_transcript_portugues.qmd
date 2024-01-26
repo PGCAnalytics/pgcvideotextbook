@@ -1,0 +1,99 @@
+---
+title: "Capítulo 3.2: Sequenciamento de Próxima Geração"
+---
+
+# ***Como sequenciar o genoma humano*** {#sec-section1}
+
+**Título**: Como sequenciar o genoma humano
+
+**Apresentador**: Mark J. Kiel
+
+Provavelmente, você já ouviu falar do genoma humano, a enorme coleção de genes dentro de cada uma de suas células. Você provavelmente também sabe que o genoma humano foi sequenciado, mas o que isso, de fato, significa? Como o genoma de uma pessoa é sequenciado?
+
+*O que é um genoma*
+
+Vamos voltar um pouco. O que é um genoma? Bem, genoma é o conjunto de todos os genes, e algo mais, que constituem um organismo. Os genes são feitos de DNA, e o DNA é feito de um longo par de filamentos de As, Ts, Cs e Gs. Seu genoma é o código que suas células usam para saber como se comportar. A interação entre as células forma tecidos. A cooperação entre tecidos forma os órgãos. A cooperação entre órgãos forma um organismo, você!
+
+Então, você é quem é, em grande parte, por causa do seu genoma. O primeiro genoma humano foi sequenciado dez anos atrás e não foi uma tarefa fácil. Levou duas décadas para ser concluído, exigiu o esforço de centenas de cientistas em dezenas de países e custou mais de três bilhões de dólares. Mas algum dia, muito em breve, será possível conhecer a sequência de letras que compõem o seu próprio genoma, tudo em questão de minutos e por menos do que o custo de um belo presente de aniversário. Como isso é possível? Vamos olhar mais de perto. Conhecer a sequência dos bilhões de letras que compõem o seu genoma é o objetivo do sequenciamento do genoma. Um genoma é, ao mesmo tempo, extremamente grande e extremamente pequeno. As letras individuais do DNA os As, Ts, Gs e Cs, têm apenas oito ou dez átomos de largura e estão todas agrupadas em um aglomerado, como um novelo de lã. Assim, para extrair toda essa informação desse espaço minúsculo, os cientistas primeiro têm de quebrar a longa cadeia de DNA em pedaços menores.
+
+*DNA se liga ao DNA*
+
+Cada uma desses pedaços é então separado no espaço e sequenciado individualmente. Mas como? É bom lembrar que o DNA se liga a outro DNA se as sequências forem exatamente opostas umas às outras. Os As se ligam aos Ts e os Ts se ligam aos As. Gs se ligam a Cs e Cs se ligam a Gs. Se a sequência ATGC de dois pedaços de DNA forem exatamente opostos, eles permanecerão juntos. Como os pedaços do genoma são tão pequenos, precisamos de alguma forma de aumentar o sinal que podemos detectar em cada uma das letras individuais. No método mais comum, os cientistas usam enzimas para fazer milhares de cópias de cada pedaço do genoma. Então, agora temos milhares de réplicas de cada um dos pedaços do genoma, todos com a mesma sequência de As, Ts, Gs e Cs.
+
+*Lendo o genoma*
+
+Mas temos que ler todos eles de alguma forma. Para fazer isso, precisamos fazer um lote de letras especiais, cada uma com uma cor distinta. Uma mistura dessas letras coloridas especiais e enzimas é então adicionada ao genoma que estamos tentando ler. Em cada ponto do genoma, uma das letras especiais liga-se à letra oposta, e agora um pedaço de DNA na forma de uma fita dupla com um ponto colorido em cada letra. Os cientistas então tiram fotos de cada fragmento do genoma. Ver a ordem das cores nos permite ler a sequência. As sequências de cada um desses milhões de pedaços de DNA são unidas por meio de programas de computador para criar uma sequência completa de todo o genoma. Esta não é a única maneira de ler as sequências de letras de pedaços de DNA, mas é uma das mais comuns. É claro, simplesmente ler as letras do genoma não nos diz muita coisa. É como folhear um livro escrito em um idioma que você não fala. Você pode reconhecer todas as letras, mas ainda não tem ideia do que se trata.
+
+*Interpretando a sequência*
+
+Então, o próximo passo é decifrar o que a sequência significa, como o seu genoma e o meu genoma são diferentes. Interpretar os genes do genoma é a parte em que os cientistas ainda estão trabalhando. Embora nem todas as diferenças tenham consequências, a soma destas diferenças é responsável pelas diferenças na nossa aparência, no que gostamos, na forma como agimos e até na probabilidade de ficarmos doentes ou de respondermos a medicamentos específicos. Uma melhor compreensão de como as disparidades entre os nossos genomas explicam estas diferenças certamente mudará a forma como pensamos não apenas sobre como os médicos tratam os seus pacientes, mas também como tratamos uns aos outros.
+
+------------------------------------------------------------------------
+
+# ***Sequenciamento de próxima geração: um guia passo a passo para sequenciamento de DNA*** {#sec-section2}
+
+**Título**: Sequenciamento de próxima geração: um guia passo a passo para sequenciamento de DNA
+
+**Apresentador**: ClevaLab
+
+O Projeto Genoma Humano descobriu todas as 3,2 bilhões de bases do genoma humano. Este projeto começou em 1990 e demorou até 2003 para completar 85% do primeiro genoma. Mas, em 2022, as lacunas foram preenchidas e a sequência ficou completa. Portanto, no total, o sequenciamento do genoma humano levou 32 anos. Agora, com o sequenciamento de nova geração ou NGS, leva apenas um dia para sequenciar todo o genoma de uma pessoa.
+
+*Sequenciamento NGS vs Sanger*
+
+Um dia é um aumento dramático de velocidade em comparação com 32 anos! A diferença se deve ao número de fitas de DNA sequenciadas de uma só vez. Bilhões de cadeias de DNA são sequenciadas simultaneamente usando NGS. No entanto, apenas o sequenciamento Sanger estava disponível para o Projeto Genoma Humano. Com o sequenciamento Sanger, apenas uma fita pode ser sequenciada por vez. No entanto, o NGS só funciona porque o Projeto Genoma Humano criou uma sequência de DNA de referência humana.
+
+*O Princípio Básico do NGS*
+
+O princípio básico por trás do NGS é que o DNA pode ser cortado em pequenos pedaços e sequenciado. As sequências desses pequenos pedaços são então montadas com base no genoma de referência. NGS pode ser usado para sequenciar DNA e RNA. Primeiro, as amostras são coletadas e o DNA ou RNA é purificado.
+
+*Purificação e controle de qualidade de DNA e RNA*
+
+Em seguida, o DNA ou RNA é verificado para garantir que é puro e não degradado. O RNA primeiro precisa ser transcrito reversamente em DNA antes de ser sequenciado. Uma biblioteca é então preparada a partir do DNA.
+
+*Preparação da Biblioteca – A Primeira Etapa do NGS*
+
+Uma biblioteca é uma coleção de pequenos fragmentos de DNA de um longo trecho de DNA. As bibliotecas são feitas cortando o DNA em pequenos pedaços de tamanhos específicos. Este corte é feito usando ondas sonoras de alta frequência ou enzimas. Em seguida, sequências de DNA chamadas adaptadores são adicionadas a cada extremidade de um fragmento de DNA. Esses adaptadores contêm as informações necessárias para o sequenciamento. Eles também incluem um index para identificar a amostra. Finalmente, todos os adaptadores não ligados são removidos e a biblioteca é concluída. Dependendo da aplicação, pode haver uma etapa de PCR para aumentar a quantidade da biblioteca. Uma biblioteca bem-sucedida terá o tamanho correto. Também terá uma concentração suficientemente alta para sequenciamento. Os principais instrumentos de sequenciamento utilizados no NGS são da Illumina.
+
+*Sequenciamento por Síntese e Reação de Sequenciamento*
+
+Esses instrumentos utilizam um método denominado sequenciamento por síntese. O sequenciamento ocorre na superfície de vidro de uma célula de fluxo (“flow cell”). Pequenos pedaços de DNA, chamados oligonucleotídeos, estão ligados à superfície da célula de fluxo. Estes oligonucleótidos correspondem às sequências dos adaptadores da biblioteca. Primeiro, a biblioteca é desnaturada para formar cadeias simples de DNA. Em seguida, essa biblioteca é adicionada à célula de fluxo, que é anexada a um dos dois oligos. A fita que se liga ao oligo é a fita forward. Em seguida, a fita reversa é feita e a fita forward é lavada. A biblioteca agora está ligada à célula de fluxo. Se o sequenciamento começasse agora, o sinal fluorescente seria muito baixo para detecção.
+
+*Geração de cluster a partir do fragmento da biblioteca*
+
+Portanto, cada fragmento único da biblioteca precisa ser amplificado para formar clusters. Essa amplificação clonal é feita por PCR que acontece em uma única temperatura. Anelamento, extensão e desnaturação ocorrem alterando a solução da célula de fluxo. Primeiro, as cadeias ligam-se ao segundo oligo na célula de fluxo para formar uma ponte. As fitas são copiadas. Então esses fragmentos de fita dupla são desnaturados. Essa cópia e desnaturação se repete continuamente. Clusters são feitos e, finalmente, as fitas reversas são cortadas. Esses fios são removidos, deixando a fita forward pronta para sequenciamento.
+
+*Sequenciamento da fita forward*
+
+O primer de sequenciamento se liga às fitas forward. Em seguida, os nucleotídeos fluorescentes G, C, T e A são adicionados à célula de fluxo junto com a DNA polimerase. Cada nucleotídeo possui uma tag fluorescente de cor diferente e um terminador. Portanto, apenas um nucleotídeo pode ser sequenciado por vez. Primeiro, a base complementar liga-se à sequência. Em seguida, a câmera lê e registra a cor de cada cluster. Em seguida, uma nova solução é adicionada e remove os terminadores. Os nucleotídeos e a DNA polimerase fluem novamente e outro nucleotídeo é sequenciado. Esses ciclos de leitura continuam pelo número de leituras definido no sequenciador. Depois de concluídas, essas sequências de leitura são eliminadas.
+
+*O primeiro index é lido*
+
+Em seguida, o primeiro index é sequenciado e eliminado. Se apenas uma única leitura for necessária, o sequenciamento termina aqui. Mas, para sequenciamento emparelhado, o segundo index é sequenciado, assim como a fita reversa da biblioteca.
+
+*O segundo index é lido*
+
+Não há primer para a segunda leitura do index. Em vez disso, uma ponte é criada para que o segundo oligo atue como primer. O segundo index é então sequenciado. Essas duas leituras de index usam indexes duplos exclusivos. Isso permite o uso de até 384 amostras na mesma célula de fluxo.
+
+*Sequenciamento da fita reversa*
+
+Em seguida, a fita reversa é feita e as fitas forward são cortadas e lavadas. As fitas reversas são então sequenciadas. Assim que o sequenciamento for concluído, todas as leituras ruins serão filtradas.
+
+*Filtragem e Mapeamento das Leituras*
+
+Estes incluem os clusters que se sobrepõem, adiantam ou atrasam no sequenciamento ou são de baixa intensidade. Os clusters não podem se sobrepor em uma célula de fluxo patenteada, mas pode haver mais de um fragmento de biblioteca por nanopoço. Esses poços policlonais também serão filtrados. Em seguida, as leituras que passam pelo filtro são demultiplexadas.
+
+*Demultiplexação e mapeamento para a referência*
+
+A demultiplexação usa os indexes anexados para identificar e classificar as leituras de cada amostra. Finalmente, as leituras são mapeadas para o genoma de referência. As diferentes leituras se alinham ao genoma de referência, sobrepondo-se umas às outras. O sequenciamento de extremidades emparelhadas (paired end sequencing) cria duas leituras de sequenciamento do mesmo fragmento de biblioteca. Durante o alinhamento da sequência, o algoritmo sabe que essas leituras pertencem juntas. Trechos mais longos de DNA ou RNA podem ser analisados ​​com maior confiança de que o alinhamento está correto.
+
+*O que é profundidade de leitura no NGS?*
+
+A profundidade de leitura é uma métrica essencial no sequenciamento. Profundidade de leitura é o número de leituras de um nucleotídeo. A profundidade média de leitura é a profundidade média na região sequenciada. Para o sequenciamento completo do genoma, uma profundidade média de leitura de 30x é boa. Uma profundidade de leitura média de 1.500x é adequada para detectar eventos de mutação rara no câncer. Outra métrica essencial é a cobertura. O objetivo é não haver áreas faltantes no DNA alvo.
+
+*Como o NGS está sendo usado?*
+
+O NGS é usado em uma ampla variedade de aplicações. No diagnóstico de câncer e doenças raras, orientação sobre tratamento de câncer e em muitas áreas de pesquisa, da ecologia à botânica e à ciência médica.
+
+*Que tipos de aplicações do NGS existem?*
+
+Tanto o DNA quanto o RNA podem ser sequenciados. Poderia ser todo o genoma ou transcriptoma, apenas as regiões codificantes (chamadas exomas) do DNA, ou genes alvo no DNA ou RNA. Todos os tipos de RNA podem ser sequenciados, incluindo RNAs não codificantes, como microRNAs e RNA longo não codificante. Além disso, DNA livre de células, células individuais, bem como locais de metilação ou ligação a proteínas também podem ser sequenciados.

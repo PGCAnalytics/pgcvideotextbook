@@ -23,7 +23,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=PeFOjLEJkrA")
 ```
 
-Link to video transcript [here](chapter3.1_transcript.qmd).
+Link to video transcript [here](chapter3.1_transcript.qmd). Tradução para o português disponível [aqui](chapter3.1_transcript_portugues.qmd#sec-section1).
 
 Powerpoint slides for this video are available [here](https://github.com/GenomicsBootCamp/IntroductionToGenomics).
 
@@ -46,7 +46,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=MvuYATh7Y74")
 ```
 
-Link to video transcript [here](chapter3.2_transcript.qmd#sec-video1).
+Link to video transcript [here](chapter3.2_transcript.qmd#sec-video1). Tradução para o português disponível [aqui](chapter3.2_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -63,4 +63,4 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=WKAUtJQ69n8")
 ```
 
-Link to video transcript [here](chapter3.2_transcript.qmd#sec-video2).
+Link to video transcript [here](chapter3.2_transcript.qmd#sec-video2). Tradução para o português disponível [aqui](chapter3.2_transcript_portugues.qmd#sec-section2).

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PGC Video Textbook - Capítulo 9.1: CNVs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PGC Video Textbook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html" rel="" target="">
+ <span class="menu-text">Contact us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://pgc.unc.edu/" rel="" target="">
+ <span class="menu-text">PGC Website</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Capítulo 9.1: CNVs</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pgc_logo_website_v3.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/PGCAnalytics/pgcvideotextbook/">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-twitter"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/PGCgenetics">
+            PGC Twitter
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to the PGC Video Textbook!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: The Genome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: Technologies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Study Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: GWAS Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6: Polygenic Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7: Ancestry-Specific Analyses and Considerations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8: Post-GWAS Bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9: Advanced Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10: Other Considerations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Software Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_cnvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CNVs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_ewas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_geneset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gene Set Identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_gwas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_genomicSEM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genomic SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_MR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mendelian Randomization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_mtag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MTAG</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_prs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SNP Heritability and Genetic Correlation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools/Software Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://pgc.unc.edu/for-researchers/download-results/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGC Summary Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-section1" id="toc-sec-section1" class="nav-link active" data-scroll-target="#sec-section1"><strong><em>Como executar a análise de variação do número de cópias (CNV)</em></strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capítulo 9.1: CNVs</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-section1" class="level1">
+<h1><strong><em>Como executar a análise de variação do número de cópias (CNV)</em></strong></h1>
+<p><strong>Título:</strong> Como executar a análise de variação do número de cópias (CNV)</p>
+<p><strong>Apresentador(es):</strong> Daniel Howrigan, Broad Institute</p>
+<p>Olá, meu nome é Daniel Howrigan e hoje falarei sobre como executar análise de variação de número de cópias. Na palestra de hoje, abordarei algumas questões, a saber: o que é uma variante de número de cópias e como a detectamos com dados genotípicos? Qual é a aparência do formato do arquivo CNV e como é o resultado da análise CNV? Finalmente, como posso usar isso para executar testes de carga e associação de CNV?</p>
+<p>Então, o que é uma variante de número de cópia? Bem, eu defino aqui como um subconjunto de variação estrutural envolvendo um ganho ou duplicação ou uma perda/deleção da sequência genômica. Agora, eu chamo isso de subconjunto de variação estrutural porque a variação estrutural pode abranger basicamente qualquer mudança no comprimento de uma sequência genômica, que pode ser tão pequena quanto a inserção ou deleção de um único par de bases. Agora, a maioria dos SNPs que pensamos são apenas substituições, de modo que o tamanho real do genoma não é alterado com um polimorfismo de um único nucleotídeo. Mas uma variante estrutural pode abranger desde cromossomos muito pequenos até cromossomos inteiros.</p>
+<p>O que chamamos de CNVs, bem, sendo um nome genérico, cai na categoria de aproximadamente, pelo menos definida aqui, de no mínimo um quilobase a submicroscópico. Com dados de array, geralmente dizemos algo em torno de 10 a 100 quilobases, dada a nossa sensibilidade para detectar essas CNVs, enquanto CNVs maiores geralmente são superiores a 500 quilobases até múltiplas megabases, e então entramos em eventos muito maiores. Agora, não vou entrar em detalhes sobre os mecanismos que causam isso. Listei alguns aqui; você pode procurá-los. Mas existem diferentes pontos críticos no genoma que são mais propensos a essas variantes no número de cópias devido a regiões repetidas ou muitas vezes formas no maquinário que podem cometer erros e levar a esses ganhos ou perdas de sequência genômica.</p>
+<p>Como podemos detectá-lo usando dados genotípicos? Então, quando percorremos o genoma coletando um monte de SNPs… Eu mostro aqui o mecanismo básico, ou pelo menos uma figura mostrando como tiramos a intensidade da luz de diferentes experimentos procurando capturar ou você conhece o alelo A, eu tenho um A como alelo A, ou o alelo B sendo TT aqui, e então um heterozigoto , você pode ver uma mistura de vermelho e verde. Agora podemos aproveitar essas frequências alélicas no que chamamos de frequência do alelo B, ou pelo menos a frequência do T neste caso. Agora, normalmente, quando não há variante de número de cópias, estes serão aproximadamente iguais e, portanto, em torno de 50%. Quando vemos algo como uma deleção grande ou qualquer tipo de deleção, devemos ver uma perda de heterozigosidade e, portanto, veremos uma lacuna nesses alelos B, pelo menos em qualquer local onde você normalmente seria heterozigoto. Com a duplicação, elas ficariam um pouco afastadas, então seriam mais como dois terços-um terço, e você veria talvez um movimento semelhante ao para onde essas linhas rosa podem estar indo, embora não seja bem definido que você veria em uma duplicação que as frequências do alelo B se afastam de 50%, mas não para um e zero.</p>
+<p>Agora, olhando para os alelos B, a outra coisa que usamos para detectá-lo é a razão log R (LRR) e isso basicamente mede a intensidade da luz e quando você vê uma queda aqui, onde veríamos talvez em todas essas chamadas, você deverá ver uma queda de 50% quando tivermos uma deleção e, posteriormente, verá um aumento de cerca de 33% para uma duplicação. Agora não vou entrar em detalhes sobre os softwares usados ​​para detectar essas variantes de número de cópias, basta dizer que esta é a base sobre a qual foi construído.&nbsp;</p>
+<p>O que vou falar a seguir é que, como você executou chamadas de variantes de número de cópia, aqui estão os tipos de chamadas de controle de qualidade que você está movendo para o estágio de análise. Eu uso o plink para analisar os dados CNV, para que você possa obter vários formatos de arquivo diferentes, copiar variantes de números de diferentes softwares.Se quiser usar o plink, você converteria isso para este formato de arquivo específico, é definitivamente qual é o arquivo .cnv, e são basicamente identificadores individuais, o cromossomo, a posição inicial e final desta CNV, o tipo um sendo uma deleção, três sendo uma duplicação, e também há alguns outros campos aqui, o campo de pontuação e sites. Neste exemplo, eu uso a pontuação sendo o número de softwares que concordaram em ignorar e chamar, e pode variar até seis; e sites aqui sendo o número de SNPs usados ​​para chamar a CNV. Agora, observo aqui que a pontuação e os sites não são forçados a uma convenção específica. Você poderia dizer, substitua a pontuação pelo número de genes que se sobrepõem ao CNV ou o site é alguma outra variável que você estaria interessado em medir. Agora, junto com esse arquivo, o plink cria um arquivo cnv.map, que basicamente divide os pontos de interrupção de cada CNV em um arquivo de mapa, semelhante ao que temos para dados SNP. E você pode ver aqui, observo que cada posição diferente é mapeada, até mesmo a posição final, mas também talvez uma única posição após esse final, porque você pode querer fazer um teste adicional após o final de uma CNV para ver como as coisas mudaram. Observe que os comandos de formato de arquivo .cnv não estão disponíveis no plink 1.9, mas os atalhos garantidos da versão inicial que você obtém usando a versão mais recente do plink não são tão aplicáveis ​​aqui porque geralmente estamos lidando com variações raras e assim esses tamanhos de arquivo geralmente não são muito grandes e os tipos de computação que você usa não são muito pesados.</p>
+<p>Então, como é o output da análise CNV? Normalmente, sempre que você executa um comando no plink olhando seus arquivos de CNV, você obtém o arquivo cnv.indiv, então este é um arquivo por amostra onde você diz o número de segmentos CNV que este indivíduo possui, o número de quilobases que estes cobertura dos segmentos e a média de quilobases cobertas por segmento. Você também obtém um arquivo cnv.summary, semelhante ao arquivo cnv.map que resume o número de indivíduos afetados e não afetados em qualquer ponto de interrupção ou início e fim mais um de uma CNV. E esta é basicamente, você sabe, o output aqui, bem, parece bem simples. Mostrarei como com esses arquivos você pode fazer análises bastante sofisticadas usando vários filtros diferentes.</p>
+<p>Portanto, grande parte da mágica do plink são todos os sinalizadores que você pode usar para subdividir sua lista de CNVs. O que tenho aqui é um comando detalhado apenas para mostrar as opcionalidades disponíveis no plink e, para cada um deles, descrevo o que essa função está fazendo. Então, com o plink, você tem `–cfile`, que pode ser lido nos arquivos .cnv.map e .cnv. Quero selecionar apenas exclusões, quero selecionar CNVs com pelo menos 100 quilobases de comprimento, quero CNVs com pontuação quatro ou superior e pelo menos 50 sites. Quero excluir CNVs que se sobrepõem a uma região específica, para poder inserir um arquivo de texto diferente com uma lista de cromossomos e posições iniciais e finais aqui, e quero ter certeza nesta exclusão de que os CNVs devem se sobrepor em pelo menos 50 por cento ser excluído. Também posso observar a frequência em que pelo menos 10 CNVs se sobrepõem. Gostaria de excluí-los porque talvez esteja mais interessado em CNVs muito raros. Também posso escrever as frequências dessas CNVs apenas para garantir quais CNVs estão sendo descartadas, quais CNVs estão sendo mantidas, e então posso executar um teste de carga básico usando um modelo de permutação, e aqui apenas defino o número de permutações é dez mil. Então você pode ver que há muitos sinalizadores diferentes aqui, e a manipulação de muitos desses sinalizadores pode fornecer exatamente o que você gostaria em termos de sua análise.Agora concedido, o uso dos testes de carga no plink não lida com covariáveis, basicamente apenas olha para algo como status de controle de caso, e então o que eu recomendo é pegar a saída, particularmente o arquivo .cnv and .cnd.indiv, e ler isso em, digamos, Python ou R. Eu prefiro R para executar modelos mais sofisticados.</p>
+<p>E então você pode ver quando você coloca mais filtros aqui, se eu voltar, o número de segmentos mudará dependendo de quais filtros e, obviamente, subsequentemente, o número de quilobases cobertas por esses segmentos mudará como uma função, e é uma espécie de leitura iterativa desses arquivos em diferentes etapas de filtragem que podem produzir uma ampla variedade de testes.</p>
+<p>Então, mostrei aqui alguns números que publicamos ao analisar a carga da CNV na esquizofrenia do PGC. Então, coloquei esses arquivos .cnv.indiv em R, executei uma regressão logística prevendo o status de esquizofrenia e adicionando uma série de covariáveis, como componentes principais, plataformas de genótipo e, basicamente, enquanto executava interativamente diferentes comandos no plink para examinar Kb, contagens de CNV, comprimentos, frequências, se estão ou não em uma região específica… você pode construir uma série de testes de carga geral. Então, neste exemplo aqui, seriam todas as CNVs, deleções e duplicações estratificadas por diferentes plataformas de genotipagem, e então todas juntas, e então no painel B aqui, estou estratificando por diferentes frequências, e digo CNVs previamente implicados como regiões. Quero dizer nas barras azuis que estamos vendo o enriquecimento aqui nas barras verdes e azuis, mas você pode ver o grande desvio aqui. Há muito enriquecimento quando falamos de CNVs nesse tamanho ou pelo menos nessa frequência. Quero dizer, e eles vão embora porque a maioria deles está implicada. Então, excluí essas regiões, executei novamente o teste de carga e você pode ver que já capturamos grande parte do sinal com CNVs previamente implicados.</p>
+<p>Então, como usamos isso para executar testes de associação de CNV em loci de CNV individuais ou em pontos de quebra individuais de CNVs? Basicamente, eu executaria um comando muito semelhante. Eu poderia usar todos os mesmos filtros, basicamente me livrar de uma série de comandos, em particular, você está se livrando desse CNV na etapa indiv.perm, mas ainda executa um teste de permutação, e o que você obterá é um arquivo .cmd.summary.mperm e, em cada posição base, você pode executar um teste de associação aqui usando permutação. Este seria o valor de permutação pontual, mas também há um p-valor de permutação familiar que corrige todos os testes aqui. Então, essa associação é executada em todas as posições iniciais e finais mais um possíveis, e uma das coisas que você pode fazer se quiser incluir covariáveis ​​em seus dados, pelo menos o que fiz no passado, é talvez executar seu modelo de regressão logística com muitas de suas covariáveis, retire os resíduos e, em seguida, use isso como uma característica quantitativa, e você pode executar o mapeamento de associação no plink para obter p-valores dessa forma.</p>
+<p>Então, como é isso? Acho que ter uma figura é instrutivo aqui. Então, plotei através de um navegador. Vou detalhar isso: este é o nosso sinal no gene NRXN1, em vermelho, temos nossas deleções, deleções em vermelho claro em nossos casos de esquizofrenia, deleções em vermelho escuro em nossos controles de esquizofrenia. Também tenho duplicações em azul, que não representam grande parte do sinal aqui. Mas, como você pode ver, também plotei o p-valor do log 10 negativo e, se você olhar com atenção, poderá ver cada pequeno ponto de quebra. Você pode ver um teste diferente sendo executado, e você pode ver um local como este, onde há muitos pontos de quebra diferentes, muita granularidade, você pode executar muitos testes diferentes e obter uma forma da associação em torno deste gene. Agora, você também pode entrar em colapso. Outro teste que fizemos foi o colapso de todos os exons desse gene, e isso seria mais parecido com um teste de carga genética onde você colapsa essa região e depois testa a sobreposição nessa região, executa um modelo semelhante, e então você pode agregar todos os CNVs e casos e controles para relatar, digamos, um p-valor baseado em gene.</p>
+<p>Então, essa é uma visão geral muito rápida de como executar carga e associação com dados CNV, e algumas considerações são que uma das coisas às quais você não tem acesso quando olha para CNVs é a imputação. E então, é uma consideração a se pensar, você sabe, não há nenhum tipo de referência, você sabe, haplótipos de referência ou um conjunto de dados maior para fazer controle de qualidade adicional. Portanto, pode haver desafios adicionais, especialmente com dados abaixo da média, que não podem ser resgatados da mesma forma que a imputação pode resgatar genótipos de SNP. E por falar nisso, você sabe, o chip de genotipagem é muito importante porque você não pode imputar um monte de novos sítios diferentes. A variabilidade em termos do número de SNPs, especialmente para CNVs menores, é uma consideração muito importante. E assim, você pode pensar que, em um chip de genotipagem específico, se você não tiver um bom equilíbrio de caso-controle, poderá não ter a sensibilidade para detectar CNVs adequadamente. Portanto, há muito trabalho para determinar em que comprimento de CNVs, ou pelo menos em quais saldos de controle de caso, dado o seu chip de genotipagem, você tem a quantidade certa de poder e sensibilidade para fazer um teste de associação de caso-controle adequado.&nbsp;</p>
+<p>Outra coisa também é que os PCs ancestrais, a maioria dos hotspots de CNV e CNVs associados que vemos em doenças psiquiátricas não são muito afetados, principalmente porque são áreas de CNV recorrentes de novo, onde há uma taxa de mutação mais alta. Mas isso não é realmente ancestral, definido em termos do fato de que não há uma grande diferença na frequência alélica entre diferentes ancestrais. Mas ainda é útil incluir, especialmente quando você atinge frequências mais altas e obtém mais CNVs herdados. Finalmente, a permutação de correção de múltiplos testes é mais uma das formas mais robustas de contabilizar os múltiplos testes porque a natureza dos dados CNV é tal que, dado o tipo de chip de genotipagem que você usa, o tamanho do seu conjunto de dados, nenhum estudo específico será muito semelhante, semelhante a outro estudo, e que aproveitar a estrutura de correlação dentro do seu próprio conjunto de dados, dado que você conhece sua capacidade de detectar CNVs em vários, de vários tamanhos e frequências, usar a permutação é geralmente a melhor maneira de faça testes adequados para Associação.</p>
+<p>Então, se você tiver alguma dúvida, sinta-se à vontade para me enviar um e-mail. Também coloquei alguns sites onde você pode pesquisar aqui o artigo PGC CNV que fizemos em 2017, e também acho que o artigo e o link sobre como fazer isso são realmente bons e muito descritivos de todas as suas funcionalidades. Obrigado.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,19 @@
+---
+title: "Capítulo 4.3: Desenho de Estudos Genéticos"
+---
+
+# ***O que são “estudos de gêmeos”?*** {#sec-section1}
+
+**Título**: O que são “estudos de gêmeos”?
+
+**Apresentador(es)**: OpenLearn da Open University
+
+Os estudos com gêmeos nos permitem estimar quanto uma característica vem de nossos genes e quanto é influenciada pelo ambiente. Esses gêmeos idênticos compartilham os mesmos genes. Eles são o produto de um espermatozoide e um óvulo que se dividiram em dois embriões no início da gravidez. Eles são, portanto, geneticamente idênticos.
+
+Gêmeos não idênticos derivam de dois espermatozoides diferentes e de dois óvulos diferentes. Eles são geneticamente tão semelhantes quanto irmãos e irmãs comuns e compartilham, em média, 50% dos seus genes. Mas todos compartilham o mesmo ambiente, pois crescem na mesma família.
+
+Em estudos com gêmeos, é possível separar essas diferentes influências comparando a semelhança entre gêmeos idênticos com a semelhança entre gêmeos não-idênticos. Os dados são coletados de vários pares de gêmeos para obter uma estimativa precisa da importância relativa dos genes e do meio ambiente.
+
+Portanto, gêmeos idênticos compartilham todos os seus genes e compartilham influências ambientais. As diferenças entre esses gêmeos podem, portanto, ser devidas apenas a influências ambientais não compartilhadas. Se ambos os gêmeos idênticos e não idênticos se assemelham muito, isso deve ser devido a influências ambientais compartilhadas. Se os gêmeos idênticos se assemelham mais do que os gêmeos não-idênticos, isso nos dá uma pista de que os fatores genéticos devem desempenhar um papel.
+
+Assim, os estudos com gêmeos podem fornecer pistas sobre a importância relativa dos genes e do ambiente e, assim, fornecer informações sobre onde se encontra o equilíbrio entre natureza e criação.

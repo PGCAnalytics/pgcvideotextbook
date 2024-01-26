@@ -25,7 +25,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=Jd3gFT0-C4s")
 ```
 
-Link to video transcript [here](chapter4.1_transcript.qmd).
+Link to video transcript [here](chapter4.1_transcript.qmd). Tradução para o português disponível [aqui](chapter4.1_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -44,7 +44,7 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=bcfg9kcxeuU")
 ```
 
-Link to video transcript [here](chapter4.2_transcript.qmd).
+Link to video transcript [here](chapter4.2_transcript.qmd). Tradução para o português disponível [aqui](chapter4.2_transcript_portugues.qmd#sec-section1).
 
 ------------------------------------------------------------------------
 
@@ -63,4 +63,4 @@ library("vembedr")
 embed_url("https://www.youtube.com/watch?v=BTYCv1ObZrI&t=1s")
 ```
 
-Link to video transcript [here](chapter4.3_transcript.qmd#sec-video1).
+Link to video transcript [here](chapter4.3_transcript.qmd#sec-video1). Tradução para o português disponível [aqui](chapter4.3_transcript_portugues.qmd#sec-section1).

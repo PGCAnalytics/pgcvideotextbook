@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PGC Video Textbook - Capítulo 6.2: Escores Poligênicos de Risco: Em Detalhe</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PGC Video Textbook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html" rel="" target="">
+ <span class="menu-text">Contact us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://pgc.unc.edu/" rel="" target="">
+ <span class="menu-text">PGC Website</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Capítulo 6.2: Escores Poligênicos de Risco: Em Detalhe</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pgc_logo_website_v3.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/PGCAnalytics/pgcvideotextbook/">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-twitter"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/PGCgenetics">
+            PGC Twitter
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to the PGC Video Textbook!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: The Genome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: Technologies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Study Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: GWAS Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6: Polygenic Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7: Ancestry-Specific Analyses and Considerations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8: Post-GWAS Bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9: Advanced Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10: Other Considerations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Software Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_cnvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CNVs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_ewas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_geneset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gene Set Identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_gwas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_genomicSEM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genomic SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_MR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mendelian Randomization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_mtag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MTAG</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_prs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SNP Heritability and Genetic Correlation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools/Software Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://pgc.unc.edu/for-researchers/download-results/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGC Summary Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-section1" id="toc-sec-section1" class="nav-link active" data-scroll-target="#sec-section1"><strong><em>Escores Poligênicos de Risco</em></strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capítulo 6.2: Escores Poligênicos de Risco: Em Detalhe</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-section1" class="level1">
+<h1><strong><em>Escores Poligênicos de Risco</em></strong></h1>
+<p><strong>Título</strong>: Escores Poligênicos de Risco</p>
+<p><strong>Apresentadores</strong>: Adrian Campos (Regeneron)</p>
+<p><strong>Adrian Campos</strong>:</p>
+<p>Olá, meu nome é Adrian Campos e hoje vou falar com vocês sobre escores poligênicos de risco (PRS) para o Boulder Workshop 2021. Agradecimentos especiais a Sarah Medland, Lucia Colodro Conde e Baptiste Couvy Douchesne, por todas as contribuições para a preparação destes slides.</p>
+<p><em>Contorno</em></p>
+<p>Este é o layout da palestra de hoje. Começaremos com uma breve introdução sobre GWAS e tamanhos de efeito de alelos. A seguir darei uma breve visão geral do que é um PRS e como ele é calculado com o exemplo gráfico. Depois disso, discutiremos quais variantes incluir e como levar em conta o desequilíbrio de ligação (LD) ao estimar um escore de poligênico de risco. Discutiremos a abordagem mais tradicional denominada aglomeração e limiarização, que é amplamente utilizada na área. Em seguida discutiremos algumas aplicações para escores poligênicos de risco, outros métodos para escores poligênicos de risco e um breve resumo no final.</p>
+<p><em>GWAS</em></p>
+<p>Então, sem mais delongas, deixe-me sair de cena e vamos começar com esta palestra. Como vimos anteriormente, um Estudo de Associação Genômica em Larga Escala (GWAS) permite-nos identificar quais variantes genéticas estão ligadas a uma característica de interesse. Um GWAS permite-nos identificar não só quais variantes genéticas estão ligadas a uma característica de interesse, mas também o seu tamanho de efeito. Se imaginarmos, por exemplo, que se trata de um GWAS de altura e nos concentrarmos na variante genética destacada, identificaríamos um tamanho de efeito de 2 centímetros por cópia do alelo G. Portanto, o tamanho do efeito desta variante seria aproximadamente 2, que também é a inclinação de uma regressão linear entre a altura média e os grupos de genótipos. O que isto significa basicamente é que se tivéssemos acesso a uma nova amostra com dados genotípicos e de altura, esperaríamos que os indivíduos AG fossem em média 2 centímetros mais altos que os indivíduos AA e dois centímetros mais baixos que os indivíduos GG. Mas sabemos que características complexas como a altura são altamente poligênicas. Existem muitas variantes genéticas que contribuem para o fenótipo. Além disso, sabemos que as variantes comuns têm um tamanho de efeito pequeno e que o exemplo que estávamos usando era um exagero. Isso faria com que essa predição baseada em locus único fosse basicamente inútil. No entanto, podemos combinar as informações que obtemos de diversas variantes genéticas para estimar um escore geral e obter uma estimativa melhor da característica. Isto é essencialmente o que um PRS faz.</p>
+<p>Agora vamos continuar usando este exemplo para entender o que realmente é um PRS. No nosso exemplo anterior, começamos focando nesta variante genética. Que teve um tamanho de efeito de 2 centímetros por cópia do alelo G. Portanto, se pontuarmos este participante com base nesta variante genética, somaremos 0, visto que ele não possui cópias do alelo G. O mesmo seria verdade para todos os participantes homozigotos para o alelo A neste locus. Os participantes que são heterozigotos neste locus possuem uma cópia do alelo G. Então, para pontuá-los, multiplicamos 2, que é o tamanho do efeito, vezes o número de cópias do alelo G, que é 2. Finalmente, pontuamos os participantes com duas cópias do efeito [alelo] por duas vezes o tamanho do efeito, que também é 2 neste exemplo. Para escores poligênicos de risco, queremos agregar as informações de diversas variantes genéticas. Então agora vamos nos concentrar em outra. Este tem um tamanho de efeito de -1 por alelo de efeito. Seguindo o mesmo processo, pontuaríamos os participantes ponderando o número de cópias do alelo T que eles possuem, multiplicado pelo tamanho do efeito desse alelo. Portanto, neste exemplo, os participantes com genótipo TT terão um escore de -2 para este locus. Os participantes com genótipo CT terão um escore -1 e os participantes com o genótipo CC de referência terão 0. Podemos fazer isso para uma terceira variante genética. Esta tem um tamanho de efeito de 0.5 por alelo G. Novamente, procedemos à pontuação deste locus multiplicando o tamanho do efeito pelo número de cópias do alelo do efeito. Podemos repetir esse processo, incluindo todas as outras variantes e somar todos os loci. Isso lhe dará uma estimativa do risco poligênico para a característica de interesse.</p>
+<p>Portanto, uma definição funcional de escore poligênico de risco é uma soma ponderada de alelos que quantifica o efeito de diversas variantes genéticas no fenótipo de um indivíduo. Como advertência, a amostra para a qual o PRS será calculado deve ser independente daquela do GWAS de descoberta. Isso significa que não deve haver nenhuma sobreposição amostral entre a amostra com a qual você calculou os tamanhos de efeito para as variantes e a amostra na qual você estava calculando um escore poligênico de risco. Embora neste exemplo tenhamos nos concentrado em uma característica quantitativa, que é a altura, é importante mencionar que os escores poligênicos de risco também podem ser usados ​​para calcular o risco genético para uma doença ou uma característica binária. É importante lembrar que o material genético está organizado em duas fitas complementares de DNA, que são formadas por bases de nucleotídeos. Essas bases são quatro: basicamente ATCG, mas são complementares entre si. Isso significa que se uma das fitas tiver um A, a outra fita terá um T na posição complementar a esse A. O mesmo vale para C e G. Sempre que os alelos de referência e alternativos de uma variante genética não forem complementares entre si, podemos dizer de qual vertente eles vieram. Contudo, quando os alelos de referência e alternativos são complementares entre si, é difícil dizer qual das cadeias estamos realmente medindo e, portanto, qual é o alelo de efeito. Isso pode ter consequências graves nos escores poligênicos de risco. Às vezes é possível resolver essa ambiguidade usando informações sobre a frequência alélica, mas isso pode ser complicado se as frequências alélicas estiverem próximas de 0.5. Agora discutiremos como decidir quais variantes incluir em um PRS e também como levar em conta o desequilíbrio de ligação. Eu sei que disse anteriormente que deveríamos repetir a inclusão de todas as outras variantes e somar todos os loci. No entanto, há coisas a considerar. A primeira é que sabemos que existem muitos GWAS com fraca potência. Isso significa que há muito mais associações verdadeiras do que aquelas que estão alcançando significado em todo o genoma. A segunda é que o desequilíbrio de ligação cria uma estrutura de correlação dentro das variantes e é importante usar SNPs independentes para o escore poligênico de risco, ou explicar de alguma forma sua correlação. Para fazer isso, tentamos identificar SNPs quase independentes usando um método chamado aglomeração (clumping). A aglomeração basicamente seleciona todos os SNP que são significativos em um determinado limite de valor P e forma aglomerados de SNPs dentro de uma certa distância do índice SNP apenas se eles estiverem em LD com o índice SNP.</p>
+<p>Após a aglomeração, as variantes genéticas são aproximadamente independentes, mas ainda há uma questão de saber se devemos incluir apenas variantes genéticas que alcancem significância em todo o genoma ou relaxamos o limite do valor P para incluí-las? Uma solução é calcular muitos PRS, incluindo cada vez mais variantes, tornando-nos mais tolerantes com o limite do valor P que usamos para filtrá-los. Aqui está um exemplo de oito limites de valor P, começando com o mais rigoroso, que seria apenas variantes significativas para todo o genoma, até o mais relaxado, que incluiria todas as variantes. Depois de “resolver” o problema de quais variantes genéticas incluir, o escore poligênico de risco pode prosseguir como vimos anteriormente e então terminaremos com um conjunto de escores que retratam a responsabilidade genética ou o risco genético em uma população independente para uma determinada característica de interesse, então podemos realizar a análise de associação PRS-característica. Para isso, é importante pensar na sua amostra. Se for uma amostra baseada na família, como um registro de gêmeos, é importante ajustar o parentesco. Se for homogêneo em termos de ancestralidade, mesmo assim é sempre uma boa ideia ajustar os componentes principais genéticos para garantir que você esteja se livrando dos efeitos da estratificação populacional. Também é importante pensar se a amostra alvo corresponde à ancestralidade do GWAS, porque existem problemas conhecidos de portabilidade entre ancestralidades.</p>
+<p>Então você também deve considerar sua característica de interesse. É contínua? Então você pode usar uma regressão linear para realizar a associação PRS-característica. Se for binária, você pode confiar em regressões logísticas ou probit e se for ordinal, você terá que encontrar algo como um modelo vinculado cumulativo ou modelos mistos vinculados cumulativos para amostras baseadas em famílias. Lembre-se sempre de que existem potenciais confundidores da característica e do GWAS de descoberta e você deve pensar sobre eles e ajustar-se a eles. Antes de realizar uma análise de escore poligênico de risco é importante ter em mente que o poder do PRS depende do poder do GWAS que será utilizado para estimar o PRS. Neste exemplo, a mesma amostra alvo foi usada para calcular escores poligênicos de risco para depressão. E estão ao comparar a variância explicada por um escore poligênico de risco baseada no primeiro PRS-MDD do PGC e numa atualização subsequente; e o que descobriram é que houve um aumento substancial na variância explicada, que dependia do tamanho da amostra. A abordagem de aglomeração e limiarização permite-nos explorar o padrão de variância explicado e a sua relação com o número de variantes genéticas que incluímos. Por exemplo, aqui podemos ver que usar o ponto de corte mais estrito não significa ter uma variância significativa explicada, e quanto mais variantes incluímos, mais variância explicada obtemos. Este é um padrão típico de um PRS construído a partir de um GWAS que ainda não estava totalmente alimentado. Com um GWAS totalmente alimentado, esperávamos um padrão que se incluísse apenas os SNPs significativos em todo genoma tivesse um desempenho muito bom em termos de variância explicada e então, quando começarmos a incluir mais e mais SNPs barulhentos, estamos perdendo variância explicada.</p>
+<p><em>Aplicações</em></p>
+<p>Agora discutiremos algumas das aplicações para escores poligênicos de risco. Listei aqui alguns deles, mas acho que você pode usar a imaginação e pensar em outros. O primeiro é algo muito típico, testar a associação GWAS e quantificar a variância explicada. É basicamente uma verificação de segurança em um estudo de associação genômica em larga escala, onde você deseja demonstrar que seu GWAS é realmente preditivo da característica de interesse. Os escores poligênicos de risco também podem ser utilizados para estratificação de risco, o que identificaria pessoas para testar mais tarde uma doença específica. Isso deve reduzir a carga para um sistema de serviços de saúde. Também pode ajudar no diagnóstico clínico de doenças raras. Também podemos usar escores poligênicos de risco para testar a sobreposição genética entre características. Por exemplo, um risco genético para depressão é preditivo de doenças cardiovasculares e vice-versa?</p>
+<p>Poderíamos também pensar em usar PRS para imputação de características quando uma característica não é medida. Por exemplo, se você quiser imputar um fenótipo de tabagismo em uma amostra populacional. Isto é obviamente imperfeito e depende da herdabilidade da característica, mas pode começar a ganhar força à medida que os escores poligênicos de risco se tornam cada vez mais preditivos da característica de interesse. Como há muito mais GWASs de resposta ao tratamento e eles estão ganhando força, o tratamento personalizado baseado no escore poligênico de risco pode se tornar uma realidade. E basicamente qualquer hipótese em que você confie em um risco genético ou em uma responsabilidade genética. Tem havido muitas publicações onde escores poligênicos de risco são usados para examinar interações gene-ambiente.</p>
+<p><em>Programas</em></p>
+<p>Até agora discutimos a abordagem tradicional de aglomeração e limiarização. No entanto, existem outros métodos que valem a pena mencionar. Mas primeiro, deixe-me mencionar o software que você pode usar para calcular pontuações de risco poligênico de aglomeração e limiarização. O primeiro é PLINK [e PLINK2]. O segundo é PRSice2, e há uma biblioteca R chamada bigsnpR que contém não apenas aglomeração e limiarização, mas muitas outras opções. Existem outros tipos de PRS que discutiremos brevemente, como LDpred2, que é implementado em bigsnpR, SbayesR que é implementado em GCTB. Lassosum e lassosum 2, que também são implementados no bigsnpR e há PRS-CS e JAMPred. Acredito que sejam softwares independentes, mas não tenho certeza. Todos esses métodos compartilham uma motivação comum, que é substituir a etapa de aglomeração por algo mais elegante. Basicamente, queremos aproximar os tamanhos dos efeitos que obteríamos se tivéssemos executado uma regressão linear múltipla GWAS. Ou seja, um GWAS que estimou simultaneamente os efeitos conjuntos de todos os SNPs. O problema é que não podemos fazer isso. Então, o que fazemos em um GWAS é executar m regressões. E obtemos os tamanhos de efeito ‘marginais’ do SNP, ou seja, o tamanho do efeito de cada SNP sem levar em conta a correlação com outros SNPs. E a falta de ajuste para essas correlações é óbvia nos gráficos de Manhattan com essas torres bem definidas.</p>
+<p>Para resolver este problema, precisamos encontrar um método que aproxime os resultados da regressão linear múltipla com base nas estatísticas resumidas do GWAS. Existem muitos métodos que implementam a estimativa de regressão múltipla e tamanhos de efeito SNP, e realmente não temos tempo para cobrir todos eles em detalhes. Então hoje vou citar rapidamente alguns deles, e depois vou dar alguns detalhes nos dois que considerei os mais usados ​​na área, que é o LDpred2 e o SBayesR. O LDpred2 é implementado em bigsnpR e usa um amostrador Gibbs para estimar os efeitos conjuntos do SNP. SBayesR é implementado no GCTB e estima os efeitos conjuntos do SNP usando regressão múltipla bayesiana. Lassosum e lassosum 2 também são implementados em bigsnpR e são baseados na execução de uma regressão penalizada que basicamente reduz os tamanhos dos efeitos do SNP. Depois, há o PRS-CS, que também usa uma regressão bayesiana para estimar os efeitos conjuntos do SNP e, em seguida, o JAMPred, que usa uma estrutura de regressão bayesiana em duas etapas. No SBayesR, eles combinam uma função de verossimilhança que conecta os tamanhos dos efeitos conjuntos com as estatísticas resumidas do GWAS, juntamente com uma mistura finita de anteriores de distribuição normal subjacentes aos efeitos do marcador. Isso basicamente significa que estamos modelando os tamanhos dos efeitos do SNP como uma mistura de distribuições normais com média zero e variâncias diferentes. Isso normalmente é feito usando quatro distribuições normais, todas com média zero e variâncias distintas. A primeira é a variância zero, que basicamente captura todos os SNPs com efeito 0, e a partir daí permitimos que existam valores crescentes de tamanhos de efeito neste modelo. O que isso faz então é realizar a amostragem de Monte Carlo Gibbs em cadeia de Markov para os parâmetros do modelo que são basicamente: Os tamanhos dos efeitos conjuntos, as probabilidades dos componentes da mistura e os termos de erro. É claro que o parâmetro que é de nosso principal interesse são os tamanhos de efeito conjuntos que podemos usar como tamanhos de efeito ou pesos em nossa análise de escore poligênico de risco.</p>
+<p><em>LDpred2</em></p>
+<p>O LDpred2 é uma atualização recente do LDpred, que era um método que também derivou uma expectativa dos efeitos conjuntos dados os ‘efeitos marginais’ e a correlação (LD) entre os SNPs. Este método assume que existe uma proporção P de variantes causais naquela característica de interesse e, em seguida, assume que os tamanhos dos efeitos conjuntos são normalmente distribuídos com média zero e variância proporcional à herdabilidade da característica. É importante ressaltar que a proporção de variantes causais e a herdabilidade da característica são estimadas de forma independente, pelo menos na abordagem clássica e para P há uma grade de valores que são explorados, enquanto para a herdabilidade ou herdabilidade baseada em SNP, é estimada usando o escore LD regressão. Em seguida, ele usa um amostrador Bayesiano Gibbs para estimar também os tamanhos dos efeitos conjuntos para o GWAS. No entanto, o LDpred2 adiciona 2 novos modelos à abordagem LDpred tradicional. O primeiro estima P e a herdabilidade do modelo. Em vez de testar vários valores e usar a regressão do escore LD. Isto é útil porque antes de P e h2 ao quadrado serem estimados através de um conjunto de dados de validação e esta nova abordagem, chamada ‘LDpred2 auto’, não requer mais este conjunto de dados de validação intermediário. E há outro chamado ‘LDpred2 sparse’ que permite que os tamanhos dos efeitos sejam exatamente 0, o que seria semelhante ao primeiro componente da mistura do SBayesR. LDpred2 também é bom para modelar desequilíbrio de ligação de longo alcance, como aquele encontrado próximo à região HLA. Outros métodos baseiam-se na remoção destas regiões para resolver este problema. No entanto, este método (seus autores) aponta adequadamente que essas regiões são importantes para certas características e que removê-las reduziria o poder delas.</p>
+<p><em>Principais mensagens para levar para casa</em></p>
+<p>Como mensagens importantes para levar para casa, essas abordagens geralmente apresentam melhor desempenho, ou pelo menos tão bem quanto, aglomeração e limiarização; e quando isso não acontece, é importante ficar atento, pois às vezes os modelos não convergem e podem falhar silenciosamente. O desempenho de um PRS melhor ainda é uma área de pesquisa ativa e há uma batalha clara entre complexidade e poder versus escalabilidade e facilidade de uso. Há muitas publicações comparando esses métodos, então tente lê-las e escolha aquela que melhor atenda às suas necessidades.</p>
+<p><em>Resumo</em></p>
+<p>Resumindo: um escore poligênico de risco é uma soma ponderada de alelos. É basicamente uma ferramenta que estima a responsabilidade genética ou risco para características. Isso pode ser feito para características quantitativas e binárias. Antes de realizar PRS, é essencial ter controle de qualidade de suas estatísticas resumidas de GWAS (descoberta). Ter controle de qualidade do conjunto de dados do genótipo (alvo) e ser cauteloso com os SNPs ambíguos potencialmente problemáticos. Além disso, na prática você descobre que precisa combinar os identificadores SNP entre seus dados GWAS e os dados do genótipo. Lembre-se de que as amostras descobertas e alvo precisam ser independentes e considerar o poder estatístico antes de iniciar qualquer análise. Ao usar escores poligênicos de risco, lembre-se de estar ciente dos indivíduos relacionados na amostra e de ajustá-los adequadamente. Bem como para estratificação populacional. Considere também que as diferenças na ancestralidade podem estar subjacentes às diferenças na capacidade preditiva de um escore poligênico de risco e tenha sempre cuidado para não tirar conclusões precipitadas. Sempre considere possíveis vieses no GWAS de descoberta e na amostra alvo.</p>
+<p><em>Leitura adicional</em></p>
+<p>Se você estiver interessado, aqui estão algumas leituras adicionais sobre escores poligênicos de risco. Alguns deles são artigos históricos que marcam os marcos para realmente alcançar a predição poligênica em características complexas, e alguns deles são discussões sobre os possíveis vieses e os diferentes métodos que existem para o escore poligênico de risco. E isso é tudo para a introdução aos escores poligênicos de risco. Obrigado e até a próxima.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,57 @@
+---
+title: "Capítulo 4.2: Confusão, Acaso e Viés"
+---
+
+# ***Confusão, acaso e viés*** {#sec-section1}
+
+**Título**: Confusão, acaso e viés
+
+**Apresentador(es)**: Cochrane Austria (Department for Evidence-based Medicine and Evaluation, Danube University Krems)
+
+O objetivo dos estudos clínicos é investigar a eficácia e segurança dos tratamentos. Eles deixam espaço para três importantes fontes de erro que podem levar a resultados falsos de estudos: confusão, acaso e viés. Os fatores de confusão confundem-nos na interpretação dos resultados dos estudos e podem levar-nos a inferir conclusões incorretas sobre as relações de causa e efeito. Por exemplo, num estudo, observamos que aqueles que bebem muito café correm um risco aumentado de doença coronária. O café é perigoso para a saúde do coração ou outro fator poderia ser responsável por essa relação? No nosso exemplo, o tabagismo é responsável pela relação observada. Fumar é um fator de risco para doenças coronárias, e as pessoas que fumam tendem a beber muito café. Portanto, sem levar em conta o fator de confusão, fumar, chegaríamos à conclusão errada de que beber café é um fator de risco para doenças cardíacas.
+
+*Propriedades dos confundidores (= fatores de confusão)*
+
+Estamos lidando com o confundidor se as seguintes propriedades estiverem presentes, o fator de confusão deve estar relacionado ao resultado, independentemente da exposição. No nosso exemplo do café, isto significa que fumar é um fator de risco independente para doenças coronárias, independentemente de alguém beber café ou não. O confundidor deve estar relacionado à exposição. No nosso exemplo, isso significa que as pessoas que fumam frequentemente bebem café. O fator de confusão não deve estar no caminho causal entre a exposição e o resultado. Esta condição também seria satisfeita no nosso exemplo: beber café não leva automaticamente ao fumo. Como você lida com fatores de confusão?
+
+*Como você lida com fatores de confusão?*
+
+Você pode controlar os fatores de confusão que conhece antecipadamente na fase de planejamento. Por exemplo, os critérios de inclusão de um estudo são definidos de forma tão restrita que a influência dos fatores de confusão é eliminada. Este procedimento é chamado de restrição. Também se pode considerar confusão na análise. Por exemplo, com a estratificação, no nosso estudo sobre o café, estratificaríamos todos os indivíduos em grupos; isto é, divida-os em fumantes e não fumantes e examine em ambos os grupos se existe uma ligação entre o consumo de café e doenças cardíacas. Se apenas as pessoas que fumam corressem um risco aumentado de doenças cardíacas, veríamos que beber café não é a causa de doenças cardíacas. Estamos lidando principalmente com vários fatores de confusão aqui. Podem ser calculadas análises multivariadas, que ajustam vários fatores de confusão. Mas o que você faz com fatores de confusão que são desconhecidos para nós?
+
+*O que você faz quando um fator de confusão é desconhecido?*
+
+A única maneira de lidar com fatores de confusão desconhecidos é a randomização. Os participantes do estudo são divididos aleatoriamente em braços de estudo. A randomização leva a uma distribuição igual de fatores de confusão conhecidos e desconhecidos nos grupos de estudo. Se observarmos uma diferença entre os grupos após uma intervenção, podemos assumir que isso foi causado pela intervenção e não porque os fatores influenciadores já estavam distribuídos de forma diferente entre os grupos no início. A randomização é o único remédio eficaz contra fatores de confusão desconhecidos.
+
+*Acaso*
+
+Outra fonte de erro nos estudos é o acaso, também chamado de erro aleatório. O resultado de um estudo pode, coincidentemente, diferir do verdadeiro efeito na população apenas por acaso. Este desvio aleatório não tem direção definida. Se você fizesse muitos dos mesmos estudos, alguns superestimariam o efeito, outros o subestimariam e outros o estimariam corretamente. Pode-se minimizar a influência do acaso tendo um tamanho de amostra grande.
+
+Imagine que você tem uma tigela com 500 ursinhos de goma verdes e 500 vermelhos. Você tira duas amostras, uma com dez ursinhos de goma e outra com cem. Na pequena amostra, pode ser fácil desenhar oito ursinhos de goma verdes e dois vermelhos. Com 100 ursinhos de goma, você provavelmente já está muito mais próximo da distribuição 50-50. É semelhante com os estudos. Em estudos muito pequenos, pode acontecer, apesar da randomização, que os grupos de estudo não sejam semelhantes. Uma regra prática não baseada em evidências afirma que estudos com menos de 300 participantes são suscetíveis à variabilidade aleatória. Além disso, uma baixa taxa de eventos está sujeita a erros aleatórios. Um grande tamanho de estudo pode minimizar erros aleatórios.
+
+*Viés*
+
+O viés é outra fonte de erro nos estudos. Viés é um desvio sistemático do verdadeiro efeito que pode ser causado pelo desenho, condução ou análise de um estudo. Em contraste com o erro aleatório, o viés sempre distorceria os resultados na mesma direção se o estudo fosse realizado múltiplas vezes. Há uma variedade de subcategorias de viés, e aqui estão quatro tipos de viés que desempenham um papel importante em estudos intervencionistas: viés de seleção, viés de desempenho, viés de medição e viés de atrito.
+
+*Viés de seleção*
+
+O viés de seleção descreve o problema das diferenças sistemáticas na alocação dos participantes do estudo. Por exemplo, imagine um estudo que examina os efeitos de um programa de exercício físico contra nenhuma intervenção, e os participantes do estudo podem escolher em que grupo querem pertencer. É muito provável que mais entusiastas do desporto e indivíduos preocupados com a saúde optem por o grupo esportivo. Como resultado, seriam formados dois grupos que não são comparáveis ​​desde o início em alguns aspectos. Se, no final do estudo, se verificar que o grupo desportivo teve melhores resultados, isso não pode ser automaticamente atribuído à intervenção em si, pois o grupo já apresentava melhores condições iniciais. O viés de seleção pode ser evitado empregando a randomização e garantindo o sigilo da sequência de randomização, também conhecida como ocultação de alocação.
+
+*Viés de desempenho*
+
+O viés de desempenho ocorre quando, além da intervenção sob investigação, existem diferenças sistemáticas no tratamento e cuidados dos pacientes. Por exemplo, o tipo de cuidado e atenção muda com a administração intravenosa de um medicamento. Assim, se compararmos dois medicamentos administrados de forma diferente, não fica claro se um efeito diferente se deve apenas ao medicamento ou a outros cuidados e atenção dispensados. Para evitar viés de desempenho, é útil ter um conceito de tratamento padronizado para todos os grupos de estudo e cegar todas as pessoas envolvidas em um estudo. Cegar significa que os participantes de um estudo não sabem quais pessoas recebem qual tratamento.
+
+*Viés de medição*
+
+O viés de medição existe quando há diferenças sistemáticas na medição dos resultados. Por exemplo, se uma pessoa avalia sua dor no joelho, saber se ela fez parte do grupo de intervenção ou de comparação pode influenciar a percepção da dor. Para evitar vieses de medição, aqueles que medem os resultados não devem saber quais indivíduos recebem a intervenção e quais recebem a intervenção de controle. Isso lhes permite avaliar os resultados de forma objetiva e não afetada.
+
+*Viés de atrito*
+
+A saída prematura do estudo resulta em diferenças sistemáticas entre os grupos de estudo. Em geral, é normal que algumas pessoas abandonem os estudos mais cedo. No entanto, torna-se problemático se isso acontecer de forma sistemática e não acidental. Suponha que aqueles que se sentem particularmente desagradáveis ​​ou que apresentam muitos efeitos colaterais abandonem o estudo. Se, no final do estudo, olhássemos apenas para aqueles na análise que permaneceram no estudo até ao final, iríamos acreditar ironicamente que houve muito poucos efeitos secundários. Pode-se minimizar a influência do viés de atrito na avaliação dos dados, fornecendo uma análise de intenção de tratar que inclua todos os indivíduos originalmente randomizados para um estudo.
+
+*Risco de viés*
+
+Quando avaliamos criticamente os estudos, tentamos estimar o risco de viés. O viés não pode ser medido diretamente. O risco de viés só pode ser avaliado indiretamente através da avaliação do desenho do estudo e da execução dos estudos. Além disso, o risco de viés entre os resultados pode variar. Por exemplo, embora os resultados subjetivos, como a dor, possam ser fortemente influenciados pela falta de cegamento, isso não tem efeito sobre os resultados difíceis, como a mortalidade.
+
+*Componentes de um resultado de estudo*
+
+O objetivo dos estudos é mapear o verdadeiro efeito de uma intervenção da melhor forma possível. Ou seja, a influência distorcida da confusão, do acaso e do viés deve ser contida tanto quanto possível. Uma amostra grande pode minimizar a influência do erro aleatório. O desenho do estudo, a boa execução do estudo e a análise podem minimizar a influência de confusão e viés.

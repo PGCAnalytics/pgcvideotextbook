@@ -65,6 +65,20 @@ In alphabetical order:
 
 ------------------------------------------------------------------------
 
+## Portuguese Translations
+
+Translations of video transcripts are available in Portuguese thanks to the incredible work of the following individuals:
+
+**Marcos Santoro, PhD**: Adjunct Professor, Departamento de Bioquímica, Universidade Federal de São Paulo, Brazil.
+
+**Lucas Toshio Ito**: PhD student, Departamento de Bioquímica, Universidade Federal de São Paulo, Brazil.
+
+**Júlia Arendt**: PhD student, Departamento de Bioquímica, Universidade Federal de São Paulo, Brazil.
+
+**Rafaella Ormond**: PhD student, Departamento de Bioquímica, Universidade Federal de São Paulo, Brazil.
+
+------------------------------------------------------------------------
+
 # About the Psychiatric Genomics Consortium
 
 ### The Psychiatric Genomics Consortium

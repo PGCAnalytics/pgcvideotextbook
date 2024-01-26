@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PGC Video Textbook - Capítulo 6.3: Métodos de escore poligênico</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PGC Video Textbook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html" rel="" target="">
+ <span class="menu-text">Contact us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://pgc.unc.edu/" rel="" target="">
+ <span class="menu-text">PGC Website</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Capítulo 6.3: Métodos de escore poligênico</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pgc_logo_website_v3.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/PGCAnalytics/pgcvideotextbook/">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-twitter"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/PGCgenetics">
+            PGC Twitter
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to the PGC Video Textbook!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: The Genome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: Technologies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Study Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: GWAS Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6: Polygenic Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7: Ancestry-Specific Analyses and Considerations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8: Post-GWAS Bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9: Advanced Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10: Other Considerations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Software Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_cnvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CNVs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_ewas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_geneset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gene Set Identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_gwas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_genomicSEM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genomic SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_MR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mendelian Randomization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_mtag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MTAG</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_prs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SNP Heritability and Genetic Correlation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools/Software Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://pgc.unc.edu/for-researchers/download-results/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGC Summary Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-section1" id="toc-sec-section1" class="nav-link active" data-scroll-target="#sec-section1"><strong><em>Métodos de escore poligênico: comparação e implementação</em></strong></a></li>
+  <li><a href="#sec-section2" id="toc-sec-section2" class="nav-link" data-scroll-target="#sec-section2"><strong><em>Escores de risco poligênico: comparação de PGS</em></strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capítulo 6.3: Métodos de escore poligênico</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-section1" class="level1">
+<h1><strong><em>Métodos de escore poligênico: comparação e implementação</em></strong></h1>
+<p><strong>Título:</strong> Métodos de escore poligênico: comparação e implementação</p>
+<p><strong>Apresentador(es):</strong> Oliver Pain (Social, Genetic, and Developmental Psychiatry Centre, King’s College London)</p>
+<p>Olá, meu nome é Oliver Pain e sou pesquisador de pós-doutorado e trabalho com a professora Cathryn Lewis no King’s College London. Hoje falarei sobre métodos de escore poligênico, comparando vários métodos entre si e também descrevendo recursos que desenvolvemos para o cálculo de escores poligênicos para fins clínicos e de pesquisa. Não tenho conflitos de interesse a declarar. Minha apresentação está dividida em três seções. Primeiro, darei uma breve introdução ao escore poligênica, depois descreverei nosso trabalho comparando diferentes métodos de escore poligênico e, finalmente, apresentarei um pipeline fácil e confiável para escore poligênico que desenvolvemos, chamado GenoPredPipe.</p>
+<p>Então, primeiro, uma breve introdução ao escore poligênico. Um escore poligênico é uma forma de resumir o risco genético ou a propensão de um indivíduo para um determinado resultado, normalmente calculado com base na variação genética de um indivíduo e nas estatísticas resumidas de estudos de associação de todo o genoma (GWAS), conhecidas como sumstats do GWAS. Os escores poligênico são uma ferramenta de pesquisa útil e também podem ser úteis para a medicina personalizada, à medida que sua utilidade preditiva aumenta.</p>
+<p>Para escore poligênico, as estatísticas resumidas do GWAS são normalmente processadas para identificar variantes que se sobrepõem à amostra alvo, levar em conta o desequilíbrio de ligação (LD) entre as variantes e ajustar os tamanhos dos efeitos do GWAS para otimizar a relação sinal-ruído nas estatísticas resumidas do GWAS. Portanto, o escore poligênico de um indivíduo pode variar devido às variantes genéticas consideradas e à frequência alélica e às estimativas de desequilíbrio de ligação usadas para ajustar os sumstats do GWAS. Frequentemente, na pesquisa, esses fatores variam dependendo da amostra-alvo, usando a variância intersectiva entre a amostra-alvo e o GWAS e usando estimativas de desequilíbrio de ligação e frequência alélica da própria amostra-alvo. Agora, isso não é ideal, e uma estratégia alternativa é usar uma abordagem padronizada de referência, em que um conjunto comum de variantes é considerado para todas as amostras-alvo, e as estimativas de ligação e frequência alélica são derivadas usando uma amostra de referência comum correspondente à ancestralidade. Esta abordagem padronizada de referência é vantajosa ao usar escores poligênico em contextos clínicos e de pesquisa, pois permite que escores poligênico sejam calculadas para um único indivíduo e evita variação no escore poligênico de um indivíduo devido a propriedades específicas da amostra-alvo, que podem influenciar o resultado.</p>
+<p>Agora apresentarei nosso trabalho comparando métodos de escore poligênico. Esta tabela mostra os principais métodos de escore poligênico conforme relatado na literatura.</p>
+<p>A abordagem pT+clump é a abordagem tradicional, em que a aglomeração baseada em LD é usada para remover o desequilíbrio de ligação entre as variantes principais e o GWAS, e uma faixa de limites de valor p é usada para selecionar as variantes consideradas. Os outros são métodos desenvolvidos mais recentemente que utilizam estimativas de LD para modelar conjuntamente o efeito de variantes genéticas e normalmente realizam a redução para levar em conta as diferentes arquiteturas genéticas.</p>
+<p>Assim como a abordagem de limiar de valor p, vários dos métodos mais recentes aplicam vários parâmetros de redução para otimizar o escore poligênico. Quando vários parâmetros são usados, um procedimento de validação, como validação cruzada de 10 vezes, é necessário para evitar overfitting, em que a estimativa explicada pela variância é artificialmente alta devido à tentativa de muitos limites de valor p ou parâmetros de redução diferentes.</p>
+<p>Em contraste, alguns métodos fornecem uma abordagem de pseudo-validação, em que o parâmetro ideal é estimado apenas com base nas estatísticas resumidas do GWAS, não exigindo uma amostra de validação. Outra abordagem que não requer uma amostra de validação é assumir uma arquitetura genética infinitesimal. Porém, esta abordagem funciona melhor para fenótipos altamente poligênicos.</p>
+<p>Uma terceira opção é modelar múltiplos escores poligênicos com base em uma série de parâmetros, usando métodos como a rede elástica para explicar a correlação entre os escores poligênicos.</p>
+<p>Comparamos métodos usando uma série de resultados medidos em duas amostras-alvo: UK Biobank e Twins Early Development Study, conhecido como TEDS. Usamos duas amostras para garantir que nossos resultados não sejam específicos da amostra-alvo e selecionamos as características à direita, pois elas possuem GWAS disponíveis publicamente e representam uma variedade de arquiteturas genéticas.</p>
+<p>Como descrevi anteriormente, utilizamos a abordagem padronizada de referência ao calcular os escores poligênicos. As frequências de LD e alelos foram estimadas usando duas amostras de referência de diferentes tamanhos de amostra para avaliar a importância do tamanho de amostra de referência entre os métodos. E essas amostras de referência foram os subconjuntos europeus do 1000 Genomes Fase 3 e um subconjunto aleatório independente de 10.000 participantes europeus do UK Biobank. Variantes do HapMap 3 foram usadas, pois essas variantes são normalmente bem capturadas por arrays de genotipagem, após imputação, fornecem boa cobertura do genoma e também reduzem o tempo de computação.</p>
+<p>Vários métodos já fornecem matrizes LD, incluindo apenas variantes do HapMap 3, para uso com seu software. Em linha com a abordagem padronizada de referência, a utilidade preditiva de cada abordagem de escore poligênico foi avaliada com base na correlação de Pearson entre o resultado observado e os valores previstos. A significância estatística das diferenças entre as correlações previstas e observadas foi determinada pelo teste de Williams, que contabiliza a correlação entre as previsões de cada método.</p>
+<p>Esta figura mostra o desempenho médio de cada método em comparação com o melhor escore poligênico pT+clump, conforme identificado usando validação cruzada de 10 vezes. Os pontos transparentes na figura mostram os resultados para cada fenótipo alvo separadamente. Estou apenas mostrando os resultados com base na amostra alvo do UK Biobank ao usar a referência 1000 Genomes, pois os resultados foram altamente concordantes ao usar o TEDS ou a referência maior. Ao comparar métodos que você usa validação cruzada de 10 vezes para otimizar parâmetros (mostrados em vermelho), você pode ver que os melhores métodos são LDpred2, lassosum e PRScs. Todos superam a abordagem pT+clump, proporcionando uma melhoria relativa de 16 a 18% na predição.</p>
+<p>O LDpred2 mostrou outras melhorias nominalmente significativas em relação ao lassosum e ao PRScs, em média.</p>
+<p>Ao comparar métodos que usam uma abordagem de pseudovalidação ou um modelo infinitesimal (que não requer uma amostra de validação), destacado em azul e roxo, você pode ver que os métodos PRScs e DBSLMM apresentam bom desempenho, fornecendo pelo menos uma melhoria relativa de 5% em relação aos outros métodos de pseudo-validação. PRScs é melhor que DBSLMM, proporcionando uma melhoria relativa de 4% em relação a DBSLMM. Vale ressaltar que o desempenho do SBayesR melhorou em média ao usar uma referência LD maior do que ao usar o DBSLMM.</p>
+<p>Ao comparar o desempenho do PRScs pseudovalidado com os resultados da validação cruzada de 10 vezes em vermelho, o escore poligênico do PRScs tem um desempenho apenas 3% pior do que o melhor escore poligênico identificado pela validação cruzada de 10 vezes para qualquer outro método, e tem um desempenho melhor do que a abordagem pT+clump para todos os fenótipos testados, destacando a confiabilidade desta abordagem.</p>
+<p>A abordagem multi-PRS, mostrada em verde, que usa um modelo de rede elástica para modelar múltiplos escores poligênicos com base em uma gama de limites de valor p ou parâmetros de redução, supera consistentemente o melhor escore poligênico selecionada por validação cruzada de 10 vezes, mostrado em vermelho, com a maior melhoria para a abordagem pT+clump, de 13%.</p>
+<p>Por último, testamos se o ajuste de escores poligênicos em vários métodos melhorou a predição, e descobrimos que isso aconteceu em um pequeno grau, embora a carga computacional seja obviamente substancial porque então você terá que executar todos os métodos. Em termos de tempo de execução, esses métodos variam substancialmente. Este gráfico mostra o número de minutos para executar o método apenas no cromossomo 22, sem qualquer computação paralela. Você pode ver que o PRScs e o LDpred2 demoram muito mais do que outros métodos. No entanto, desde o nosso estudo, os desenvolvedores do LDpred2 melhoraram substancialmente a eficiência do seu software, reduzindo pela metade o tempo de execução, diminuindo para pouco menos de 25 minutos para o cromossomo 22. É importante notar que o tempo necessário para PRScs ao usar um único parâmetro de encolhimento é um quinto do tempo mostrado aqui, o que significa que sua abordagem de pseudovalidação é razoavelmente rápida. O DBSLMM é de longe o mais rápido dos métodos mais recentes, demorando apenas alguns minutos quando executado em todo o genoma sem qualquer computação paralela, o que é impressionante considerando o seu desempenho em relação a outros métodos em termos de previsão.</p>
+<p>Algo que gostaria de destacar é que ao utilizar o SBayesR, tenho utilizado a opção robusta de parametrização disponível na versão mais recente do SBayesR. Como descobri que o SBayesR não estava convergindo corretamente para alguns GWAS, usar essa parametrização robusta foi o mais confiável e não piorou o desempenho do SBayesR, exceto para depressão, usando a referência europeia menor do 1000 Genomes, você pode ver isso aqui no figura.</p>
+<p>O segundo ponto é que, desde nosso estudo publicado, também comparei métodos PRScs usando estatísticas resumidas do GWAS para 17 fenótipos diferentes derivados usando apenas a amostra do UK Biobank, evitando possíveis problemas de controle de qualidade que ocorrem em meta-análises em larga escala. Os resultados são altamente concordantes com os resultados quando se utilizam os maiores resultados do meta-GWAS disponíveis publicamente, o que garante que nossas descobertas são confiáveis. No entanto, o desempenho do SBayesR melhorou novamente, destacando que o SBayesR é especialmente sensível à qualidade do GWAS do que outros métodos. Mas quando a qualidade é boa, o SBayesR tem um desempenho muito bom e parece ser o melhor método nesta análise.</p>
+<p>Também estávamos interessados ​​em ver se um método específico tinha melhor desempenho na predição entre diferente ancestralidades, já que alguns métodos podem destacar melhor os efeitos genéticos causais do que outros. Usando os mesmos 17 GWAS que mencionei brevemente no slide anterior apenas na amostra do UK Biobank, testei o desempenho dos métodos de PRS entre populações. Portanto, utilizando o GWAS europeu, mas predizendo em subconjuntos não europeus do UK Biobank. Como pode ver, os resultados são muito semelhantes em cada população, sendo o melhor método identificado numa amostra-alvo europeia também o melhor método na amostra-alvo não europeia.</p>
+<p>Portanto, o conselho para pesquisas futuras sobre métodos de escore poligênico é: para uma predição ideal, recomendamos modelar vários parâmetros de LDpred2, lassosum ou PRScs. Mas se você estiver procurando uma opção mais simples, talvez para observar a sobreposição genética, eu recomendaria usar o método de pseudovalidação PRScs, também conhecido como método “totalmente bayesiano”. Alternativamente, se você precisar calcular escores poligênicos para muitos GWAS ou tiver tempo ou capacidade de computador limitados, o DBSLMM é uma alternativa rápida e boa. Embora o SBayesR tenha um bom desempenho quando a qualidade das estatísticas resumidas do GWAS é boa, sua sensibilidade a essa qualidade significa que ele nem sempre tem um bom desempenho ao usar os maiores resultados do meta-GWAS.</p>
+<p>Ok, agora vou passar para a última seção da minha palestra, que descreve nosso pipeline recentemente desenvolvido para escore poligênico, chamado GenoPredPipe. Portanto, a maior parte do trabalho que acabei de apresentar está contida no estudo mostrado no canto superior esquerdo, onde também descrevemos o escore poligênico da abordagem padronizada de referência. No estudo, fornecemos uma representação esquemática desta abordagem padronizada de referência mostrada na figura à direita. Assim, os dados genéticos alvo são primeiro imputados, se ainda não o foram; então, apenas as variantes do HapMap 3 são retidas, pois normalmente são bem imputadas e fornecem uma cobertura decente do genoma. E então, a amostra é dividida em superpopulações ancestrais determinadas por comparação com a referência da fase três do 1000 Genomes. E, por último, os escores poligênicos são calculados com base nas estatísticas resumidas do GWAS processadas antecipadamente usando uma referência de correspondência de ancestralidade do GWAS.</p>
+<p>Agora, quando estávamos realizando este estudo e escrevendo o código para a abordagem padronizada de referência, queríamos garantir que os resultados fossem totalmente reproduzíveis e queríamos desenvolver um recurso que outros pesquisadores pudessem usar para calcular escores poligênicos padronizados de referência. Portanto, usamos uma combinação de R Markdown, Git, GitHub e GitHub Pages para criar um site disponível publicamente contendo uma série de documentos legíveis que descrevem o código e os resultados de nossos vários estudos.</p>
+<p>O site se chama GenoPred porque se concentra na previsão baseada em genótipos. E há um QR code aqui se você quiser dar uma olhada. E agora vou mostrar brevemente o site. [https://opain.github.io/GenoPred/]. Então, esta é a página inicial do site, que mostra uma lista das páginas disponíveis. Clicarei agora no link que descreve como preparar os dados de referência para a abordagem padronizada de referência. Na parte superior, ele fornece algumas informações e lista o software necessário abaixo delas. E então, ele passa por cada etapa, uma por uma, com pedaços de código para os usuários usarem para reproduzir resultados ou criar seus próprios dados.</p>
+<p>Agora, embora pensemos que este é um ótimo recurso para outros verem o que fizemos e replicarem os resultados, você pode ver que há muitas etapas e muitos pedaços de código separados a serem seguidos, tornando seu uso bastante demorado e possivelmente sujeito a erros do usuário. Então, recentemente escrevi todas as etapas para calcular escores poligênicos padronizados de referência em um pipeline usando Snakemake, junto com o que é chamado de ambiente Conda, que baixará e instalará automaticamente todo o software necessário, o que significa que criará totalmente resultados reproduzíveis. O pipeline requer apenas três arquivos de entrada. Primeiro, uma lista de estatísticas resumidas do GWAS que você deseja usar, indicando a população na qual foram derivadas e, opcionalmente, informações sobre a distribuição do fenótipo na população geral (ou seja, prevalência ou média e desvio padrão). Em seguida, você fornece uma lista de amostras alvo para as quais deseja calcular escores poligênicos, com o pipeline atualmente aceitando binários PLINK1 (por exemplo, BED, BIM, FAM) ou arquivos BGEN e também o formato 23andMe. Por último, você precisará de um arquivo chamado config.yaml, que descreve a localização do GWAS e arquivos de lista de destino. Então, executar todo o pipeline requer apenas uma única linha de código. Eu forneci alguns dados de teste para novos usuários experimentarem, que podem ser baixados. E a etapa dois, aqui, é onde o pipeline é realmente executado. Basta escrever Snakemake, em seguida, dois parâmetros indicando os recursos computacionais que você deseja usar e que deseja usar o Conda ambiente e, em seguida, o nome da saída desejada. Neste exemplo, estou solicitando o resultado final, que é um relatório em RMarkdown da identificação de ancestralidade e resultados de escore poligênico para todas as amostras alvo que envolve a execução de todo o pipeline.</p>
+<p>Aqui está uma versão atualizada do esquema que mostrei anteriormente, com base no que está implementado no pipeline GenoPred. A única diferença é que ao final agora geramos um relatório resumindo os resultados da identificação de ancestralidade e escore poligênico. Vou mostrar esses relatórios brevemente agora.</p>
+<p>Este é o relatório produzido para descrever os resultados de um único indivíduo. Primeiro, existem algumas descrições sobre o número de SNPs [polimorfismos de nucleotídeo único] antes e depois da imputação e o número de SNPs de referência disponíveis. Em seguida, o relatório descreve os resultados da análise de identificação de ancestralidade, mostrando primeiro a probabilidade de ser de cada subpopulação na referência 1000 Genomes. Neste exemplo, o indivíduo tem quase 100% de probabilidade de pertencer a uma população europeia. Você também pode ver a posição do indivíduo nos primeiros componentes principais projetados por referência em relação à população do 1000 Genomes que estou mostrando agora, e o indivíduo-alvo neste caso é aquele círculo preto.</p>
+<p>Então, a ancestralidade do indivíduo é dividida em populações mais específicas dentro da superpopulação designada. Neste caso, mostrar que o indivíduo era mais semelhante à população da Grã-Bretanha e aos indivíduos em geral do Norte e da Europa Ocidental. E na parte inferior, mostra os escores poligênicos do indivíduo, neste caso para índice de massa corporal e doenças cardiovasculares, mostrando os resultados em termos relativos em comparação com uma referência de ancestralidade correspondente. E então, em termos absolutos para melhor interpretação, considerando a variância explicada pelos escores poligênicos e a distribuição do fenótipo na população geral.</p>
+<p>Então, este é um exemplo de relatório produzido para resumir os resultados para uma amostra de indivíduos. Novamente, começando com algumas descrições sobre a sobreposição com os SNPs de referência, mostrando então o número de indivíduos atribuídos a cada superpopulação usando um limite máximo de 50%, com as probabilidades subjacentes mostradas como um histograma abaixo. Novamente, você pode ver a posição desses indivíduos nos componentes principais projetados em comparação com a referência do 1000 Genomes. E então, cada indivíduo é atribuído a populações específicas dentro de cada superpopulação atribuída. Porém, vou pular isso e mostrar os escores poligênicos, que estão resumidas na parte inferior, simplesmente usando histogramas para mostrar a distribuição dos escores poligênicos para cada população e GWAS.</p>
+<p>Então, concluirei explicando por que acho que as pessoas deveriam usar esse pipeline. Em primeiro lugar, realiza a classificação de ancestralidade, o que é realmente importante, uma vez que os não-europeus são frequentemente excluídos dos estudos e, à medida que o tamanho das amostras aumenta, as populações não-europeias utilizáveis ​​podem ser identificadas e analisadas. Além disso, é importante considerar a ancestralidade de um indivíduo ao calcular o escore poligênico. Em segundo lugar, fornece escores poligênicos padronizados por referência, que são dimensionados de acordo com uma referência correspondente à ancestralidade e são independentes de quaisquer propriedades específicas da amostra-alvo, o que é útil para fins de pesquisa e previsão clínica. Terceiro, ele pode implementar com eficiência qualquer um dos métodos de escore poligênico de melhor desempenho usando uma única linha de código, economizando tempo e reduzindo erros do usuário. Quarto, foi experimentado e testado. Analisei o UK Biobank e outras amostras e comparei o PRS com os fenótipos observados, garantindo-me que está funcionando como deveria. Finalmente, está bem documentado online e produz resultados totalmente reproduzíveis, sendo que ambos são importantes para o progresso da ciência. Estou mostrando novamente o QR code do site GenoPred à direita. Por favor, verifique se você estiver interessado.</p>
+<p>Por fim, gostaria de agradecer aos meus incríveis colegas pela ajuda neste trabalho, em particular a Cathryn, pela brilhante supervisão durante todo o processo. Obrigado por ouvir.</p>
+<hr>
+</section>
+<section id="sec-section2" class="level1">
+<h1><strong><em>Escores de risco poligênico: comparação de PGS</em></strong></h1>
+<p><strong>Título:</strong> Escores de risco poligênico: comparação de PGS</p>
+<p><strong>Apresentador(es):</strong> Guiyan Ni (Institute for Molecular Bioscience, University of Queensland)</p>
+<p>Bem-vindo! O tópico deste vídeo é como executar uma comparação de escore poligênico de risco. Até agora, já assistimos palestras individuais sobre PRScs, LDpred2, SBayesR e outros métodos. Acredito que todos vocês tenham um bom conhecimento do escore poligênico de risco e de cada um desses métodos.</p>
+<p>Então, esses slides aqui são apenas para preparar o cenário, para ter certeza de que estamos na mesma página. Um escore poligênico de risco de um indivíduo é uma soma ponderada das contagens de alelos de risco. Com base nos resultados estatísticos resumidos do GWAS, o método básico para o escore poligênico de risco é a aglomeração e limiar do valor p.&nbsp;Este método é simples, mas não modela completamente diferentes arquiteturas genéticas. Portanto, existem muitos métodos novos que tentam modelar a arquitetura genética para a característica de interesse. Por exemplo, usando diferentes parâmetros na regressão Bayesiana, como modelo LDpred-infinitesimal, LDpred2, SBayesC, PRScs e SBayesR. E também, métodos como o lassosum usam a regressão LASSO. MegaPRS é outro método executado em diferentes priors. Por exemplo, se for executado a priori usando uma mistura de quatro distribuições normais, será igual a SBayesR ou similar. E se um SNP tiver uma contribuição para a variância do fenótipo, então será semelhante ao modelo infinitesimal LDpred ou *SBLUP. Ele também pode executar um prior como o BOLT-LMM e também executar a regressão lassosum. Portanto, a diferença entre o MegaPRS e outros métodos é que a herdabilidade esperada por SNP [polimorfismo de nucleotídeo único] pode variar de acordo com LD e frequência alélica menor. Então, nesta palestra, compararemos todos esses métodos. E sabemos que quando um método é proposto, os criadores do método já o comparam com outros métodos. Mas a questão fundamental que estamos tentando responder aqui é: Qual método devemos usar nos dados do PGC?</p>
+<p>Então usamos a validação cruzada. Queremos um grupo de validação cruzada para responder a esta pergunta e comparar o desempenho de diferentes métodos. Aqui está o exemplo de teste mostrando, para a validação cruzada, cada célula aqui é uma coorte, e a célula rosa é para a coorte de descoberta, e a célula verde é para a coorte alvo.</p>
+<p>Na primeira rodada da análise, usamos as quatro coortes de descoberta rosa como um conjunto de descobertas e, em seguida, avaliamos o desempenho de cada método na amostra alvo. E então repetimos esse processo em cada uma dessas células, cada uma dessas coortes serve como coorte alvo. Se for necessário pelo método, temos outra coorte que servirá como amostra de ajuste para selecionar os hiperparâmetros ideais.</p>
+<p>Assim, na análise de dados reais, usamos as estatísticas resumidas do GWAS da Esquizofrenia 2 [PGC Schizophrenia GWAS data freeze 2] como uma amostra de descoberta, e todos os dados aos quais realmente temos acesso através de um serviço, através da coorte, onde o genótipo do indivíduo está disponível. Usamos cada um deles como amostra-alvo. Para a coorte de ajuste, usamos essas quatro coortes para ajustar os hiperparâmetros. E então, podemos prever o escore poligênico em cada uma das amostras alvo.</p>
+<p>Aqui, usamos algumas estatísticas para medir o desempenho de diferentes métodos. Uma é a AUC [área sob a curva ROC], outra é a proporção explicada na escala de responsabilidade e a terceira é a razão de chances. Analisarei cada um deles para mostrar como calcular cada uma dessas estatísticas.</p>
+<p>Então, vamos primeiro começar com AUC. Aqui está um exemplo de como calcular a AUC manualmente. Portanto, AUC é na verdade a abreviação de área sob a curva ROC [característica operacional do receptor], que está sombreada em rosa aqui. A curva ROC é feita traçando a taxa de verdadeiros positivos em relação à taxa de falsos positivos em cada ponto de corte possível. Então, o que isso significa? Isso significa assumir que este é o gráfico de densidade para o escore poligênico na amostra de controle, e aqui é para as amostras de caso. Esta linha vertical é o corte atual. Neste caso, este gráfico pode ser dividido em quatro grupos: verdadeiro negativo, falso negativo, falso positivo e verdadeiro positivo. E então podemos calcular a proporção de cada grupo, e então podemos calcular as taxas de verdadeiros positivos e as taxas de falsos positivos, que são as coordenadas usadas na curva ROC. Portanto, no corte atual que usamos aqui, significa que temos cerca de 17% de casos que são corretamente classificados como casos, e depois há cerca de 10% de controles que são erroneamente classificados como casos, o que nos dá as coordenadas para este ponto aqui. E então, à medida que variamos essa linha vertical (esse corte), vamos obter essa curva ROC, como mostra esse slide aqui. E esta, você vê, é a primeira estatística que usamos para medir o desempenho de diferentes métodos.</p>
+<p>E a segunda é a variância explicada na escala de responsabilidade quando se utilizam estudos de caso-controle verificados. Então, essa variância é função da variância explicada na escala observada, desse R2 observado em um estudo caso-controle, e de outros dois parâmetros, C e teta (θ). A variância explicada na escala observada é na verdade uma função de duas verossimilhanças, do modelo nulo e do modelo completo, que é desenhado nessas duas equações.</p>
+<p>E esse parâmetro C é uma função de K, z e P. Esse parâmetro K é na verdade a proporção da população que está doente, isso também significa a prevalência da doença. O parâmetro z é a densidade neste limite t aqui, e esta curva é uma distribuição normal padrão. E o P é a proporção de casos nos resultados do GWAS ou no seu estudo de caso-controle. E o parâmetro θ é uma função do mesmo K, z, t e limite t, mas com uma combinação diferente.</p>
+<p>Então, nesses slides eu apenas dou o resultado final de como calcular a variância explicada na escala de responsabilidade. A derivação completa desta equação pode ser encontrada nesta referência.</p>
+<p>A terceira estatística é chamada de razão de chances. Uma razão de chances é uma razão entre duas probabilidades, onde uma probabilidade é a probabilidade de ser um caso sobre a probabilidade de ser um controle.</p>
+<p>Então aqui está um exemplo de teste que mostra como calcular a razão de chances manualmente. Digamos que estamos ordenando os indivíduos com base em seu escore poligênico de risco, do mais baixo para o mais alto, e estamos interessados ​​na razão de chances entre o 10º decil e o 1º decil. Assim, com uma série de casos e controles mostrados nesta tabela, a probabilidade de ser o caso no 1º decil é de 23 sobre 103. E a probabilidade de ser o caso no 10º decil é de 83 dividido por 40. a razão de chances entre os dois decis é de 9,3. Este valor significa que quando ordenamos os indivíduos com base no seu escore poligênico, os indivíduos nos 10% superiores, ou no 10º decil, têm 9,3 vezes mais probabilidades de serem um caso em comparação com os indivíduos nos 10% inferiores. E essa razão de chances pode ser facilmente estimada a partir da regressão logística usando a função logit link.</p>
+<p>Assim, usando a estratégia de uma coorte, podemos acessar a AUC, a variância explicada e também a razão de chances para cada uma dessas coortes alvo. Aqui está o resultado de AUC e variância explicado para cada método, e cores diferentes aqui representam diferentes métodos que usamos. O eixo y aqui é a diferença de AUC em comparação com p+T, que é uma referência que usamos. E como você pode ver, com diferentes coortes de validação, há muitas variações. E é por isso que achamos que nossa comparação é mais robusta em comparação com outras comparações quando usam apenas uma coorte-alvo.</p>
+<p>Se resumirmos esses gráficos de barras por cada grupo por método, podemos observar esse gráfico de barras. O eixo y aqui é AUC, e cada um dos grupos representa cada um dos métodos que comparamos. E cada uma das barras em cada um dos grupos representa uma coorte de ajuste diferente que usamos. E notamos que os métodos que modelaram formalmente diferentes arquiteturas genéticas, na verdade, têm desempenho bastante semelhante. Isso ocorre porque a arquitetura genética dos transtornos psiquiátricos é bastante poligênica.</p>
+<p>Se olharmos para os resultados da doença de Alzheimer, que é menos poligênica em comparação com os transtornos psiquiátricas, observaremos uma grande diferença entre os diferentes métodos. E depois também observamos um padrão semelhante de variância explicada na escala de responsabilidade e na razão de chances entre os 10% superiores e os 10% inferiores, bem como a razão de chances entre os 10% superiores e os médios. Mas observamos que LDpred2, SBayesR e MegaPRS têm a classificação mais alta entre a maioria das comparações.</p>
+<p>Para resumir, nesta palestra, mostrei como calcular a AUC, a variância explicada na escala de responsabilidade e também a razão de chances manualmente. E com base nas comparações que fizemos, observamos que para transtornos psiquiátricos, que são muito poligênicos, todos os métodos têm desempenho semelhante, mas alguns têm classificação superior a outros, por exemplo, LDpred2, SBayesR e MegaPRS.</p>
+<p>Os resultados que mostro aqui fazem parte deste estudo, que foi publicado recentemente. Neste artigo, também fizemos a comparação para depressão maior e também outras análises de sensibilidade. Também fornecemos o código para executar cada método e para cada comparação, bem como cada uma das estatísticas utilizadas para comparação.</p>
+<p>Com isso, gostaria de agradecer muito à professora Naomi Wray, que sempre me deu grande apoio sempre que precisei, e a todos os demais membros do PCC. E obrigada a todos.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

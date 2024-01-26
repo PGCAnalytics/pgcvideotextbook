@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PGC Video Textbook - Capítulo 5.3: Testes de Associação</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PGC Video Textbook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html" rel="" target="">
+ <span class="menu-text">Contact us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://pgc.unc.edu/" rel="" target="">
+ <span class="menu-text">PGC Website</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Capítulo 5.3: Testes de Associação</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pgc_logo_website_v3.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/PGCAnalytics/pgcvideotextbook/">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-twitter"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/PGCgenetics">
+            PGC Twitter
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to the PGC Video Textbook!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: The Genome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: Technologies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Study Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: GWAS Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6: Polygenic Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7: Ancestry-Specific Analyses and Considerations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8: Post-GWAS Bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9: Advanced Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10: Other Considerations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Software Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_cnvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CNVs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_ewas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_geneset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gene Set Identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_gwas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GWAS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_genomicSEM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genomic SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_MR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mendelian Randomization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_mtag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MTAG</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_prs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SNP Heritability and Genetic Correlation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools/Software Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://pgc.unc.edu/for-researchers/download-results/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGC Summary Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-section1" id="toc-sec-section1" class="nav-link active" data-scroll-target="#sec-section1"><strong><em>Modelo Biométrico e Estatística Básica</em></strong></a></li>
+  <li><a href="#sec-section2" id="toc-sec-section2" class="nav-link" data-scroll-target="#sec-section2"><strong><em>Teste de hipóteses, tamanhos de efeito e poder estatístico</em></strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capítulo 5.3: Testes de Associação</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-section1" class="level1">
+<h1><strong><em>Modelo Biométrico e Estatística Básica</em></strong></h1>
+<p><strong>Título</strong>: Modelo Biométrico e Estatística Básica</p>
+<p><strong>Apresentador(es)</strong>: Benjamim Neale (Harvard Medical School; Analytic and Translational Genetics Unit, Massachusetts General Hospital)</p>
+<p>Olá, meu nome é Ben Neale. Sou um dos diretores do curso do Workshop Internacional de Genética Estatística e estou aqui hoje para falar com vocês sobre o modelo biométrico e estatística básica. Alguns fundamentos teóricos realmente fundamentais de como pensamos sobre gêmeos e famílias, estimativa de herdabilidade. Tudo isto remonta a uma tradição intelectual que remonta, vocês sabem, a Mendel, Galton e Fisher, todas pessoas de quem falaremos ao longo, digamos, de meados do século XIX até, você sabe, hoje.</p>
+<p>Agora, vários cientistas aos quais vou me referir também são eugenistas. Não vou falar sobre eugenia aqui. Eu sei que isso pode ser um gatinho para muitos. Se você quiser aprender mais sobre eugenia ou entender a relação entre herança poligênica e poligenicidade e a teoria da eugenia, recomendo a palestra de Lea Davis no workshop de 2021 sobre exatamente isso. Mesmo assim, vamos seguir em frente e focar na ciência nesta sessão específica.</p>
+<p>Portanto, um ponto de partida natural quando se pensa em Genética Humana ou, na verdade, em qualquer genética, é começar com Mendel e começar com esta ideia de herança de características físicas, e era nisso que Mendel estava realmente interessado - trabalhar e compreender como os pais e os descendentes compartilhar alguns tipos de características. No caso de Mendel, ele estava fazendo experimentos de reprodução usando plantas de ervilha, e aqui temos a pequena imagem desse tipo de exemplo de brinquedo de uma ervilha amarela de casca lisa cruzada com uma ervilha verde de casca enrugada. E se você cruzar ervilhas com essas características fenotípicas específicas, tudo o que obterá na primeira geração serão ervilhas lisas e amarelas. Isso é denotado aqui por uma espécie de genótipo imaginado de AABB - “AA” “BB” para amarelo e liso e depois pequeno “aa” “bb” para verde e enrugado. Este fenótipo específico opera de forma recessiva. Se você pensa em verde ou enrugado, ou seja, tem que ser homozigoto ou idêntico no genótipo. Você precisa ter duas cópias da variante genética - uma de sua mãe e outra de seu pai para expressar o fenótipo verde enrugado para o verde ou enrugado, eles estão em cromossomos independentes. Esta é a lei da classificação independente a que Mendel também se referia. Você pode justapor isso com a ervilha lisa amarela, que se comportará em uma forma de ação genética dominante, onde isto é, o A ou B significa que se você tiver apenas uma cópia daquela variante genética específica que governa o fenótipo que você, se você estiver olhando, o traço amarelo ou o traço da ervilha de casca lisa, você acaba com uma geração F1 que tem todos os mesmos fenótipos - todas ervilhas amarelas e todas de casca lisa. E então se você cruzar dentro daquela geração F1, então você pega a geração F1 e acasala com as diferentes plantas dessa maneira, você acaba com 3/4 do tempo sendo uma ervilha amarela e 1/4 do tempo sendo uma ervilha verde, sendo 3/4 das vezes uma ervilha de casca lisa e 1/4 das vezes uma ervilha de casca enrugada. Agora, esse enrugado, liso, amarelo e verde está operando de forma dominante para o amarelo ou de forma recessiva para o verde. E é realmente uma variante genética única que governa essa característica neste exemplo específico de uma planta de ervilha.</p>
+<p>E Mendel mostrou isso experimentalmente. Ele criou um monte de ervilhas e fez a análise para chegar a um ponto onde chegamos às leis de Mendel de classificação independente e segregação. Metade do seu material genético vem da sua mãe e a outra metade vem do seu pai. Bem, Mendel fez isso quando não havia muita apreciação por estatística, mas vamos passar muito tempo falando sobre estatística neste curso e no restante desta palestra. Como resultado, as somas dele saíram exatamente na proporção, então eles pararam o experimento quando chegaram ao ponto onde pensaram que a resposta era porque não havia realmente uma noção de aleatoriedade no contexto desta experiência em particular. Mesmo assim, esses tipos de leis - as leis de Mendel, que tenho certeza que você aprendeu em seu curso de introdução à biologia - ainda governam como a variação genética é transmitida de pai para filho em humanos e basicamente em todas as outras espécies da população. Muitos mecanismos diferentes de reprodução na biologia, e assim você pode entrar em toda essa complexidade. Mas vamos concentrar a nossa atenção na forma como as coisas funcionam nos humanos durante este curso porque penso que estamos interessados ​​em compreender um pouco mais sobre a variação das características na população ou populações que estamos a estudar.</p>
+<p>Agora, ao pensar na genética mendeliana, você também pode pensar nesse tipo de caso intermediário interessante, onde você tem flores brancas e flores vermelhas, e você as cruza. E então, na primeira geração depois disso, você não vê nada além de flores cor de rosa. Então você não vê flores como o lado da flor branca ou o lado da flor vermelha. Você só vê flores rosa. E então, se você pegar aquela geração de flor rosa e cruzá-la com outra flor branca, o resultado será uma mistura 50/50 de flores rosa e flores brancas. Ao passo que, se você cruzar apenas as flores rosa, acabará com um quarto de flores brancas, metade de flores rosa e um quarto de flores vermelhas.</p>
+<p>Agora, isso é uma espécie de co-dominância, uma espécie de circunstância intermediária para a genética mendeliana, certo? Portanto, existe a ideia de que o fenótipo não é uma de duas formas, mas na verdade talvez um pouco mais em um continuum do branco ao vermelho, e você chega ao ponto intermediário nesse tipo de espaço quando cruza flores vermelhas e flores brancas. Portanto, pode ser que as duas variantes genéticas estejam, num certo sentido, se equilibrando igualmente, em vez de necessariamente expressarem puramente ou não o seu fenótipo particular.</p>
+<p>Bem, esse é um caso complicado, mas vamos pegar algo que também é intuitivo e importante. E vamos falar sobre altura. Se pensarmos na altura da população, esse cara aqui, Francis Galton, tem feito muitas coisas diferentes cientificamente. Mas talvez uma de suas contribuições mais importantes tenha sido a observação de que pais altos ou baixos tendem a ter filhos altos ou baixos. E, na verdade, eles não apenas tendem a ter pais altos, têm filhos altos e pais baixos têm filhos baixos, mas os filhos não parecem ser tão baixos quanto os pais quando você olha para a altura parental média (que é esta linha de A a B nesta imagem). Essa é a distribuição de alturas dos pares parentais, tomando o ponto médio deles. E então, se você olhar para os filhos dos pais com a estatura mais baixa, eles não têm filhos baixos. Eles têm essa linha C a D, então eles tendem a regredir um pouco em direção à média. Então é daí que tiramos nosso termo regressão. Então, quando fazemos uma regressão linear, é na verdade a partir desse tipo de conceito de desenho de linha que Galton estava fazendo quando escrevia sobre altura e estatura e pais e filhos.</p>
+<p>Mas há uma questão natural que surge quando pensamos em algo como altura. Se você pensar na sua própria altura, você acha que existe uma única variante genética que lhe diz qual a sua altura? Eu não. Isso não parece fazer muito sentido para algo como a genética. Por que você teria uma única variante que termina com, digamos, 6’4 polegadas, como a minha altura? Não, na verdade é um pouco mais complicado que isso, certo? Intuitivamente, essa ideia de que existe esse tipo de variação contínua de altura na população. Existe um tipo de distribuição de altura que quase parece uma distribuição normal, então como conciliamos essa herança de características físicas discretas que Mendel observou com essa ideia de variação contínua?</p>
+<p>Agora, Galton também foi fortemente influenciado por Charles Darwin. Você sabe que eles eram parentes. Havia muita curiosidade intelectual em torno da variação de características e do tipo de genética e biologia, de forma mais geral, certo? Como se tudo isso estivesse acontecendo novamente em meados de 1800, então uma enorme mudança na literatura científica, e muitos dados sendo coletados sobre coisas como a altura das pessoas e seus filhos e suas famílias, e essas ideias de como fazer quando pegamos algo como altura? Como podemos pegar uma característica contínua como a altura e integrá-la com o que entendemos sobre herança discreta de características de Mendel? Porque esse era realmente o ponto principal de Mendel, é que havia algo - alguma coisa discreta sendo transmitida de pai para filho.</p>
+<p>Então, em 1915, há um artigo realmente lindo de East analisando o comprimento do Corolla em Nicotiana longiflora, ou a planta do tabaco. E o experimento que East fez foi concentrar as plantas de maior comprimento do Corolla e as de menor comprimento do Corolla e então torná-las as gerações parentais fundadoras e então cruzá-las e terminar com uma distribuição. Essa distribuição F1 estava meio que no ponto médio, você sabe, entre essas duas distribuições de comprimento do Corolla das plantas de tabaco do Corolla longo e do Corolla curto, e ele tinha essa distribuição F1. E então ele acasalou com a geração F1 para obter a geração F2. O mesmo acontece com as ervilhas ou as flores, e o que você pode ver claramente é que a distribuição se espalha bastante de F1 a F2. E essa observação, tal como o aumento da variabilidade da distribuição de F1 para F2, aponta para a ideia de que talvez haja aqui mais do que um fator genético a ser herdado. Que talvez haja algo que esteja acrescentando um pouco de confusão e, na verdade, você sabe, o que realmente está acontecendo que podemos saber e apreciar agora e, obviamente, indicar é que entre os pais altos, você foi homozigoto ou tomou os dois alelos que são a forma longa do que quer que seja, do alelo específico que é. E nas plantas de comprimento mais curto, você é homozigoto para a forma curta, a forma curta. E então, quando você faz a geração F1, você obtém muitos locais heterozigotos. Ou seja, casos em que você tem uma forma longa e uma forma curta da variante genética específica que está tendo impacto no comprimento da corolla na planta do tabaco. E como todos eles são homozigotos, eles são geneticamente muito semelhantes em F1. E então, quando você vai para F2, você tem a reamostragem binomial, então alguns dos locais heterozigotos estão agora se transformando na forma longa homozigótica ou na forma curta homozigótica naquela geração F2.</p>
+<p>Agora, não contente em simplesmente observar o aumento na distribuição à medida que você chega à geração F2, East então fez uma amostragem de diferentes pontos dessa distribuição e então. De certa forma, criou uma geração F3, então basta pegar um monte de plantas com altura semelhante e ver o que acontece ali. E aí você pode ver que a média acompanha mais ou menos a média de onde a amostragem estava acontecendo na geração F3 subsequente. E essa é a ideia de que existe realmente uma contribuição genética para a variação fenotípica no comprimento do Corolla na planta do tabaco, e que você pode ver isso através desses tipos de experimentos reprodutivos.</p>
+<p>Este é um trabalho muito importante, e meio que articulou a ideia de que a herança poligênica era, vocês sabem, talvez a explicação mais natural, mas não havia realmente uma formulação matemática clara que tornasse tudo hermético e coerente. E para que isso entrasse em cena foi um artigo que Ronald Fisher escreveu em 1916 e, na verdade, foi submetido à Royal Society de Londres em 1916. Foi rejeitado e depois meio que foi divulgado na imprensa acadêmica da época para este artigo em 1918, onde foi descrito na Royal Society de Edinburgh.</p>
+<p>E como resultado do tipo de observações de que Lee está falando, e muitos outros estavam fazendo em toda a literatura científica da época, Fisher escreveu este tratado sobre a correlação entre parentes na suposição da herança mendeliana, e este artigo é extremamente texto rico e denso. Tem um grande número de ideias que ainda são relevantes hoje, um século depois. Portanto, isto foi há mais de um século, os fundamentos teóricos da teoria genética quantitativa foram realmente articulados e apresentados num quadro matemático muito, muito claro e preciso por Fisher. E em, você sabe, cerca de 30 páginas ou mais, há todos os tipos de ideias sobre como pensar sobre a variância genética, a definição de variância genética, a definição de variância que usamos hoje, a ideia de particionar a variância de fato, antes para este artigo, a divisão da variância e até mesmo ideias do tipo ANOVA não foram realmente inventadas, e essa é a clara contribuição de Fisher aqui. Como tentamos desembaraçar ideias realmente complicadas? O que podemos talvez particionar? Agora, novamente, esta é uma ferramenta estatística. Esta é uma ferramenta científica. É uma descrição modelo do mundo. Não é uma descrição completa e rica do mundo, e sempre que falamos sobre partição da variância, é importante que seja uma afirmação de que a variação genética influencia um fenótipo. Mas não é de forma alguma o único mecanismo pelo qual um determinado valor fenotípico pode surgir e, na verdade, o ambiente pode ser muito importante. Mudanças no ambiente podem ter grandes mudanças nos fenótipos, e isso não é realmente capturado em uma espécie de modelo de brinquedo idealizado de que Fisher estava falando no contexto do modelo biométrico. Mas, no entanto, a variância genética aditiva, a dominância, as preocupações com uma espécie de epistasia de acasalamento, como pensar sobre alelos múltiplos, como pensar sobre todos os tipos de forças diferentes que moldariam a paisagem genética de um fenótipo numa população foram realmente dadas algumas profundas reflexões. tratamento matemático completo por Fisher, e este artigo é tão importante que ainda é a forma principal de pensarmos sobre a definição de herdabilidade. Na verdade, a definição de herdabilidade remonta precisamente a este artigo.</p>
+<p>OK, então como Fisher chegou lá? Como ele conciliou essa ideia de herança discreta de Mendel com variação contínua como a altura? E o que Galton estava fazendo olhando para pais e filhos e medindo sua altura e mostrando que eles eram iguais? Bem, o que Fisher fez foi invocar algo chamado teorema do limite central, e o que o teorema do limite central afirma é que se você tiver um monte de fatores independentes que se somam para criar algum resultado, então uma distribuição normal surgirá. E podemos ver isso se criarmos uma espécie de exemplo de brinquedo de pensamento sobre o lançamento de moedas. E o que vamos fazer quando pensarmos no lançamento da moeda, vamos pensar apenas na probabilidade binomial. E, de certa forma, se você pensar nos seus pais, eles têm variação genética. Eles têm muitos lugares onde são heterozigotos, onde têm uma forma de variante genética e outra forma de variante genética, e é um lançamento aleatório da moeda. Qual forma dessa variante genética você mesmo obtém, e pensando no sorteio, bem, se houver apenas uma moeda como havia para enrugada ou lisa em termos de ervilhas ou casca amarela ou casca verde para as ervilhas, então isso pode você sabe, é apenas uma chance binomial exatamente como esta. Mas o que acontece quando começamos a adicionar moedas? Bem, quando começamos a adicionar moedas, vemos diferentes distribuições de resultados nos lançamentos de moedas. E se você continuar adicionando moedas, o que você vê é, e você sabe, uma distribuição emerge, e essa distribuição que emerge é essa distribuição normal sobre a qual de Moivre escreveu no século 18 e Gauss no século 19, e essa distribuição normal distribuição aqui. É como se você tivesse um número infinito ou um número muito grande de resultados, você acabaria com aquela distribuição normal, mas vale a pena lembrar que se você apenas olhar para dez lançamentos de moeda como seus resultados, você já está chegando bem perto de um distribuição normal na população.</p>
+<p>OK, então como relacionamos as distribuições normais com algo como diabetes ou esquizofrenia? Bem, invocamos algo chamado modelo de limite de responsabilidade que foi realmente articulado antes da ideia fisheriana da teoria genética quantitativa, o modelo biométrico de que estou falando. Então Pearson, trabalhando com Alice Lee em 1901, meio que articulou a ideia de que se você tem uma distribuição subjacente de responsabilidade, se você conhece algum tipo de risco para um fenótipo como esquizofrenia ou diabetes, então se você estiver acima desse limite, então de repente você terá, você apresentará aquela doença ou aquela doença ou aquela característica binária. E se você estiver abaixo disso, não terá essa característica. E então você pode realmente pensar em algum fenótipo binário discreto como tendo realmente uma distribuição contínua subjacente. Agora, Pearson meio que elevou Alice Lee no início do século XX. Não era frequente que as mulheres fossem coautoras de artigos científicos devido ao bloqueio de muitos cientistas e instituições masculinas diferentes e a muito sexismo institucionalizado. Mas Pearson, eu acho, foi um pouco mais do tipo que deixou o tipo de pessoa que realmente criou as ideias receber o crédito, e então ele defendeu que Alice Lee fosse reconhecida nos artigos científicos, e acho que há muitas contribuições que não foram ditas na história, e por isso é bom reconhecer aquele em que houve realmente a coautoria estendida ao principal parceiro intelectual para o desenvolvimento dessas ideias. Agora, a maneira como Pearson e Lee chegaram a esse conjunto de ideias foi, na verdade, pensando em cavalos e na cor da pelagem do cavalo, que você pode ver como características distintas que vão desde um Cavalo Preto até um Cavalo Branco. Mas se você alinhasse todos esses cavalos, desde os tons mais claros até os tons mais escuros ou os tons escuros, os tons mais claros, então poderia haver alguma distribuição subjacente da cor da pelagem do cavalo que talvez fosse um pouco mais normalmente distribuída na população, e isso foi a ideia. Foi assim que chegaram à noção de que poderia haver alguma distribuição oculta que não podemos ver, mas que apenas vemos esse tipo de resultado binário no final. E este modelo de limiar de responsabilidade ainda é uma ferramenta muito poderosa para modelar resultados discretos, especialmente quando são multifatoriais, quando têm muitas causas contribuintes, tal como vimos com as ideias do teorema do limite central com Fisher.</p>
+<p>OK, então Fisher não definiu apenas, você sabe, variância e particionamento de variância genética e a análise de variância no artigo de 1918. Ele também apresentou um modelo para descrever como a ação genética pode operar na população, e estes são slides que Manuel Ferreira fez há muitos anos e que ainda utilizo porque os considero extremamente claros. E então o que temos aqui são três classes de genótipos: “aa”, “Aa” e “AA”, e elas estão associadas a diferentes médias na população: o círculo branco, o círculo amarelo e o círculo vermelho têm diferentes médias na população, dependendo do genótipo que você possui. E isso ocorre porque essa variante genética, se mantida constante como tudo o mais, tem algum impacto no fenótipo. Tem algumas pequenas mudanças que talvez o deixem um pouco mais alto ou mais baixo, pensando no conjunto de dados de exemplo de Galton. E você pode ver que o efeito genético aqui que Fisher escreveu é “a” e “a” não é realmente a melhor convenção de nomenclatura, pois é uma colisão de termos realmente difícil, mas é o que é. É assim que está escrito. Então é assim que estamos ensinando. E assim o tipo de média do genótipo na população é “menos a” para o “aa” [genótipo], “d” para “Aa” [genótipo], e isso está em um contexto onde D ou o desvio de dominância, que é para dizer a que distância do valor do ponto médio das duas classes de homozigotos você está, o “aa” ou “AA” onde está esse genótipo “Aa” em relação a esse ponto médio. Tudo bem, neste caso, sua dominância é igual a zero e, portanto, “Aa” tem média 0, e então “AA” tem média “mais a”, e esses são o tipo de média condicional do genótipo. Então aqui está uma imagem das distribuições normais em camadas sobre a distribuição do genótipo, então vemos que a distribuição “aa” vermelha tem algum valor médio de característica. A distribuição azul “Aa” tem algum valor médio de característica, e o verde “AA” tem algum valor de característica lá, você sabe, separados por um valor de distância “a’s”, e agora eles são uma fonte de variação na característica na população em geral, o que é na verdade uma grande fonte de variação neste exemplo específico.</p>
+<p>Agora, o que acontece se tivermos algum desvio de dominância, certo? Então talvez nem tudo seja puramente aditivo. Talvez a aditividade não explique perfeitamente o universo. Bem, nessa circunstância, veremos este “d” agora mover a média do genótipo de “Aa”. Observe que o ponto médio ainda é o termo 0, é o ponto médio entre as duas classes de homozigotos, e Fisher fez isso para tornar a álgebra um pouco mais organizada, e acho que todos nós apreciaremos a organização da álgebra quando chegarmos lá. OK, então este é o desvio de dominância, então isso permite a não aditividade no efeito genético, e há muitos defensores da não aditividade nas Ciências Biológicas porque há muitos fenótipos de ação recessiva, mais ou menos como vimos com a cor verde-amarelada da ervilha, e as ervilhas verdes são uma espécie de modo de ação recessivo, e então essa necessidade é uma observação importante na biologia, e assim esta não-aditividade tem uma longa e forte tradição intelectual neste espaço. OK, então é isso que acontece na aditividade. Isso é o que acontece sob domínio. Agora vamos falar um pouco sobre algumas das estatísticas usadas, e essas são apenas estatísticas elementares de primeiro nível. Maneiras estatísticas muito, muito básicas de descrever distribuições de características, e aqui temos algumas características simuladas idealizadas no eixo X à direita, e então esta linha vermelha de média, tem uma média zero que, você sabe , fixei artificialmente como 0, com base em R, e então a frequência é a contagem do número de indivíduos com o valor da característica, e aqui temos isso em unidades normais no eixo X, e a média é apenas simplesmente definido como a soma das observações de Xi, esses valores de características individuais, dividido pelo número total de indivíduos ou n.&nbsp;Muito simples. Estatísticas bastante básicas. Esperançosamente, todos vocês se lembram de como calcular uma média.</p>
+<p>Agora vamos falar sobre a variação. A medida de propagação na distribuição. Bem, a variância agora é somar os desvios da média e coletá-los e agregá-los em toda a distribuição. E Fisher usou o desvio da média quadrada porque descobriu que esse era o estimador mais consistente ao pensar em tentar definir a medida da propagação. Então, o que isso significa é que ele tem a menor variabilidade de um estimador da propagação da distribuição, e é por isso que favorecemos X menos a quantidade média ao quadrado para cada indivíduo dividido por agora “n - 1”. E a razão pela qual temos um “n - 1” é que tivemos que abrir mão de um certo grau de liberdade para a média, e não vou me aprofundar muito nisso. Mas os graus de liberdade são um pouco complicados assim, mas esta é uma forma de tornar o estimador imparcial.</p>
+<p>OK, então a covariância de uma distribuição agora está pensando não apenas em uma característica, mas em duas características, o que significa que temos a característica um no eixo X aqui e a característica dois no eixo Y. E essas características têm alguma relação entre si. Há alguns, você sabe, você pode ver esta linha vermelha. Essa é a linha de regressão que ajustei neste conjunto de dados específico, e elas estão um pouco correlacionadas ou têm alguma covariância. Agora, todas as covariâncias são apenas uma forma de resumir novamente os desvios da média. Mas agora, em vez de fazermos isso em uma dimensão, estamos fazendo isso em duas dimensões. Portanto, temos Xi menos Mu de X, que é o valor da característica individual de X para o i-ésimo indivíduo menos a média disso para o conjunto de dados geral. E então fazemos para a característica Y a mesma coisa que fizemos para a característica X, e então multiplicamos esses desvios para cada indivíduo, e dividimos isso pelo número de entradas emparelhadas que temos menos um, e isso nos dá apenas a covariância, e isso é apenas na escala em que X está ou Y está quando X e Y são normais padrão. Quando estão, você conhece as médias de 0 e a variância de 1. Isso se transforma em correlação, mas também há uma maneira de transformar a covariância em correlação.</p>
+<p>OK, então quanto de média e variância? Bem, podemos pensar sobre a contribuição do QTL para a média e, na verdade, isso é apenas uma maneira de garantir que a média corresponda à forma como definimos nossas classes de genótipos, e então pegamos o número de indivíduos com um determinado valor da característica multiplica a frequência de indivíduos com esse valor da característica. E você deve se lembrar de como havia diferentes médias para as diferentes características que vimos na imagem há pouco, com “AA”, “Aa” e “aa”. Muito bem, para esses pontos médios teremos que chegar a uma grande média para o nosso conjunto de dados total.</p>
+<p>Agora, isso pode ser algo como os níveis de colesterol na população ou algo como a altura. Você sabe, qualquer fenótipo contínuo. E realmente, pode ter qualquer formato, qualquer distribuição, e ainda assim terá alguma média. Agora, aqui temos nossos genótipos “AA”, “Aa”, “aa”. O efeito do QTL, o locus da característica quantitativa. Essa é a variante genética que tem impacto na característica ou fenótipo, e esse efeito aqui é para o genótipo “AA” é apenas “a”, para “Aa”, é “d” e, para “aa”, é “-a”. Essa é a média condicional. Essa é a média do fenótipo condicional ao porte desse genótipo, e depois há as frequências dessas classes de genótipos. Outra notação introduzida. Portanto, temos a tendência de definir a frequência do genótipo como “p” e “q” para o outro alelo. Portanto, um alelo, uma forma da variante genética obtém a frequência de “p”, a outra forma da variante genética obtém uma frequência de “q”, que é igual a “1-p”, e você termina com “p^2 ,” “2pq” e “q^2” para a frequência das classes de genótipos, se as regras de Hardy-Weinberg seguirem, e o Hardy-Weinberg é basicamente apenas uma maneira de dizer que não há uma quantidade inesperada de correlação entre seus pais em termos de seu genótipo. Então, se você tiver acasalamentos aleatórios na população mais ou menos, então você terá esse tipo de frequência como p^2 para “AA”, 2pq para “Aa” e q^2 para “aa”.</p>
+<p>Agora, a média será apenas pegar essas médias condicionais do genótipo vezes a frequência do genótipo e somar tudo isso. E é isso que vemos aqui na média de X, e isso nos dá uma média geral que usaremos no contexto do nosso cálculo da variância. OK, então quando calculamos a variância novamente, estamos olhando para o desvio quadrático da média. Agora observe, isso está na população e, portanto, não precisamos nos preocupar com o “n-1”. Porque se trata de pensarmos em todos valores, em vez de pensar em uma estimativa, e aquela coisa do estimador é apenas uma pequena nuance em torno das estatísticas. Mas, novamente, temos isso (xi menos mu)^ 2, então o i-ésimo valor da característica do indivíduo de X menos a média quadrada vezes a frequência dessa classe de genótipo. E aqui vamos trabalhar um pouco mais de álgebra. Então a variância é pegar essa média de efeito por “AA” multiplicando-a, você sabe, tirando a média geral que calculamos no slide anterior e multiplicando-a pela frequência desse genótipo na população. Então temos (a - mu)^2 * p^2 + (d - mu)^2 * 2pq + (-a - mu)^2 * q^2. E é assim que definimos a variância do QTL. Isso é o que Fisher particionou como a variância do QTL, já em 1918. Novamente, antes de existir a estrutura do genoma, antes de os ácidos nucleicos serem realmente compreendidos, antes de termos qualquer noção real do que realmente estava acontecendo com próprio DNA. Mas entendemos que existiam variantes genéticas operando na população, que eram uma fonte de variação, e que essa fonte de variação poderia ser algo tratável e quantificável. Esse VQTL, essa variação do QTL. E a herdabilidade da característica X neste locus é simplesmente dividir a variância do QTL pela variância total do fenótipo. Agora, tudo isso foi calculado para apenas um efeito genético, mas lembre-se, poderíamos ter muitos, muitos efeitos genéticos, e se somarmos todos esses efeitos genéticos, então isso pode nos levar à soma total da variância de QTL, que é depois dividida pela soma total da variância fenotípica. Apenas a variação da característica na população em geral. E é assim que você chega à sua herdabilidade.</p>
+<p>OK, então vamos trabalhar um pouco mais na álgebra, para termos essa variação. Aqui obtemos isto (a - m)^2 * p^2 + (d - m)^2 * 2pq + (-a - m)^2 * q^2, e podemos realmente particionar a variância do QTL em uma parte que é aditiva e uma parte que é dominante, e é isso que foi feito aqui através do rearranjo é pegar o VA do QTL, e esse é o principal efeito: se você pegar um genótipo e apenas executar uma regressão, o genótipo contra um fenótipo, você acabará com essa variância genética aditiva como seu estimador. Fisher tornou isso muito conveniente e muito bom para nós na derivação da matemática e meio que pensou dessa maneira, e então se você adicionar esse segundo termo e codificar um desvio de dominância dessa aditividade, então você pode obter este VD do QTL, ou a contribuição da dominância para a variância. Então esse é apenas o desvio do modelo puramente aditivo, tudo baseado no destino da classe heterozigótica.</p>
+<p>OK, esse é um efeito genético, mas lembre-se, para algo como altura, as coisas são um pouco mais complicadas, certo? Não temos necessariamente um único efeito genético. Na verdade, talvez tenhamos muitos, muitos efeitos genéticos e, portanto, podemos desenvolver um pouco mais essas ideias e dizer que pode haver alguma distribuição dos efeitos genéticos. Isto não é o que você sabe. Isto é o que Fisher sugeriu em seu trabalho. Ele disse que vamos supor que existam poligenes. Podemos assumir uma distribuição desses polimorfismos de nucleotídeo único, aqueles efeitos genéticos específicos sobre os quais você aprenderá um pouco mais adiante no curso. Podemos então usar isso para gerar uma estimativa da herdabilidade, e é exatamente isso que a ferramenta GCTA faz. Foi também o que fizemos no contexto da regressão do escore LD. Portanto, esta foi apenas uma introdução à herdabilidade, variância genética aditiva, variância genética de dominância, médias, variâncias e covariâncias. Esses são os blocos de construção básicos mais fundamentais sobre os quais o resto das duas semanas será construído, e espero que você tenha gostado desta introdução sobre como pensamos sobre o particionamento da variância fenotípica e um pouco sobre por que fazemos isso para tentar e entender um pouco mais sobre o mundo que nos rodeia. Obrigado.</p>
+<hr>
+</section>
+<section id="sec-section2" class="level1">
+<h1><strong><em>Teste de hipóteses, tamanhos de efeito e poder estatístico</em></strong></h1>
+<p><strong>Título</strong>: Teste de hipóteses, tamanhos de efeito e poder estatístico</p>
+<p><strong>Apresentadores</strong>: Brad Verhulst, (Department of Psychiatry and Behavioral Sciences, Texas A&amp;M University)</p>
+<p>Olá e bem-vindo ao Boulder Workshop 2022, onde discutiremos testes de hipóteses, tamanhos de efeito e poder estatístico. Meu nome é Brad Verhulst, da Texas A&amp;M University, e vou explicar alguns dos componentes importantes desses conceitos.</p>
+<p>Então, a primeira coisa com que vamos começar é o poder estatístico, e só para defini-lo rapidamente, o poder estatístico é a probabilidade de rejeitar corretamente a hipótese nula. É importante ressaltar que o poder estatístico depende de 4 componentes. A primeira coisa é o tamanho da amostra – geralmente é isso que estamos tentando calcular. O segundo é o nosso nível α, e normalmente definimos α em 0,05 ou o valor p de α é igual a 0,05 ou menos. A terceira coisa é nosso nível β, nosso nível de poder, a probabilidade de rejeitarmos a hipótese nula se a hipótese nula for realmente falsa, e a última coisa que faremos é olhar em tamanhos de efeito. E assim, para fazer isso, vamos começar do início e pensar em como o poder estatístico se relaciona com os componentes básicos do teste de hipóteses.</p>
+<p><em>Testando hipóteses</em>:</p>
+<p>Então, quando pensamos em testes de hipóteses, temos três passos. O primeiro passo é definir o que é a hipótese nula. Muitas vezes, esta é uma hipótese sem diferença. Então, o Grupo A é igual ao Grupo B, ou o parâmetro de interesse que procuramos, digamos, o nosso coeficiente de herdabilidade é igual a 0. É claro que, nesse ponto, definimos o que seria considerado evidência suficiente para rejeitar a hipótese nula. Digamos que p seja menor que 0,05, por exemplo. Numa estrutura de significância genômica ampla, poderíamos querer dizer que p é menor que 5x10-8, e esse seria o nosso limite para rejeitar a hipótese nula. A última coisa que fazemos é coletar dados e então conduzir nossa análise e ver onde os parâmetros se enquadram.</p>
+<p>Então, quando pensamos em testes de hipóteses, podemos imaginar uma distribuição da nossa estatística de teste sob a hipótese nula. A próxima coisa que precisamos fazer é definir a evidência que usaremos para rejeitar a hipótese nula. Portanto, numa situação padrão em que α é definido como 0,05, qualquer coisa que caia nesta região sombreada em azul, afirmaríamos ser inconsistente com a hipótese nula e, portanto, iremos rejeitá-la. Agora, mesmo que faça parte da hipótese nula, observaremos isso aproximadamente 5% das vezes, ou seja, p de 5%. A segunda coisa que realmente precisamos pensar é a distribuição da estatística de teste sob a nossa hipótese alternativa. Agora, na maioria das vezes, se vamos conduzir um estudo, não pensamos: “Ah, nada vai acontecer”. Estamos pensando: “Oh, algo vai acontecer”. E o que acreditamos que vai acontecer é que a nossa estatística de teste vai cair nesta distribuição – na distribuição da hipótese alternativa. E assim, a probabilidade de sermos capazes de rejeitar a hipótese nula, dado que estamos na hipótese alternativa, extraindo a nossa estatística da distribuição da hipótese alternativa, será o nosso poder, e esta área sombreada em vermelho é o componente β aqui – 1 menos o nosso poder – o que podemos facilmente dizer é que às vezes, mesmo que a nossa estatística seja extraída da hipótese alternativa, às vezes essa estatística ainda não atingirá o nosso nível de evidência de que somos obrigados a rejeitar que faz parte de a distribuição da hipótese nula.</p>
+<p>O segundo componente aqui sobre o qual realmente precisamos falar são os tamanhos dos efeitos. Portanto, o tamanho do efeito é uma medida da força de um fenômeno na população. E na maioria das vezes, quando pensamos no tamanho do efeito, pensamos no tamanho do efeito como independente do tamanho da amostra ou de outros componentes do poder estatístico. Em muitos casos, isto ajuda-nos a comunicar o resultado numa linguagem cotidiana, especialmente se a escala for significativa a nível prático. Por exemplo, podemos querer dizer que as pessoas que tomam Zyban ou Bupropiona fumaram 5 cigarros a menos por dia, ou que as pessoas que tomam Liponox perderão 28,16 libras em oito semanas. Essa seria uma medida de tamanho de efeito. Os tamanhos dos efeitos são independentes de se o efeito é real ou não, portanto, pode ser um efeito real ou um efeito falso. E o tamanho do efeito realmente não se importa se é um ou outro, porque eles não estão associados a valores p, pois não incorporam nenhum componente do tamanho da amostra neles.</p>
+<p>Quando pensamos em tamanhos de efeito e na distribuição da hipótese nula e da hipótese alternativa, a diferença entre a média da hipótese nula e a média da distribuição da hipótese alternativa é o que realmente pensamos quando pensamos estamos pensando nos tamanhos dos efeitos. Portanto, se tivermos um coeficiente de regressão de 0,2, essa diferença entre 0 e 0,2 sob hipóteses nulas e alternativas, respectivamente, seria nosso tamanho de efeito. Então, quais são os tamanhos convencionais em que pensamos quando falamos sobre tamanhos de efeito? Bem, a maior parte do material vem do livro clássico de Cohen de 1988, onde ele forneceu alguns padrões para interpretar tamanhos de efeitos, e é muito importante ter cuidado ao interpretar tamanhos de efeitos, porque de uma forma bastante contraintuitiva, tamanhos de efeitos grandes não são necessariamente mais interessantes teoricamente e, em vez disso, tendem a ser bastante óbvios. Assim, quando Cohen escreveu o seu livro, ele observou que, bem, um pequeno efeito, algo com um R2 em torno de 1%, é provavelmente algo que precisamos de fazer algum tipo de análise estatística para detectar. Nós realmente precisamos fazer algum tipo de modelagem dos nossos dados para extrair a associação; não será observável apenas andando por aí. Um tamanho de efeito médio ou um R2 de cerca de 0,1 será aparente após uma inspeção cuidadosa – pode não ser completamente óbvio – mas será aparente se você realmente olhar cuidadosamente para o mundo ao seu redor. E então temos tamanhos de efeito grandes, ou um R-quadrado de cerca de 0,25, e isso ficará realmente óbvio à primeira vista. Coisas como homens tendem a ser mais altas que as mulheres ou algo completamente óbvio assim, em média. Isso não significa que todos os homens sejam mais altos que as mulheres, mas que, em média, não precisaríamos realmente fazer um teste estatístico para conseguir isso.</p>
+<p>Ok, agora que definimos vários componentes do poder estatístico, vamos falar sobre o que isso realmente significa. Portanto, o poder estatístico é normalmente usado para fazer dois tipos de análises de poder. O primeiro tipo de análise de poder é chamado de análise de poder a priori ou prospectiva. Normalmente fazemos uma análise de poder a priori para descobrir quantas respostas são necessárias para testar de forma justa a nossa hipótese nula. Isso normalmente é feito para solicitações de financiamento ou coisas desse tipo, onde temos que justificar o tamanho da amostra que planejamos coletar. Um segundo tipo de análise de poder é chamado de análise de poder post hoc ou retrospectiva, e neste tipo de análise de poder, o que vamos fazer é explorar se os efeitos que observamos podem ser que razoavelmente espera-se que rejeite o nulo se for realmente falso. Se adicionássemos, digamos, mais pessoas, quanto poder tínhamos em nosso teste ou nosso teste é baseado em cerca de 20% de poder, 50% de poder, etc., etc.? E saber quanto poder você tinha para testar sua hipótese nula é realmente um elemento essencial para entender a probabilidade de você replicar seus resultados.</p>
+<p>Portanto, se pensarmos na probabilidade de observar um efeito verdadeiro, rejeitar o nulo ou não rejeitar o nulo, podemos pensar numa situação em que sabemos o que é a verdade. Portanto, podemos dizer que a hipótese nula é verdadeira ou que a hipótese nula é falsa. É claro que, na realidade, nunca sabemos qual é a verdade, mas podemos configurar isto como uma espécie de espantalho. E então, se a hipótese nula for verdadeira, mas rejeitarmos a hipótese nula, estaremos cometendo um erro Tipo I, ou um falso positivo. Se, por outro lado, a hipótese nula for realmente falsa e não conseguirmos rejeitá-la, então estaremos cometendo um erro Tipo II, ou um erro β – neste caso, é um falso negativo. É claro que, se a hipótese nula for falsa e a rejeitarmos, ou se a hipótese nula for verdadeira e não conseguirmos rejeitar a hipótese nula, então estamos numa boa situação.</p>
+<p>Então, o que é um erro Tipo I? Um erro Tipo I é um falso positivo. A região de rejeição que estamos focando aqui é a região sombreada em vermelho nesta figura, e se nossa estatística de teste cair nesta região, iremos rejeitá-la mesmo que o efeito não seja verdadeiro. Basicamente, neste caso, tivemos sorte. Portanto, dado que o nosso α é fixado provavelmente pela nossa disciplina ou pelo menos exogenamente a partir da experiência, este é o nível de significância básico que estamos a tentar testar.</p>
+<p>Por outro lado, um erro β é a probabilidade de não rejeitar a hipótese nula quando ela é realmente falsa. Neste caso, a nossa estatística é extraída da distribuição do lado direito aqui, mas aconteceu de estar muito longe na cauda inferior da nossa distribuição de tamanho de efeito, e o que isso significa é que não excede o limiar α necessário para rejeitar a hipótese nula. Nesse caso, isso é um falso negativo.</p>
+<p>Assim, quando pensamos na conceitualização padrão do poder estatístico, estamos realmente a pensar nesses quatro elementos. Temos nossos tamanhos de efeito, nossos tamanhos de amostra e os níveis α e β. Então, se pegarmos nesta equação simples e a reorganizarmos, podemos mostrar que temos o nosso nível α, o nosso nível β, e a diferença entre α e β é igual à raiz quadrada do tamanho da nossa amostra vezes o nosso tamanho do efeito. E isso funciona muito bem em muitos casos quando olhamos para diferenças de médias ou para correlações ou algo parecido.</p>
+<p>Uma vez que entramos em coisas como modelos gêmeos, onde observamos diferenças entre distribuições de correlações, as coisas ficam um pouco mais complicadas, então, em vez de pensar nos cálculos de potência padrão, a modelagem de gêmeos tende a usar dois métodos possíveis para calcular o poder estatístico. O primeiro método é um método simples de simulação de Monte Carlo onde você simula um modelo sob a hipótese alternativa inúmeras vezes, digamos 1000 vezes, e então conta quantas vezes você observa uma estatística de teste para seu parâmetro de interesse que excede o valor crítico que você está procurando, então 0,05, por exemplo. E a proporção de vezes que você obtém esse resultado significativo é o seu poder estatístico. É muito simples de fazer. A desvantagem disso é que pode consumir muito tempo. Além disso, com modelos complexos, isso pode levar muito tempo e você pode acabar com muitas falhas de modelo que podem ou não afetar seu poder estatístico.</p>
+<p>Um método alternativo é usar o que chamaríamos de parâmetros de não centralidade. Como estamos trabalhando com testes paramétricos, sabemos ou presumimos que a distribuição da estatística do teste segue, digamos, um qui-quadrado padrão ou uma distribuição normal padrão, e podemos aproveitar essa suposição para calcular mais diretamente o poder estatístico sem fazer apenas uma tonelada absoluta de replicação. Portanto, podemos fazer isso uma vez e depois calcular a potência a partir daí, em vez de fazer isso 1000 vezes e observar as proporções. E por causa dessa diferença de horário, da quantidade de vezes que você tem que fazer isso, isso pode ser feito de forma relativamente rápida.</p>
+<p>Então, vamos nos concentrar nos parâmetros de não centralidade (NCP). Assim, o parâmetro de não centralidade é a soma da média da distribuição estatística de teste sob a hipótese alternativa com um determinado conjunto de graus de liberdade. Isso é um pouco complicado, mas basicamente estamos falando da diferença entre as distribuições que já discutimos: a distribuição do tamanho do efeito. Portanto, há dois pontos que são especialmente importantes para o cálculo do poder estatístico utilizando parâmetros de não centralidade. A primeira é: à medida que o tamanho do efeito aumenta, a média da distribuição estatística do teste aumenta e, portanto, o NCP aumenta, e à medida que o NCP aumenta, temos mais poder estatístico. O segundo componente é: à medida que o tamanho das amostras aumenta, o desvio padrão da distribuição nula e alternativa fica mais restrito e, portanto, o NCP, o parâmetro de não centralidade, também fica maior. Em ambos os casos, à medida que os tamanhos dos efeitos aumentam ou os tamanhos das amostras aumentam, aumentamos o nosso poder estatístico.</p>
+<p>Ok, então quando calculamos a potência com parâmetros de não centralidade em modelos gêmeos, temos quatro etapas básicas que iremos seguir. A primeira coisa que faremos é simular dados de gêmeos que correspondam à hipótese alternativa. Digamos que queremos testar o poder para detectar um componente de variância genética aditiva de 0,4 – de quanto poder precisaríamos para fazer isso? E isso seria algo que queremos testar. É claro que o nível dos seus tamanhos de efeito, por exemplo, o tamanho do seu componente de variância genética aditiva, deve ser baseado na literatura, tanto quanto possível. É claro que, se você estiver fazendo algo realmente novo, talvez não saiba o quanto isso é hereditário e, portanto, terá que adivinhar.</p>
+<p>A segunda etapa é ajustar os modelos completo e reduzido aos dados simulados para obter um valor qui-quadrado do teste de razão de verossimilhança. Então, se vamos testar a herdabilidade ou o componente genético aditivo, o que queremos fazer é simular os dados na etapa 1, e na etapa 2, executaremos o modelo ACE e, na etapa 2, também compararíamos isso com um modelo reduzido, o modelo CE. E seríamos capazes de dizer com base nisso quão significativo era esse parâmetro A.</p>
+<p>Depois de obtermos esse valor do qui-quadrado do teste da razão de verossimilhança para o total e o reduzido, podemos calcular a contribuição média de cada observação para o qui-quadrado. Então, para fazer isso, pegamos a diferença que observamos no teste da razão de verossimilhança e simplesmente a dividimos pelo número total de observações. Nesse caso, se tivéssemos gêmeos MZ, dividimos pelo número total de gêmeos MZ mais o número total de gêmeos DZ: pares de gêmeos. E isso nos dará o que chamo de parâmetro de não centralidade ponderada (Wncp).</p>
+<p>E então podemos prosseguir, e na etapa 4, podemos realmente calcular isso, podemos usar esse parâmetro de não centralidade ponderado para calcular o parâmetro de não centralidade para uma variedade de tamanhos de amostras estatísticas. E então podemos basicamente multiplicá-lo por qualquer tamanho de amostra para obter qual seria o nosso valor qui-quadrado para esse valor específico de n.</p>
+<p>Portanto, se tivéssemos um valor qui-quadrado, por exemplo, 10 com 1.000 observações, o parâmetro de não centralidade ponderado seria 10, ou nosso valor qui-quadrado dividido por 1.000, que é nosso número de observações para nos dar 0,01. Portanto, em média, cada observação contribui com cerca de 0,01 para o NCP. Como a escala do NCP é linear com o tamanho da amostra, se tivéssemos 2.000 observações, simplesmente multiplicaríamos esse 0,01, esse parâmetro ponderado de não centralidade, por 2.000, e obteríamos um valor qui-quadrado de 20. Se tivéssemos 500 observações, teríamos que multiplicar esse parâmetro ponderado de não centralidade de 0,01 por 500 e obteríamos um valor qui-quadrado de 5, e é realmente muito fácil.</p>
+<p>Então, tudo o que contei hoje vem deste artigo que escrevi em 2017, para o Boulder Workshop, e vou guiá-los rapidamente por uma análise de poder baseada no roteiro que elaboramos. Todas as funções podem ser encontradas neste script powerFun.R e, como observação rápida, você precisará ter o script powerFun.R em seu diretório de trabalho atual ou o powerScript.R não será capaz de encontrar o funções - porque todas as funções estão aqui. Então, o que podemos fazer é percorrer alguns exemplos para mostrar como esse script funciona e mostrar como você pode calcular a potência usando o parâmetro de não centralidade em gêmeos e tudo está muito bem embalado. Mas é claro que o diabo está nos detalhes, então examinaremos alguns desses detalhes agora.</p>
+<p>Então, a primeira coisa que faremos é exigir os pacotes R necessários, e há dois em particular que usaremos OpenMx e MASS. Portanto, o OpenMx nos ajudará a especificar e ajustar nossos modelos gêmeos, e o MASS nos ajudará a simular os dados. Lembre-se de que esse é o passo principal no início. E então o que faremos é obter todas essas funções e executar essas três linhas de código nos permitirá começar a brincar com algumas das possíveis análises de poder que desejaremos analisar no.</p>
+<p>Então, estabeleci uma série de análises de poder que podemos achar interessantes como modeladores gêmeos. Assim, a primeira questão que podemos querer saber é qual é o poder de detectar A, ou o componente genético aditivo, no modelo univariado à medida que C, o componente ambiental partilhado, aumenta. Então, o que fiz aqui foi especificar 3 modelos, um em que o coeficiente do caminho genético aditivo é 0,6 para cada um dos modelos e então o coeficiente do caminho ambiental comum vai de 0,3 para 0,5 para 0,7. E observe aqui que estamos assumindo que o tamanho da amostra para os gêmeos MZ e DZ é igual. Nós definimos arbitrariamente para 1000, mas na verdade isso é algo que é muito mais importante para acertar a proporção de gêmeos – então, neste caso, estamos tendo proporções iguais – do que realmente especificar um número específico. Às vezes, quando você está ajustando modelos um tanto esotéricos, você pode querer aumentar isso para, digamos, 10.000 ou 100.000 gêmeos em cada grupo, a fim de obter estimativas mais precisas do parâmetro médio de não centralidade ou do parâmetro ponderado de não centralidade.</p>
+<p>Então, se executarmos essas três linhas de código, basicamente nos preparamos para obter todas as informações que precisaremos e podemos olhar dentro deste objeto, digamos “modA1”. aqui estão três bits de informação. Primeiro, podemos ver na coluna esquerda da tabela superior as estimativas que especificamos. Então, queríamos 0,6, 0,3 e, em seguida, R apenas calcula quais seriam os demais coeficientes do caminho ser. Portanto, 0,6 e 0,3 deixariam um componente E de cerca de 0,74, e você pode ver o quão próximo eles estão sendo estimados do que estamos pedindo. E podemos ver quais são os erros padrão, e isso nos diz o que os resultados do nosso modelo gêmeo teriam sido nesta situação. Queremos ter certeza de que essas estimativas aqui correspondem ao que estamos vendo ou ao que estamos solicitando em nossa função. Se elas se desviarem muito, então nossa simulação não funciona, e provavelmente teremos que fazê-lo novamente, talvez com um tamanho de amostra maior. As duas informações principais que queremos saber aqui estarão relacionadas aos parâmetros A e C. Portanto, nosso parâmetro ponderado de não centralidade de A aqui será este valor aqui, 0,0121, etc., e o valor de C será 0,00105 ou mais. E podemos ver que este valor aqui para A e este valor aqui para C correspondem, ou pelo menos proporcionalmente, aos parâmetros de não centralidade, dando-nos algumas sugestões de que o que estamos a ver será útil.</p>
+<p>Então, agora que calculamos os parâmetros ponderados de não centralidade para A, podemos apenas representá-los. E assim a função powerPlot que está incluída nessas funções powerFun nos permitirá traçar todas as várias análises de potência de parâmetros sem centralidade que estamos interessados ​​em fazer, e se apenas executarmos essas quatro linhas de código, isso nos dará uma legenda também. E o que podemos ver aqui é que no eixo x temos o tamanho da amostra que procuramos e no eixo y temos o poder de rejeitar a hipótese nula ou o poder de detectar um parâmetro significativo. Agora, se olharmos para a linha preta aqui, essa foi a nossa primeira situação onde A era igual a 0,6 e C era igual a 0,3, então podemos ver aqui que à medida que aumentamos a potência, finalmente obtemos aquele valor mágico da potência igual 0,8 quando temos cerca de 625 indivíduos. Por outro lado, se aumentarmos C de 0,3 para 0,5, que é esta linha vermelha aqui, podemos ver que o poder de detecção da componente A aumenta muito mais rapidamente, e se aumentarmos novamente para 0,7, aumenta ainda mais rapidamente. Basicamente, o que podemos ver aqui é que o poder de detectar A depende das suposições que temos sobre o poder de detectar C, o que é muito interessante e tem um grande efeito nisso. Se olharmos em nossa janela do console R, o que podemos ver é nosso poder de 80% para detectar um A de 0,6 quando C for 0,3, precisaríamos de cerca de 645 pares gêmeos, divididos igualmente entre MZs e DZs. Se tivéssemos um C de 0,5 e um A de 0,6, teríamos cerca de 400 pares de gêmeos necessários, ou seja, 200 MZs e 200 DZs. Agora, se tivermos C de 0,7 e A de 0,6, o que explica praticamente toda a variação com o aditivo ou com o ambiente comum, aditivo genético ou ambiente comum, o que vemos aqui é que precisamos apenas de cerca de 51 MZ e 51 DZ pares de gêmeos, que é um número astronomicamente baixo de pares de gêmeos.</p>
+<p>Ok, então, a próxima pergunta é qual é o inverso? Como varia o poder de detectar C à medida que aumentamos A? Então, em vez de aumentar C de 0,3 para 0,5 para 0,7, aumentamos A e mantemos praticamente todos os outros parâmetros iguais, então tudo o que precisamos fazer aqui é executar isso e se você quiser testar valores diferentes aqui, você pode simplesmente substituir qualquer um desses valores e podemos executá-lo. E então podemos traçar isso de forma semelhante usando as mesmas funções. Basicamente, o que podemos ver aqui é que o poder de detectar C depende muito menos do nosso valor de A do que o poder de detectar A depende do nosso valor de C. Então, o que podemos dizer aqui é que realmente precisamos ter alguma expectativa de A e C incluídos em nossa análise de poder.</p>
+<p>Ok, até este ponto, analisamos o poder de detectar A e C quando os tamanhos das amostras eram iguais. Na próxima seção, o que faremos é examinar dois tamanhos de amostra diferentes e como eles afetam o poder. Então, vamos dizer que temos uma proporção de 5:1, então uma proporção de 5.000:1.000 de gêmeos MZ para DZ, e então temos uma proporção igual, e então temos uma proporção de 1:5 de gêmeos MZ para DZ. E só para simplificar, vamos mantê-lo em 0,6 para os componentes A e C, mas na verdade isso não acontece. Esta demonstração não depende realmente dos valores de A e C. O que procuramos são as proporções dos vários tipos de gêmeos que temos. E então, novamente, tudo o que precisamos fazer é executar isso rapidamente. Essas três linhas de código e então podemos traçar o poder. E se traçarmos isso rapidamente de novo, o que veríamos é que o gráfico ficaria muito melhor.</p>
+<p>Ok, então o que podemos ver na análise de poder onde variamos a proporção de gêmeos MZ para DZ de 5:1 para igual a 1:5 é que o melhor poder vem, ou os menores tamanhos de amostra vêm, quando temos aproximadamente iguais número de gêmeos MZ e DZ. Muitas vezes as pessoas pensam: “Ei, você sabe, para conseguir mais potência, eu deveria ter mais gêmeos MZ”. Mas na verdade não é assim que veríamos essa agitação para detectar a variação genética aditiva. É claro que, para detectar a variação ambiental comum, é na verdade muito mais benéfico ter mais gêmeos DZ do que gêmeos MZ, e se tivermos gêmeos MZ, teremos muito menos poder para detectar os componentes ambientais comuns da variação, o que é uma descoberta interessante e importante. que precisamos ter em mente quando estivermos fazendo nossa análise de gêmeos.</p>
+<p>Ok, a próxima coisa que devemos ter em mente é se estamos usando dados contínuos ou categóricos. E isso é para a análise atual, observe os dados binários, portanto, os dados de caso-controle. E o que podemos fazer aqui é pensar em como a prevalência da nossa característica de caso-controle afeta o poder de detectar um componente genético significativo. Agora, digamos que o componente genético tenha novamente um coeficiente de caminho de 0,6 e o ​​ambiente comum tenha um coeficiente de caminho de 0,6. Então, temos A e C iguais aqui e temos proporções iguais de gêmeos MZ e DZ. Portanto, tudo o que precisamos fazer para começar é especificar todos os vários coeficientes diferentes que podemos estar interessados ​​em executar e então podemos representá-los novamente. E como podemos ver aqui, à medida que a prevalência vai de cerca de 0,5 para 0,05, a potência cai drasticamente. Assim, para as nossas características comuns, podemos obter muito menos pares de gêmeos, digamos cerca de 1.100 para uma prevalência de 0,5, enquanto que para uma prevalência de 0,05, estamos olhando para mais de 4.000, e precisamos ter isso em mente quando estamos fazendo qualquer tipo de modelo gêmeo.</p>
+<p>Ok, o conjunto final de análise de poder sobre o qual quero falar é o poder de detectar correlações genéticas entre nossas variáveis. Então, o que fizemos aqui foi especificar um conjunto crescente de A e C ou A para a primeira característica e A para a segunda característica. E o que estamos vendo aqui é aumentar a correlação genética entre essas duas características de 0,1 para 0,3 para 0,5, ou seja, correlações genéticas muito pequenas, moderadas e, na verdade, bastante grandes. E estamos mantendo as correlações C proporcionais às correlações A, e então vamos manter os tamanhos das amostras aproximadamente iguais novamente. Tudo bem. Então, se executarmos esses 9 cenários diferentes, o que temos aqui são todos os resultados que precisamos e agora podemos plotá-los facilmente e dar uma olhada no que sai. Portanto, para ambos, como a variável 1 e a variável 2 foram simuladas como tendo os mesmos componentes A, C e E, podemos ver aqui que o poder de detectar esses componentes de variância é igual para ambas as características. O que podemos ver é que precisamos de pouco menos de 600 pares de gêmeos para detectar um A de 0,3, cerca de 200, pouco mais de 200 para um A de 0,4 e apenas cerca de 100 para detectar um A de 0,5. É importante ressaltar que aqui o poder de detectar nossas correlações genéticas varia dramaticamente com a quantidade de herdabilidade que temos em nossas características. Portanto, para características modestamente hereditárias, só podemos detectar com segurança uma correlação genética de cerca de 0,5. Então, com um A de 0,3, estamos olhando para cerca de 1.200 pessoas, 1.200 pares de gêmeos, para aumentar nosso poder de correlação até o nível de 0,8. Por outro lado, se o nosso A for cerca de 0,4, precisaremos de cerca de 500 pessoas para obter esse poder de correlação genética significativo para 80%, ao passo que precisamos de cerca de 1.400 para obtê-lo para a modesta correlação genética de cerca de 0,3. E então, quando nosso parâmetro a chegar a cerca de 0,5, teremos ainda mais poder. E, claro, quando temos uma correlação genética muito pequena, nunca alcançamos poder suficiente com amostras de tamanhos razoáveis.</p>
+<p>Ok, só para recapitular, examinamos os elementos de poder estatístico, teste de hipóteses e tamanhos de efeito, e examinamos uma variedade de métodos diferentes para calculá-los, e mostrei a você uma demonstração de como você pode usar algumas das funções que reunimos ao longo dos anos para calcular a potência de um projeto clássico de gêmeos.</p>
+<p>Muito obrigado. Meu nome é Brad Verhulst, e você pode me fazer todas as perguntas que precisar nas práticas do workshop, onde passaremos um pouco dessas informações relacionadas à estimativa de modelos gêmeos. Muito obrigado.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
