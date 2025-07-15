@@ -106,7 +106,7 @@ Link to video transcript [here](chapter10.4_transcript.qmd).
 
 ------------------------------------------------------------------------
 
-# 10.5 Equitable Collaboration for LMIC Researchers {#sec-section5}
+# 10.5 Collaboration for LMIC Researchers {#sec-section5}
 
 ***Video Content coming soon!***
 
