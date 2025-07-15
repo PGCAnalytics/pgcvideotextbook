@@ -112,7 +112,7 @@ Each video is embedded into the textbook webpage, and a link to the video transc
 >
 > [10.4: Language in Genetics Research](chapter10.qmd#sec-section4)
 >
-> [10.5: Equitable Collaboration for LMIC Researchers](chapter10.qmd#sec-section5)
+> [10.5: Collaboration for LMIC Researchers](chapter10.qmd#sec-section5)
 >
 > [10.6: GDPR for Dummies](chapter10.qmd#sec-section6)
 
